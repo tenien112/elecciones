@@ -7,6 +7,7 @@ on:
     - cron: "7,37 * * * *"
 permissions:
   contents: write
+  pages: write
 concurrency:
   group: elecciones
   cancel-in-progress: false
@@ -25,3 +26,7 @@ jobs:
           git add datos/datos.json datos/apuestas.json datos/registro.json
           git commit -m "RADAR ELECCIONES: datos actualizados" || exit 0
           for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
+      - name: Publicar la web (GitHub Pages)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST repos/${{ github.repository }}/pages/builds || true
