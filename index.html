@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RADAR ELECCIONES-LORENZITO</title>
+<meta name="author" content="Lorenzo Moreno Villalba">
+<meta name="copyright" content="© Lorenzo Moreno Villalba">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0E1A14">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Radar Elecciones">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>
+:root{--bg:#0E1A14;--card:#16241C;--card2:#1C2D23;--borde:#2A3D31;--txt:#F4F1E8;--suave:#9DB0A3;--oro:#E9C46A;
+  --pp:#1D84CE;--psoe:#E30613;--vox:#63BE21;--fa:#E5007E;--podemos:#7B3F8C}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  padding:16px 14px calc(30px + env(safe-area-inset-bottom))}
+h1{font-size:26px;margin:4px 0 2px;letter-spacing:.5px}
+h1 span{color:var(--oro)}
+.sub{color:var(--suave);font-size:14px;margin-bottom:14px}
+.fila{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.cuenta{background:var(--card);border:1px solid var(--borde);border-radius:16px;padding:12px 14px;flex:1;min-width:150px}
+.cuenta b{font-size:28px;color:var(--oro)}
+button{font:inherit;font-weight:700;border:0;border-radius:14px;padding:14px 16px;background:var(--oro);color:#1B1B1B;cursor:pointer}
+button.sec{background:var(--card2);color:var(--txt);border:1px solid var(--borde)}
+.rueda{display:inline-block;width:16px;height:16px;border:3px solid #0003;border-top-color:#1B1B1B;border-radius:50%;
+  animation:g 0.8s linear infinite;vertical-align:-3px;margin-right:6px}
+@keyframes g{to{transform:rotate(360deg)}}
+.titulo{font-size:13px;letter-spacing:1.5px;color:var(--suave);font-weight:800;margin:22px 0 10px;text-transform:uppercase}
+.card{background:var(--card);border:1px solid var(--borde);border-radius:18px;padding:14px;margin-bottom:12px}
+.cab{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:10px}
+.cab b{font-size:18px}
+.cab small{color:var(--suave)}
+.p{display:grid;grid-template-columns:62px 1fr 88px;gap:8px;align-items:center;margin:6px 0;font-size:14px}
+.p .n{font-weight:800}
+.barra{height:16px;background:#ffffff10;border-radius:8px;overflow:hidden}
+.barra i{display:block;height:100%;border-radius:8px}
+.p .v{text-align:right;font-variant-numeric:tabular-nums}
+.p .v small{color:var(--suave)}
+.suma{margin-top:10px;font-size:14px}
+.mayo{position:relative;height:22px;background:#ffffff10;border-radius:8px;margin-top:6px;overflow:visible}
+.mayo i{position:absolute;left:0;top:0;bottom:0;border-radius:8px;background:linear-gradient(90deg,var(--pp),var(--vox))}
+.mayo em{position:absolute;top:-4px;bottom:-4px;width:3px;background:var(--oro);left:50.29%}
+.mayo span{position:absolute;top:26px;font-size:11px;color:var(--oro);transform:translateX(-50%);left:50.29%}
+.ok{color:var(--vox);font-weight:800}.no{color:#ff7a7a;font-weight:800}
+.fuente{display:block;margin-top:12px;color:var(--oro);font-size:13px;text-decoration:none}
+.media .p{grid-template-columns:62px 1fr 56px}
+.nota{background:#E9C46A22;border:1px solid var(--oro);border-radius:14px;padding:10px 12px;font-size:14px;margin:10px 0}
+svg text{fill:var(--suave);font-size:10px}
+footer{margin-top:28px;text-align:center;color:var(--suave);font-size:12px}
+.tabs{display:flex;gap:8px;margin:16px 0 4px}
+.tabs button{flex:1;background:var(--card2);color:var(--txt);border:1px solid var(--borde)}
+.tabs button.on{background:var(--oro);color:#1B1B1B;border-color:var(--oro)}
+.tabs.peq button{padding:10px 8px;font-size:13px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--oro);color:#1B1B1B;font-weight:800;
+  padding:12px 16px;border-radius:14px;display:none;z-index:9;max-width:90vw;text-align:center}
+</style>
+</head>
+<body>
+<h1>RADAR <span>ELECCIONES</span></h1>
+<div class="sub">Generales del 29 de noviembre · las 4 últimas encuestas de medios distintos</div>
+
+<div class="fila">
+  <div class="cuenta"><div id="faltan"><b>–</b></div><small id="act">Cargando…</small></div>
+  <button id="btnAct" onclick="actualizarTodo()">ACTUALIZAR</button>
+</div>
+<div id="nota"></div>
+
+<div class="tabs">
+  <button id="tEnc" class="on" onclick="vista('enc')">ENCUESTAS</button>
+  <button id="tApu" onclick="vista('apu')">APUESTAS</button>
+</div>
+
+<div id="vApu" style="display:none">
+  <div class="tabs peq">
+    <button id="tGob" class="on" onclick="subApu('gobierno')">FORMA GOBIERNO</button>
+    <button id="tGan" onclick="subApu('ganar')">GANA ELECCIONES</button>
+  </div>
+  <div class="sub" id="apuAct" style="margin:6px 0 10px">Cargando…</div>
+  <div id="apuNota"></div>
+  <div class="titulo" id="apuTit">Media de las apuestas</div>
+  <div id="apuMedia" class="card media"></div>
+  <div class="titulo">Por casa de apuestas</div>
+  <div id="apuLista"></div>
+  <div class="titulo">Evolución (PP vs PSOE)</div>
+  <div class="card" id="apuEvol"></div>
+  <div style="color:var(--suave);font-size:12px">% = probabilidad que da cada casa (1 ÷ cuota). Lo que apuesta la gente, no el resultado.</div>
+</div>
+
+<div id="vEnc">
+<div class="titulo">Media de las 4</div>
+<div id="media" class="card media"></div>
+
+<div class="titulo">Las 4 últimas encuestas</div>
+<div id="lista"></div>
+
+<div class="titulo">Evolución de la media</div>
+<div class="card" id="evol"></div>
+</div>
+
+<footer>RADAR ELECCIONES-LORENZITO · by Lorenzo<br>© Lorenzo Moreno Villalba<br>
+<span style="opacity:.7">Datos de encuestas publicadas, sin opinión ni predicción propia.</span></footer>
+<div id="toast"></div>
+
+<script>
+const PARTIDOS=[["pp","PP"],["psoe","PSOE"],["vox","Vox"],["fa","F. Amplio"],["podemos","Podemos"]];
+const ELECCION=new Date("2026-11-29T09:00:00+01:00");
+const $=id=>document.getElementById(id);
+function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+function toast(t,ms){const e=$("toast");e.textContent=t;e.style.display="block";setTimeout(()=>e.style.display="none",ms||3000)}
+function fecha(s){const d=new Date(s.length<=10?s+"T12:00:00":s);return d.toLocaleDateString("es-ES",{day:"numeric",month:"short"})}
+function hora(s){const d=new Date(s);return d.toLocaleString("es-ES",{weekday:"short",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})}
+function centro(e){if(!e||e==="s/d")return null;const m=String(e).match(/(\d+)(?:\s*[-–]\s*(\d+))?/);if(!m)return null;return m[2]?(+m[1]+ +m[2])/2:+m[1]}
+function cuentaAtras(){
+  const dias=Math.ceil((ELECCION-new Date())/864e5);
+  $("faltan").innerHTML=dias>0?`<b>${dias}</b> días para el 29N`:(dias===0?"<b>Hoy</b> se vota":"<b>29N</b> celebrado");
+}
+function filaP(k,nom,pct,esc,max){
+  return `<div class="p"><span class="n" style="color:var(--${k})">${nom}</span>
+   <div class="barra"><i style="width:${pct==null?0:Math.min(100,pct/max*100)}%;background:var(--${k})"></i></div>
+   <span class="v">${pct==null?"s/d":String(pct).replace(".",",")+"%"}${esc!==undefined?`<br><small>${esc} esc.</small>`:""}</span></div>`;
+}
+function pinta(d){
+  const E=d.encuestas||[];
+  $("act").textContent="Actualizado: "+hora(d.actualizado);
+  $("nota").innerHTML=d.nota?`<div class="nota">${d.nota}</div>`:"";
+  // media
+  const med={};PARTIDOS.forEach(([k])=>{const v=E.map(x=>x[k]&&x[k].pct).filter(x=>typeof x==="number");med[k]=v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length*10)/10:null});
+  $("media").innerHTML=PARTIDOS.map(([k,n])=>filaP(k,n,med[k],undefined,40)).join("");
+  // lista
+  $("lista").innerHTML=E.map(x=>{
+    let s=x.ppvox,aprox=false;
+    if(!s||s==="s/d"){const a=centro(x.pp&&x.pp.esc),b=centro(x.vox&&x.vox.esc);if(a!=null&&b!=null){s=Math.round(a+b);aprox=true}}
+    const n=centro(s);
+    const suma=n==null?`<div class="suma">PP + Vox: s/d</div>`:
+      `<div class="suma">PP + Vox: <b>${aprox?"≈ ":""}${s}</b> escaños · <span class="${n>=176?"ok":"no"}">${n>=176?"mayoría absoluta":"sin mayoría absoluta"}</span>${aprox?' <small style="color:var(--suave)">(centro de horquillas)</small>':""}
+       <div class="mayo"><i style="width:${Math.min(100,n/350*100)}%"></i><em></em><span>176</span></div></div><div style="height:12px"></div>`;
+    return `<div class="card"><div class="cab"><div><b>${x.instituto}</b><br><small>${x.medio}</small></div><small>${fecha(x.fecha)}</small></div>
+      ${PARTIDOS.map(([k,nm])=>filaP(k,nm,x[k]&&x[k].pct,x[k]&&x[k].esc,40)).join("")}
+      ${suma}${x.url?`<a class="fuente" href="${x.url}" target="_blank" rel="noopener">Ver la fuente ›</a>`:""}</div>`;
+  }).join("")||'<div class="card">Sin encuestas guardadas todavía.</div>';
+  // evolución
+  const H=(d.historial||[]).slice(-30);
+  if(H.length<2){$("evol").innerHTML='<small style="color:var(--suave)">Se irá dibujando con cada actualización (mañana y noche).</small>';return}
+  const W=340,Hh=170,pl=26,pr=8,pt=8,pb=20,mn=0,mx=40;
+  const X=i=>pl+(W-pl-pr)*i/(H.length-1),Y=v=>pt+(Hh-pt-pb)*(1-(v-mn)/(mx-mn));
+  let g=`<svg viewBox="0 0 ${W} ${Hh}" width="100%">`;
+  [10,20,30,40].forEach(v=>g+=`<line x1="${pl}" x2="${W-pr}" y1="${Y(v)}" y2="${Y(v)}" stroke="#ffffff14"/><text x="2" y="${Y(v)+3}">${v}%</text>`);
+  [["pp"],["psoe"],["vox"],["fa"]].forEach(([k])=>{
+    const pts=H.map((h,i)=>h[k]==null?null:`${X(i)},${Y(h[k])}`).filter(Boolean).join(" ");
+    g+=`<polyline points="${pts}" fill="none" stroke="var(--${k})" stroke-width="2.5" stroke-linejoin="round"/>`;
+  });
+  g+=`<text x="${pl}" y="${Hh-4}">${fecha(H[0].fecha)}</text><text x="${W-pr}" y="${Hh-4}" text-anchor="end">${fecha(H[H.length-1].fecha)}</text></svg>`;
+  $("evol").innerHTML=g;
+}
+async function cargar(boton){
+  const b=$("btnAct");
+  if(boton){b.innerHTML='<span class="rueda"></span>ACTUALIZANDO';b.disabled=true}
+  try{
+    const r=await fetch("../bolsa/elecciones/datos.json?t="+Date.now(),{cache:"no-store"});
+    const d=await r.json();
+    const prev=store("elec_act");store("elec_act",d.actualizado);
+    pinta(d);
+    if(boton)await cargarApu(true);
+    if(boton)toast(prev===d.actualizado?"Ya tienes lo último (se renueva mañana y noche)":"Encuestas actualizadas");
+  }catch(e){toast("No se han podido cargar las encuestas")}
+  if(boton){b.textContent="ACTUALIZAR";b.disabled=false}
+}
+// ---------- ACTUALIZAR TODO (encuestas + apuestas) ----------
+// Lanza en GitHub el robot que busca encuestas (Wikipedia) y apuestas (Polymarket),
+// usa la misma llave de GitHub que BOLSA-LORENZITO y espera a que lleguen los datos nuevos.
+const REPO_E="tenien112/bolsa";
+async function leerGit(f,llave){
+  const r=await fetch(`https://api.github.com/repos/${REPO_E}/contents/elecciones/${f}?t=${Date.now()}`,
+    {headers:{Authorization:"Bearer "+llave,Accept:"application/vnd.github.raw+json"},cache:"no-store"});
+  if(!r.ok)throw new Error(r.status);return r.json();
+}
+async function actualizarTodo(){
+  const b=$("btnAct");b.innerHTML='<span class="rueda"></span>ACTUALIZANDO';b.disabled=true;
+  const fin=t=>{b.textContent="ACTUALIZAR";b.disabled=false;if(t)toast(t,5000)};
+  const llave=store("bolsa_llave");
+  if(!llave){await cargar(false);await cargarApu(true);return fin("Para buscar datos nuevos falta la llave de GitHub: guárdala en BOLSA-LORENZITO (⚙️ Llave)")}
+  let prevE=null,prevA=null;
+  try{prevE=(await leerGit("datos.json",llave)).actualizado;prevA=(await leerGit("apuestas.json",llave)).actualizado}catch(e){}
+  try{
+    const r=await fetch(`https://api.github.com/repos/${REPO_E}/actions/workflows/elecciones.yml/dispatches`,{method:"POST",
+      headers:{Authorization:"Bearer "+llave,Accept:"application/vnd.github+json","Content-Type":"application/json"},body:JSON.stringify({ref:"main"})});
+    if(!r.ok)throw new Error(r.status);
+  }catch(e){await cargar(false);await cargarApu(false);return fin("No se ha podido lanzar la búsqueda ("+e.message+"). ¿Llave caducada?")}
+  const t0=Date.now();
+  while(Date.now()-t0<240000){
+    await new Promise(r=>setTimeout(r,8000));
+    try{
+      const d=await leerGit("datos.json",llave),a=await leerGit("apuestas.json",llave);
+      if(d.actualizado!==prevE&&a.actualizado!==prevA){
+        store("elec_act",d.actualizado);pinta(d);APU=a;pintaApu(a);
+        return fin("Encuestas y apuestas actualizadas");
+      }
+    }catch(e){}
+  }
+  await cargar(false);await cargarApu(false);
+  fin("Está tardando más de lo normal; vuelve a darle en un par de minutos");
+}
+// ---------- APUESTAS ----------
+const APU_P=[["pp","PP · Feijóo","PP"],["psoe","PSOE · Sánchez","PSOE"],["vox","Vox · Abascal","Vox"]];
+let APU=null,apuSub=store("elec_apusub")||"gobierno";
+function prob(x,k){const v=x[k];if(typeof v!=="number")return null;return x.tipo==="prob"?v:Math.round(1000/v)/10}
+function vista(v){
+  $("vEnc").style.display=v==="enc"?"":"none";$("vApu").style.display=v==="apu"?"":"none";
+  $("tEnc").classList.toggle("on",v==="enc");$("tApu").classList.toggle("on",v==="apu");
+  store("elec_vista",v);if(v==="apu"&&!APU)cargarApu(false);
+}
+function subApu(s){apuSub=s;store("elec_apusub",s);
+  $("tGob").classList.toggle("on",s==="gobierno");$("tGan").classList.toggle("on",s==="ganar");if(APU)pintaApu(APU)}
+function filaA(k,nom,pct,cuota){
+  return `<div class="p" style="grid-template-columns:110px 1fr 70px"><span class="n" style="color:var(--${k})">${nom}</span>
+   <div class="barra"><i style="width:${pct==null?0:Math.min(100,pct)}%;background:var(--${k})"></i></div>
+   <span class="v">${pct==null?"–":String(pct).replace(".",",")+"%"}${cuota?`<br><small>cuota ${String(cuota.toFixed(2)).replace(".",",")}</small>`:""}</span></div>`;
+}
+function pintaApu(d){
+  const L=d[apuSub]||[];
+  $("apuAct").textContent="Actualizado: "+hora(d.actualizado);
+  $("apuNota").innerHTML=d.nota?`<div class="nota">${d.nota}</div>`:"";
+  $("apuTit").textContent=apuSub==="gobierno"?"¿Quién forma gobierno? · media":"¿Quién gana las elecciones? · media";
+  const med={};APU_P.forEach(([k])=>{const v=L.map(x=>prob(x,k)).filter(x=>x!=null);med[k]=v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length*10)/10:null});
+  $("apuMedia").innerHTML=APU_P.map(([k,n])=>filaA(k,n,med[k])).join("");
+  $("apuLista").innerHTML=L.map(x=>`<div class="card"><div class="cab"><div><b>${x.casa}</b><br><small>${x.mercado}</small></div><small>${fecha(x.fecha)}</small></div>
+    ${APU_P.map(([k,n])=>filaA(k,n,prob(x,k),x.tipo==="cuota"&&typeof x[k]==="number"?x[k]:null)).join("")}
+    ${x.url?`<a class="fuente" href="${x.url}" target="_blank" rel="noopener">Ver la fuente ›</a>`:""}</div>`).join("")||'<div class="card">Sin datos todavía.</div>';
+  const pre=apuSub==="gobierno"?"gob_":"gan_",H=(d.historial||[]).slice(-30);
+  if(H.length<2){$("apuEvol").innerHTML='<small style="color:var(--suave)">Se irá dibujando con cada actualización (mañana y noche).</small>';return}
+  const W=340,Hh=170,pl=30,pr=8,pt=8,pb=20;
+  const X=i=>pl+(W-pl-pr)*i/(H.length-1),Y=v=>pt+(Hh-pt-pb)*(1-v/100);
+  let g=`<svg viewBox="0 0 ${W} ${Hh}" width="100%">`;
+  [25,50,75,100].forEach(v=>g+=`<line x1="${pl}" x2="${W-pr}" y1="${Y(v)}" y2="${Y(v)}" stroke="#ffffff14"/><text x="2" y="${Y(v)+3}">${v}%</text>`);
+  ["pp","psoe"].forEach(k=>{const pts=H.map((h,i)=>h[pre+k]==null?null:`${X(i)},${Y(h[pre+k])}`).filter(Boolean).join(" ");
+    g+=`<polyline points="${pts}" fill="none" stroke="var(--${k})" stroke-width="2.5" stroke-linejoin="round"/>`});
+  g+=`<text x="${pl}" y="${Hh-4}">${fecha(H[0].fecha)}</text><text x="${W-pr}" y="${Hh-4}" text-anchor="end">${fecha(H[H.length-1].fecha)}</text></svg>`;
+  $("apuEvol").innerHTML=g;
+}
+async function cargarApu(aviso){
+  try{const d=await (await fetch("../bolsa/elecciones/apuestas.json?t="+Date.now(),{cache:"no-store"})).json();APU=d;pintaApu(d);return d}
+  catch(e){if(aviso)toast("No se han podido cargar las apuestas");return null}
+}
+cuentaAtras();cargar(false);cargarApu(false);subApu(apuSub);
+if(store("elec_vista")==="apu")vista("apu");
+document.addEventListener("visibilitychange",()=>{if(!document.hidden){cuentaAtras();cargar(false);cargarApu(false)}});
+
+// ---------- Aviso de actualización ----------
+// Hay que cambiar APP_VERSION en cada actualización.
+const APP_VERSION="2026.11.16-4";
+(()=>{const prev=store("elec_version");store("elec_version",APP_VERSION);
+  if(prev!==null&&prev!==APP_VERSION)toast("RADAR ELECCIONES-LORENZITO se ha actualizado",4000)})();
+if("serviceWorker" in navigator){
+  navigator.serviceWorker.register("sw.js",{updateViaCache:"none"}).then(r=>r.update()).catch(()=>{});
+}
+async function buscarVersionNueva(){
+  try{const t=await (await fetch("index.html?t="+Date.now(),{cache:"no-store"})).text();
+    const m=t.match(/const APP_VERSION="([^"]+)"/);
+    if(m&&m[1]!==APP_VERSION)location.reload();
+  }catch(e){}
+}
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)buscarVersionNueva()});
+</script>
+</body>
+</html>
