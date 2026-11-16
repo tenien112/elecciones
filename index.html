@@ -131,6 +131,7 @@ footer{margin-top:28px;text-align:center;color:var(--suave);font-size:12px}
 <div id="toast"></div>
 
 <script>
+const DATOS="https://raw.githubusercontent.com/tenien112/elecciones/main/datos/";
 const PARTIDOS=[["pp","PP"],["psoe","PSOE"],["vox","Vox"],["fa","F. Amplio"],["podemos","Podemos"]];
 const ELECCION=new Date("2026-11-29T09:00:00+01:00");
 const $=id=>document.getElementById(id);
@@ -193,7 +194,7 @@ async function cargar(boton){
   const b=$("btnAct");
   if(boton){b.innerHTML='<span class="rueda"></span>ACTUALIZANDO';b.disabled=true}
   try{
-    const r=await fetch("datos/datos.json?t="+Date.now(),{cache:"no-store"});
+    const r=await fetch(DATOS+"datos.json?t="+Date.now(),{cache:"no-store"});
     const d=await r.json();
     const prev=store("elec_act");store("elec_act",d.actualizado);
     pinta(d);
@@ -209,7 +210,7 @@ async function actualizarTodo(){
   const b=$("btnAct");b.innerHTML='<span class="rueda"></span>ACTUALIZANDO';b.disabled=true;
   const prev=store("elec_act");
   try{
-    const d=await (await fetch("datos/datos.json?t="+Date.now(),{cache:"no-store"})).json();
+    const d=await (await fetch(DATOS+"datos.json?t="+Date.now(),{cache:"no-store"})).json();
     store("elec_act",d.actualizado);pinta(d);
     await cargarApu(true);await cargarReg();
     const h=new Date(d.actualizado);
@@ -257,7 +258,7 @@ function pintaApu(d){
   $("apuEvol").innerHTML=g;
 }
 async function cargarApu(aviso){
-  try{const d=await (await fetch("datos/apuestas.json?t="+Date.now(),{cache:"no-store"})).json();APU=d;pintaApu(d);return d}
+  try{const d=await (await fetch(DATOS+"apuestas.json?t="+Date.now(),{cache:"no-store"})).json();APU=d;pintaApu(d);return d}
   catch(e){if(aviso)toast("No se han podido cargar las apuestas");return null}
 }
 cuentaAtras();cargar(false);cargarApu(false);subApu(apuSub);
@@ -298,12 +299,12 @@ function pintaReg(d){
     ||'<div class="card">Todavía no hay nada guardado.</div>';
 }
 async function cargarReg(){
-  try{pintaReg(await (await fetch("datos/registro.json?t="+Date.now(),{cache:"no-store"})).json())}
+  try{pintaReg(await (await fetch(DATOS+"registro.json?t="+Date.now(),{cache:"no-store"})).json())}
   catch(e){$("hisLista").innerHTML='<div class="card">Todavía no hay nada guardado.</div>'}
 }
 // ---------- Aviso de actualización ----------
 // Hay que cambiar APP_VERSION en cada actualización.
-const APP_VERSION="2026.11.17-2";
+const APP_VERSION="2026.11.17-3";
 (()=>{const prev=store("elec_version");store("elec_version",APP_VERSION);
   if(prev!==null&&prev!==APP_VERSION)toast("RADAR ELECCIONES-LORENZITO se ha actualizado",4000)})();
 if("serviceWorker" in navigator){
