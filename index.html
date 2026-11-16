@@ -59,6 +59,9 @@ footer{margin-top:28px;text-align:center;color:var(--suave);font-size:12px}
 .etq{font-size:12px;color:var(--suave);font-weight:700;letter-spacing:1px;text-transform:uppercase}
 .tu{background:var(--oro);color:#1B1B1B;border-radius:8px;padding:2px 7px;font-size:12px;font-weight:800}
 .au{background:var(--card2);color:var(--suave);border-radius:8px;padding:2px 7px;font-size:12px}
+.tabla{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+.tabla th{color:var(--suave);font-weight:700;text-align:right;padding:4px 2px}.tabla th:first-child,.tabla td:first-child{text-align:left}
+.tabla td{text-align:right;padding:6px 2px;border-top:1px solid var(--borde)}.tabla td small{color:var(--suave)}
 .tabs.peq button{padding:10px 8px;font-size:13px}
 #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--oro);color:#1B1B1B;font-weight:800;
   padding:12px 16px;border-radius:14px;display:none;z-index:9;max-width:90vw;text-align:center}
@@ -110,8 +113,14 @@ footer{margin-top:28px;text-align:center;color:var(--suave);font-size:12px}
 <div class="titulo">Media de las 4</div>
 <div id="media" class="card media"></div>
 
+<div class="titulo">Media de TODAS las encuestas</div>
+<div id="polMedia" class="card media"></div>
+
 <div class="titulo">Las 4 últimas encuestas</div>
 <div id="lista"></div>
+
+<div class="titulo">Todas las encuestas · últimos 10 días</div>
+<div id="polLista" class="card"></div>
 
 <div class="titulo">Evolución de la media</div>
 <div class="card" id="evol"></div>
@@ -146,6 +155,14 @@ function pinta(d){
   // media
   const med={};PARTIDOS.forEach(([k])=>{const v=E.map(x=>x[k]&&x[k].pct).filter(x=>typeof x==="number");med[k]=v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length*10)/10:null});
   $("media").innerHTML=PARTIDOS.map(([k,n])=>filaP(k,n,med[k],undefined,40)).join("");
+  // POLITICO: todas las encuestas
+  const P=d.politico;
+  if(P){
+    $("polMedia").innerHTML=PARTIDOS.map(([k,n])=>filaP(k,n,P.media[k],undefined,40)).join("")+
+      `<small style="color:var(--suave);display:block;margin-top:8px">POLITICO Poll of Polls · ${fecha(P.fecha)}</small><a class="fuente" href="${P.url}" target="_blank" rel="noopener">Ver la fuente ›</a>`;
+    $("polLista").innerHTML=`<table class="tabla"><tr><th>Encuestadora</th><th style="color:var(--pp)">PP</th><th style="color:var(--psoe)">PSOE</th><th style="color:var(--vox)">Vox</th><th style="color:var(--fa)">FA</th></tr>`+
+      P.encuestas.map(x=>`<tr><td>${x.firma}<br><small>${fecha(x.fecha)}</small></td>${["pp","psoe","vox","fa"].map(k=>`<td>${x[k]==null?"–":num(x[k])}</td>`).join("")}</tr>`).join("")+`</table>`;
+  }else{$("polMedia").innerHTML='<small style="color:var(--suave)">Cargando…</small>';$("polLista").innerHTML=""}
   // lista
   $("lista").innerHTML=E.map(x=>{
     let s=x.ppvox,aprox=false;
@@ -306,7 +323,7 @@ async function cargarReg(){
 }
 // ---------- Aviso de actualización ----------
 // Hay que cambiar APP_VERSION en cada actualización.
-const APP_VERSION="2026.11.16-5";
+const APP_VERSION="2026.11.17-1";
 (()=>{const prev=store("elec_version");store("elec_version",APP_VERSION);
   if(prev!==null&&prev!==APP_VERSION)toast("RADAR ELECCIONES-LORENZITO se ha actualizado",4000)})();
 if("serviceWorker" in navigator){
