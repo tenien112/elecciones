@@ -1,11 +1,11 @@
 {
- "actualizado": "2026-11-16T23:53:03+01:00",
+ "actualizado": "2026-11-17T00:01:40+01:00",
  "nota": "",
  "ganar": [
   {
    "casa": "Polymarket",
    "mercado": "Partido con más escaños",
-   "fecha": "2026-11-16",
+   "fecha": "2026-11-17",
    "tipo": "prob",
    "pp": 75.5,
    "psoe": 24.0,
@@ -35,7 +35,7 @@
   {
    "casa": "Manifold (dinero ficticio)",
    "mercado": "Partido ganador",
-   "fecha": "2026-11-16",
+   "fecha": "2026-11-17",
    "tipo": "prob",
    "pp": 90.5,
    "psoe": 9.3,
@@ -47,7 +47,7 @@
   {
    "casa": "Polymarket",
    "mercado": "Próximo presidente del Gobierno",
-   "fecha": "2026-11-16",
+   "fecha": "2026-11-17",
    "tipo": "prob",
    "pp": 84.5,
    "psoe": 14.6,
@@ -57,7 +57,7 @@
   {
    "casa": "Manifold (dinero ficticio)",
    "mercado": "Próximo presidente del Gobierno",
-   "fecha": "2026-11-16",
+   "fecha": "2026-11-17",
    "tipo": "prob",
    "pp": 83.7,
    "psoe": 14.2,
@@ -68,6 +68,13 @@
  "historial": [
   {
    "fecha": "2026-11-16",
+   "gan_pp": 84.9,
+   "gan_psoe": 19.9,
+   "gob_pp": 84.1,
+   "gob_psoe": 14.4
+  },
+  {
+   "fecha": "2026-11-17",
    "gan_pp": 84.9,
    "gan_psoe": 19.9,
    "gob_pp": 84.1,
