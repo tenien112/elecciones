@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-17T00:01:40+01:00",
+ "actualizado": "2026-11-17T00:11:52+01:00",
  "nota": "",
  "ganar": [
   {
@@ -50,7 +50,7 @@
    "fecha": "2026-11-17",
    "tipo": "prob",
    "pp": 84.5,
-   "psoe": 14.6,
+   "psoe": 14.3,
    "vox": 1.1,
    "url": "https://polymarket.com/event/next-prime-minister-of-spain-20260625005215443"
   },
@@ -78,7 +78,7 @@
    "gan_pp": 84.9,
    "gan_psoe": 19.9,
    "gob_pp": 84.1,
-   "gob_psoe": 14.4
+   "gob_psoe": 14.2
   }
  ]
 }
