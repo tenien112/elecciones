@@ -51,8 +51,14 @@ button.sec{background:var(--card2);color:var(--txt);border:1px solid var(--borde
 svg text{fill:var(--suave);font-size:10px}
 footer{margin-top:28px;text-align:center;color:var(--suave);font-size:12px}
 .tabs{display:flex;gap:8px;margin:16px 0 4px}
-.tabs button{flex:1;background:var(--card2);color:var(--txt);border:1px solid var(--borde)}
+.tabs button{flex:1;padding:14px 6px;font-size:14px;background:var(--card2);color:var(--txt);border:1px solid var(--borde)}
 .tabs button.on{background:var(--oro);color:#1B1B1B;border-color:var(--oro)}
+.reg{font-size:14px}.reg .cab{margin-bottom:6px}
+.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 8px;margin:4px 0 8px}
+.rg span{white-space:nowrap}.up{color:#7CDB8A;font-size:12px}.dn{color:#ff7a7a;font-size:12px}
+.etq{font-size:12px;color:var(--suave);font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.tu{background:var(--oro);color:#1B1B1B;border-radius:8px;padding:2px 7px;font-size:12px;font-weight:800}
+.au{background:var(--card2);color:var(--suave);border-radius:8px;padding:2px 7px;font-size:12px}
 .tabs.peq button{padding:10px 8px;font-size:13px}
 #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--oro);color:#1B1B1B;font-weight:800;
   padding:12px 16px;border-radius:14px;display:none;z-index:9;max-width:90vw;text-align:center}
@@ -71,6 +77,17 @@ footer{margin-top:28px;text-align:center;color:var(--suave);font-size:12px}
 <div class="tabs">
   <button id="tEnc" class="on" onclick="vista('enc')">ENCUESTAS</button>
   <button id="tApu" onclick="vista('apu')">APUESTAS</button>
+  <button id="tHis" onclick="vista('his')">HISTORIAL</button>
+</div>
+
+<div id="vHis" style="display:none">
+  <div class="sub" style="margin:6px 0 4px">Cada vez que pulsas ACTUALIZAR se guarda aquí (y también los cambios que encuentra solo).</div>
+  <div class="titulo">Encuestas · media</div>
+  <div class="card" id="hisEnc"></div>
+  <div class="titulo">Apuestas · quién forma gobierno</div>
+  <div class="card" id="hisGob"></div>
+  <div class="titulo">Registro</div>
+  <div id="hisLista"></div>
 </div>
 
 <div id="vApu" style="display:none">
@@ -196,6 +213,7 @@ async function actualizarTodo(){
       const d=await leerGit("datos.json",llave),a=await leerGit("apuestas.json",llave);
       if(d.actualizado!==prevE&&a.actualizado!==prevA){
         store("elec_act",d.actualizado);pinta(d);APU=a;pintaApu(a);
+        try{pintaReg(await leerGit("registro.json",llave))}catch(e){}
         return fin("Encuestas y apuestas actualizadas");
       }
     }catch(e){}
@@ -208,8 +226,9 @@ const APU_P=[["pp","PP · Feijóo","PP"],["psoe","PSOE · Sánchez","PSOE"],["vo
 let APU=null,apuSub=store("elec_apusub")||"gobierno";
 function prob(x,k){const v=x[k];if(typeof v!=="number")return null;return x.tipo==="prob"?v:Math.round(1000/v)/10}
 function vista(v){
-  $("vEnc").style.display=v==="enc"?"":"none";$("vApu").style.display=v==="apu"?"":"none";
-  $("tEnc").classList.toggle("on",v==="enc");$("tApu").classList.toggle("on",v==="apu");
+  $("vEnc").style.display=v==="enc"?"":"none";$("vApu").style.display=v==="apu"?"":"none";$("vHis").style.display=v==="his"?"":"none";
+  $("tEnc").classList.toggle("on",v==="enc");$("tApu").classList.toggle("on",v==="apu");$("tHis").classList.toggle("on",v==="his");
+  if(v==="his")cargarReg();
   store("elec_vista",v);if(v==="apu"&&!APU)cargarApu(false);
 }
 function subApu(s){apuSub=s;store("elec_apusub",s);
@@ -246,11 +265,48 @@ async function cargarApu(aviso){
 }
 cuentaAtras();cargar(false);cargarApu(false);subApu(apuSub);
 if(store("elec_vista")==="apu")vista("apu");
+if(store("elec_vista")==="his")vista("his");
 document.addEventListener("visibilitychange",()=>{if(!document.hidden){cuentaAtras();cargar(false);cargarApu(false)}});
 
+// ---------- HISTORIAL (registro de cada actualización) ----------
+function num(v){return v==null?"–":String(v).replace(".",",")}
+function dif(a,b){if(a==null||b==null)return"";const d=Math.round((a-b)*10)/10;if(!d)return"";
+  return `<span class="${d>0?"up":"dn"}">${d>0?"▲":"▼"}${num(Math.abs(d))}</span>`}
+function grafico(R,sec,claves,mn,mx,marcas){
+  if(R.length<2)return '<small style="color:var(--suave)">El gráfico aparecerá a partir de la segunda actualización.</small>';
+  const W=340,Hh=170,pl=30,pr=8,pt=8,pb=20;
+  const X=i=>pl+(W-pl-pr)*i/(R.length-1),Y=v=>pt+(Hh-pt-pb)*(1-(v-mn)/(mx-mn));
+  let g=`<svg viewBox="0 0 ${W} ${Hh}" width="100%">`;
+  marcas.forEach(v=>g+=`<line x1="${pl}" x2="${W-pr}" y1="${Y(v)}" y2="${Y(v)}" stroke="#ffffff14"/><text x="2" y="${Y(v)+3}">${v}%</text>`);
+  claves.forEach(k=>{const pts=R.map((h,i)=>h[sec]&&h[sec][k]!=null?`${X(i)},${Y(h[sec][k])}`:null).filter(Boolean).join(" ");
+    g+=`<polyline points="${pts}" fill="none" stroke="var(--${k})" stroke-width="2.5" stroke-linejoin="round"/>`;
+    R.forEach((h,i)=>{if(h[sec]&&h[sec][k]!=null)g+=`<circle cx="${X(i)}" cy="${Y(h[sec][k])}" r="2.5" fill="var(--${k})"/>`})});
+  g+=`<text x="${pl}" y="${Hh-4}">${fecha(R[0].t)}</text><text x="${W-pr}" y="${Hh-4}" text-anchor="end">${fecha(R[R.length-1].t)}</text></svg>`;
+  return g;
+}
+function pintaReg(d){
+  const R=(d&&d.registro)||[];
+  $("hisEnc").innerHTML=grafico(R,"enc",["pp","psoe","vox","fa"],0,40,[10,20,30,40]);
+  $("hisGob").innerHTML=grafico(R,"gob",["pp","psoe"],0,100,[25,50,75,100]);
+  $("hisLista").innerHTML=R.map((h,i)=>{const p=R[i-1]||{};const e=h.enc||{},pe=p.enc||{},g=h.gob||{},pg=p.gob||{};
+    return `<div class="card reg"><div class="cab"><b>${hora(h.t)}</b>${h.o==="tu"?'<span class="tu">PULSASTE</span>':'<span class="au">automático</span>'}</div>
+      <div class="etq">Encuestas</div><div class="rg">
+        <span style="color:var(--pp)"><b>PP</b> ${num(e.pp)}% ${dif(e.pp,pe.pp)}</span>
+        <span style="color:var(--psoe)"><b>PSOE</b> ${num(e.psoe)}% ${dif(e.psoe,pe.psoe)}</span>
+        <span style="color:var(--vox)"><b>Vox</b> ${num(e.vox)}% ${dif(e.vox,pe.vox)}</span></div>
+      <div class="etq">Apuestas · gobierno</div><div class="rg">
+        <span style="color:var(--pp)"><b>Feijóo</b> ${num(g.pp)}% ${dif(g.pp,pg.pp)}</span>
+        <span style="color:var(--psoe)"><b>Sánchez</b> ${num(g.psoe)}% ${dif(g.psoe,pg.psoe)}</span>
+        <span style="color:var(--vox)"><b>Abascal</b> ${num(g.vox)}% ${dif(g.vox,pg.vox)}</span></div></div>`}).reverse().join("")
+    ||'<div class="card">Todavía no hay nada guardado.</div>';
+}
+async function cargarReg(){
+  try{pintaReg(await (await fetch("../bolsa/elecciones/registro.json?t="+Date.now(),{cache:"no-store"})).json())}
+  catch(e){$("hisLista").innerHTML='<div class="card">Todavía no hay nada guardado.</div>'}
+}
 // ---------- Aviso de actualización ----------
 // Hay que cambiar APP_VERSION en cada actualización.
-const APP_VERSION="2026.11.16-4";
+const APP_VERSION="2026.11.16-5";
 (()=>{const prev=store("elec_version");store("elec_version",APP_VERSION);
   if(prev!==null&&prev!==APP_VERSION)toast("RADAR ELECCIONES-LORENZITO se ha actualizado",4000)})();
 if("serviceWorker" in navigator){
