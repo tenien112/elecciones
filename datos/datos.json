@@ -1,0 +1,226 @@
+{
+ "actualizado": "2026-11-16T23:53:03+01:00",
+ "nota": "",
+ "encuestas": [
+  {
+   "instituto": "40dB",
+   "medio": "El País / Cadena SER",
+   "fecha": "2026-11-16",
+   "pp": {
+    "pct": 31.5,
+    "esc": "125-136"
+   },
+   "psoe": {
+    "pct": 30.3,
+    "esc": "118-124"
+   },
+   "vox": {
+    "pct": 18.0,
+    "esc": "57-64"
+   },
+   "fa": {
+    "pct": 4.2,
+    "esc": "5-8"
+   },
+   "podemos": {
+    "pct": 1.1,
+    "esc": "0-1"
+   },
+   "ppvox": "182-200",
+   "url": "https://elpais.com/espana/elecciones-generales/2026-11-16/el-psoe-remonta-pero-no-altera-la-mayoria-de-la-derecha.html"
+  },
+  {
+   "instituto": "EM-Analytics",
+   "medio": "Electomanía",
+   "fecha": "2026-11-16",
+   "pp": {
+    "pct": 30.5,
+    "esc": "124"
+   },
+   "psoe": {
+    "pct": 26.9,
+    "esc": "113"
+   },
+   "vox": {
+    "pct": 18.9,
+    "esc": "65"
+   },
+   "fa": {
+    "pct": 6.1,
+    "esc": "12"
+   },
+   "podemos": {
+    "pct": 1.2,
+    "esc": "2"
+   },
+   "ppvox": "189",
+   "url": "https://electomania.es/tracking-electopanel-16-nov-el-psoe-avanza-con-la-suma-de-pp-y-vox-en-189-escanos/"
+  },
+  {
+   "instituto": "SW Demoscopia",
+   "medio": "La Séptima",
+   "fecha": "2026-11-16",
+   "pp": {
+    "pct": 28.8,
+    "esc": "114-121"
+   },
+   "psoe": {
+    "pct": 31.8,
+    "esc": "128-134"
+   },
+   "vox": {
+    "pct": 16.8,
+    "esc": "53-61"
+   },
+   "fa": {
+    "pct": 7.4,
+    "esc": "10-13"
+   },
+   "podemos": {
+    "pct": 1.7,
+    "esc": "0-1"
+   },
+   "ppvox": "167-182",
+   "url": "https://media.licdn.com/dms/document/media/v2/D4D1FAQGaqy1LWWU6ig/feedshare-document-sanitized-pdf/B4DaHmH8tOHIBA-/0/1794862207466?e=1795467600&v=beta&t=ja_hBbNUySAFAKb5NmWTOmoROtgqIJszn8h2xG_74Es"
+  },
+  {
+   "instituto": "SocioMétrica",
+   "medio": "El Español",
+   "fecha": "2026-11-15",
+   "pp": {
+    "pct": 32.1,
+    "esc": "132"
+   },
+   "psoe": {
+    "pct": 27.8,
+    "esc": "110"
+   },
+   "vox": {
+    "pct": 19.1,
+    "esc": "67"
+   },
+   "fa": {
+    "pct": 5.1,
+    "esc": "6"
+   },
+   "podemos": {
+    "pct": 1.2,
+    "esc": "0"
+   },
+   "ppvox": "199",
+   "url": "https://www.elespanol.com/espana/politica/20261115/sondeo-semanas-psoe-recorta-medio-punto-pp-derecha-mantiene-escanos-frente-sanchez-socios/1003744459132_0.html"
+  }
+ ],
+ "historial": [
+  {
+   "fecha": "2026-11-16",
+   "pp": 30.7,
+   "psoe": 29.2,
+   "vox": 18.2,
+   "fa": 5.7
+  }
+ ],
+ "politico": {
+  "fecha": "2026-11-15",
+  "media": {
+   "pp": 29.8,
+   "psoe": 29.6,
+   "vox": 17.9,
+   "fa": 5.4,
+   "podemos": 1.2
+  },
+  "encuestas": [
+   {
+    "firma": "40dB",
+    "fecha": "2026-11-15",
+    "muestra": 2500,
+    "pp": 31.5,
+    "psoe": 30.3,
+    "vox": 18,
+    "fa": 3.7,
+    "podemos": 1.1
+   },
+   {
+    "firma": "SW Demoscopia",
+    "fecha": "2026-11-13",
+    "muestra": 8000,
+    "pp": 28.3,
+    "psoe": 31.7,
+    "vox": 17.1,
+    "fa": 7.3,
+    "podemos": 1.7
+   },
+   {
+    "firma": "SW Demoscopia",
+    "fecha": "2026-11-12",
+    "muestra": 7500,
+    "pp": 28.5,
+    "psoe": 31.6,
+    "vox": 17.1,
+    "fa": 7.3,
+    "podemos": 1.7
+   },
+   {
+    "firma": "Sigma Dos",
+    "fecha": "2026-11-12",
+    "muestra": 4606,
+    "pp": 31,
+    "psoe": 25.4,
+    "vox": 19.7,
+    "fa": 7.3,
+    "podemos": 1.4
+   },
+   {
+    "firma": "Sigma Dos",
+    "fecha": "2026-11-11",
+    "muestra": 3120,
+    "pp": 30.8,
+    "psoe": 25.3,
+    "vox": 19.6,
+    "fa": 7.3,
+    "podemos": 1.4
+   },
+   {
+    "firma": "SW Demoscopia",
+    "fecha": "2026-11-09",
+    "muestra": 6000,
+    "pp": 28.3,
+    "psoe": 31.2,
+    "vox": 17.5,
+    "fa": 7.5,
+    "podemos": 1.7
+   },
+   {
+    "firma": "SocioMétrica",
+    "fecha": "2026-11-08",
+    "muestra": 5460,
+    "pp": 32,
+    "psoe": 27.7,
+    "vox": 18.9,
+    "fa": 4.4,
+    "podemos": 1.2
+   },
+   {
+    "firma": "SW Demoscopia",
+    "fecha": "2026-11-08",
+    "muestra": 5500,
+    "pp": 28.3,
+    "psoe": 31.1,
+    "vox": 17.3,
+    "fa": 7.6,
+    "podemos": 1.7
+   },
+   {
+    "firma": "Sigma Dos",
+    "fecha": "2026-11-06",
+    "muestra": 4172,
+    "pp": 31,
+    "psoe": 25.2,
+    "vox": 19.4,
+    "fa": 8.1,
+    "podemos": 1.6
+   }
+  ],
+  "url": "https://www.politico.eu/europe-poll-of-polls/national-parliament-voting-intention/spain/"
+ }
+}

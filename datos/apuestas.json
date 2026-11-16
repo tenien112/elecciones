@@ -1,0 +1,77 @@
+{
+ "actualizado": "2026-11-16T23:53:03+01:00",
+ "nota": "",
+ "ganar": [
+  {
+   "casa": "Polymarket",
+   "mercado": "Partido con más escaños",
+   "fecha": "2026-11-16",
+   "tipo": "prob",
+   "pp": 75.5,
+   "psoe": 24.0,
+   "vox": 0.1,
+   "url": "https://polymarket.com/event/spain-general-election-winner"
+  },
+  {
+   "casa": "DAZN Bet",
+   "mercado": "Partido con más votos",
+   "fecha": "2026-11-14",
+   "tipo": "cuota",
+   "pp": 1.1,
+   "psoe": 5.0,
+   "vox": null,
+   "url": "https://betbrothers.es/noticias/apuestas-elecciones-generales-espana-2026/"
+  },
+  {
+   "casa": "Retabet",
+   "mercado": "Partido con más escaños",
+   "fecha": "2026-11-14",
+   "tipo": "cuota",
+   "pp": 1.21,
+   "psoe": 3.83,
+   "vox": 31.0,
+   "url": "https://betbrothers.es/noticias/apuestas-elecciones-generales-espana-2026/"
+  },
+  {
+   "casa": "Manifold (dinero ficticio)",
+   "mercado": "Partido ganador",
+   "fecha": "2026-11-16",
+   "tipo": "prob",
+   "pp": 90.5,
+   "psoe": 9.3,
+   "vox": 0.1,
+   "url": "https://manifold.markets/JoseReyesTolentino/which-party-will-win-the-2026-spani"
+  }
+ ],
+ "gobierno": [
+  {
+   "casa": "Polymarket",
+   "mercado": "Próximo presidente del Gobierno",
+   "fecha": "2026-11-16",
+   "tipo": "prob",
+   "pp": 84.5,
+   "psoe": 14.6,
+   "vox": 1.1,
+   "url": "https://polymarket.com/event/next-prime-minister-of-spain-20260625005215443"
+  },
+  {
+   "casa": "Manifold (dinero ficticio)",
+   "mercado": "Próximo presidente del Gobierno",
+   "fecha": "2026-11-16",
+   "tipo": "prob",
+   "pp": 83.7,
+   "psoe": 14.2,
+   "vox": null,
+   "url": "https://manifold.markets/Jack1/prime-minister-of-spain-after-novem"
+  }
+ ],
+ "historial": [
+  {
+   "fecha": "2026-11-16",
+   "gan_pp": 84.9,
+   "gan_psoe": 19.9,
+   "gob_pp": 84.1,
+   "gob_psoe": 14.4
+  }
+ ]
+}

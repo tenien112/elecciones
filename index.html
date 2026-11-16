@@ -193,7 +193,7 @@ async function cargar(boton){
   const b=$("btnAct");
   if(boton){b.innerHTML='<span class="rueda"></span>ACTUALIZANDO';b.disabled=true}
   try{
-    const r=await fetch("../bolsa/elecciones/datos.json?t="+Date.now(),{cache:"no-store"});
+    const r=await fetch("datos/datos.json?t="+Date.now(),{cache:"no-store"});
     const d=await r.json();
     const prev=store("elec_act");store("elec_act",d.actualizado);
     pinta(d);
@@ -203,40 +203,20 @@ async function cargar(boton){
   if(boton){b.textContent="ACTUALIZAR";b.disabled=false}
 }
 // ---------- ACTUALIZAR TODO (encuestas + apuestas) ----------
-// Lanza en GitHub el robot que busca encuestas (Wikipedia) y apuestas (Polymarket),
-// usa la misma llave de GitHub que BOLSA-LORENZITO y espera a que lleguen los datos nuevos.
-const REPO_E="tenien112/bolsa";
-async function leerGit(f,llave){
-  const r=await fetch(`https://api.github.com/repos/${REPO_E}/contents/elecciones/${f}?t=${Date.now()}`,
-    {headers:{Authorization:"Bearer "+llave,Accept:"application/vnd.github.raw+json"},cache:"no-store"});
-  if(!r.ok)throw new Error(r.status);return r.json();
-}
+// El robot de esta app (repo tenien112/elecciones) busca encuestas y apuestas él solo cada 30 min.
+// El botón solo recarga lo último que ha guardado: no necesita ninguna llave.
 async function actualizarTodo(){
   const b=$("btnAct");b.innerHTML='<span class="rueda"></span>ACTUALIZANDO';b.disabled=true;
-  const fin=t=>{b.textContent="ACTUALIZAR";b.disabled=false;if(t)toast(t,5000)};
-  const llave=store("bolsa_llave");
-  if(!llave){await cargar(false);await cargarApu(true);return fin("Para buscar datos nuevos falta la llave de GitHub: guárdala en BOLSA-LORENZITO (⚙️ Llave)")}
-  let prevE=null,prevA=null;
-  try{prevE=(await leerGit("datos.json",llave)).actualizado;prevA=(await leerGit("apuestas.json",llave)).actualizado}catch(e){}
+  const prev=store("elec_act");
   try{
-    const r=await fetch(`https://api.github.com/repos/${REPO_E}/actions/workflows/elecciones.yml/dispatches`,{method:"POST",
-      headers:{Authorization:"Bearer "+llave,Accept:"application/vnd.github+json","Content-Type":"application/json"},body:JSON.stringify({ref:"main"})});
-    if(!r.ok)throw new Error(r.status);
-  }catch(e){await cargar(false);await cargarApu(false);return fin("No se ha podido lanzar la búsqueda ("+e.message+"). ¿Llave caducada?")}
-  const t0=Date.now();
-  while(Date.now()-t0<240000){
-    await new Promise(r=>setTimeout(r,8000));
-    try{
-      const d=await leerGit("datos.json",llave),a=await leerGit("apuestas.json",llave);
-      if(d.actualizado!==prevE&&a.actualizado!==prevA){
-        store("elec_act",d.actualizado);pinta(d);APU=a;pintaApu(a);
-        try{pintaReg(await leerGit("registro.json",llave))}catch(e){}
-        return fin("Encuestas y apuestas actualizadas");
-      }
-    }catch(e){}
-  }
-  await cargar(false);await cargarApu(false);
-  fin("Está tardando más de lo normal; vuelve a darle en un par de minutos");
+    const d=await (await fetch("datos/datos.json?t="+Date.now(),{cache:"no-store"})).json();
+    store("elec_act",d.actualizado);pinta(d);
+    await cargarApu(true);await cargarReg();
+    const h=new Date(d.actualizado);
+    const hora=isNaN(h)?d.actualizado:h.toLocaleString("es-ES",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"});
+    toast((prev===d.actualizado?"Ya tienes lo último":"Datos nuevos")+" · "+hora+" (se renuevan solos cada 30 min)",4500);
+  }catch(e){toast("Sin conexión: te enseño lo último guardado",4000)}
+  b.textContent="ACTUALIZAR";b.disabled=false;
 }
 // ---------- APUESTAS ----------
 const APU_P=[["pp","PP · Feijóo","PP"],["psoe","PSOE · Sánchez","PSOE"],["vox","Vox · Abascal","Vox"]];
@@ -277,7 +257,7 @@ function pintaApu(d){
   $("apuEvol").innerHTML=g;
 }
 async function cargarApu(aviso){
-  try{const d=await (await fetch("../bolsa/elecciones/apuestas.json?t="+Date.now(),{cache:"no-store"})).json();APU=d;pintaApu(d);return d}
+  try{const d=await (await fetch("datos/apuestas.json?t="+Date.now(),{cache:"no-store"})).json();APU=d;pintaApu(d);return d}
   catch(e){if(aviso)toast("No se han podido cargar las apuestas");return null}
 }
 cuentaAtras();cargar(false);cargarApu(false);subApu(apuSub);
@@ -318,12 +298,12 @@ function pintaReg(d){
     ||'<div class="card">Todavía no hay nada guardado.</div>';
 }
 async function cargarReg(){
-  try{pintaReg(await (await fetch("../bolsa/elecciones/registro.json?t="+Date.now(),{cache:"no-store"})).json())}
+  try{pintaReg(await (await fetch("datos/registro.json?t="+Date.now(),{cache:"no-store"})).json())}
   catch(e){$("hisLista").innerHTML='<div class="card">Todavía no hay nada guardado.</div>'}
 }
 // ---------- Aviso de actualización ----------
 // Hay que cambiar APP_VERSION en cada actualización.
-const APP_VERSION="2026.11.17-1";
+const APP_VERSION="2026.11.17-2";
 (()=>{const prev=store("elec_version");store("elec_version",APP_VERSION);
   if(prev!==null&&prev!==APP_VERSION)toast("RADAR ELECCIONES-LORENZITO se ha actualizado",4000)})();
 if("serviceWorker" in navigator){
