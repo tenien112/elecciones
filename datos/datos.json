@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-17T15:19:35+01:00",
+ "actualizado": "2026-11-17T23:38:19+01:00",
  "nota": "",
  "encuestas": [
   {
@@ -30,85 +30,85 @@
    "url": "https://elpais.com/espana/elecciones-generales/2026-11-17/vox-se-frena-y-cede-terreno-al-pp.html"
   },
   {
-   "instituto": "Sondaxe",
-   "medio": "La Voz de Galicia",
+   "instituto": "Sigma Dos",
+   "medio": "El Mundo",
    "fecha": "2026-11-17",
    "pp": {
-    "pct": 29.7,
-    "esc": "125"
+    "pct": 30.7,
+    "esc": "123-129"
    },
    "psoe": {
-    "pct": 26.7,
-    "esc": "112"
+    "pct": 26.4,
+    "esc": "108-114"
    },
    "vox": {
-    "pct": 18.0,
-    "esc": "66"
+    "pct": 19.8,
+    "esc": "62-67"
    },
    "fa": {
-    "pct": 6.0,
-    "esc": "9"
+    "pct": 5.3,
+    "esc": "7-9"
    },
    "podemos": {
-    "pct": 2.1,
-    "esc": "2"
+    "pct": 1.2,
+    "esc": "0"
    },
-   "ppvox": "191",
-   "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/16/bloque-derecha-mantiene-distancia-sobre-absoluta-pese-subida-psoe/00031794858982187381508.htm"
+   "ppvox": "185-196",
+   "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/17/6afca438e9cf4a7d7a8b459c.html"
   },
   {
    "instituto": "EM-Analytics",
    "medio": "Electomanía",
-   "fecha": "2026-11-16",
+   "fecha": "2026-11-17",
    "pp": {
-    "pct": 30.5,
-    "esc": "124"
+    "pct": 30.8,
+    "esc": "127"
    },
    "psoe": {
-    "pct": 26.9,
-    "esc": "113"
+    "pct": 27.0,
+    "esc": "116"
    },
    "vox": {
-    "pct": 18.9,
-    "esc": "65"
+    "pct": 18.8,
+    "esc": "61"
    },
    "fa": {
     "pct": 6.1,
     "esc": "12"
    },
    "podemos": {
-    "pct": 1.2,
+    "pct": 1.3,
     "esc": "2"
    },
-   "ppvox": "189",
-   "url": "https://electomania.es/tracking-electopanel-16-nov-el-psoe-avanza-con-la-suma-de-pp-y-vox-en-189-escanos/"
+   "ppvox": "188",
+   "url": "https://electomania.es/tracking-electopanel-17-nov-el-pp-sube-y-junto-al-psoe-arrebatan-varios-escanos-a-un-vox-en-torno-al-19/"
   },
   {
    "instituto": "SW Demoscopia",
    "medio": "La Séptima",
-   "fecha": "2026-11-16",
+   "fecha": "2026-11-17",
    "pp": {
-    "pct": 28.8,
-    "esc": "114-121"
+    "pct": 29.1,
+    "esc": "116-123"
    },
    "psoe": {
-    "pct": 31.8,
-    "esc": "128-134"
+    "pct": 31.9,
+    "esc": "129-134"
    },
    "vox": {
-    "pct": 16.8,
-    "esc": "53-61"
+    "pct": 16.5,
+    "esc": "51-59"
    },
    "fa": {
-    "pct": 7.4,
+    "pct": 7.3,
     "esc": "10-13"
    },
    "podemos": {
-    "pct": 1.7,
-    "esc": "0-1"
+    "pct": null,
+    "esc": "0"
    },
    "ppvox": "167-182",
-   "url": "https://media.licdn.com/dms/document/media/v2/D4D1FAQGaqy1LWWU6ig/feedshare-document-sanitized-pdf/B4DaHmH8tOHIBA-/0/1794862207466?e=1795467600&v=beta&t=ja_hBbNUySAFAKb5NmWTOmoROtgqIJszn8h2xG_74Es"
+   "url": "https://x.com/la_septima_tv/status/2122787030937612582"
   }
  ],
  "historial": [
@@ -121,20 +121,20 @@
   },
   {
    "fecha": "2026-11-17",
-   "pp": 30.2,
+   "pp": 30.6,
    "psoe": 29.0,
-   "vox": 17.8,
-   "fa": 5.9
+   "vox": 18.1,
+   "fa": 5.7
   }
  ],
  "politico": {
   "fecha": "2026-11-15",
   "media": {
    "pp": 29.8,
-   "psoe": 29.6,
-   "vox": 17.9,
-   "fa": 5.4,
-   "podemos": 1.2
+   "psoe": 29.9,
+   "vox": 17.8,
+   "fa": 5.9,
+   "podemos": 1.6
   },
   "encuestas": [
    {
@@ -148,6 +148,66 @@
     "podemos": 1.1
    },
    {
+    "firma": "SocioMetrica",
+    "fecha": "2026-11-15",
+    "muestra": 5923,
+    "pp": 31.6,
+    "psoe": 27.8,
+    "vox": 19.1,
+    "fa": 4.4,
+    "podemos": null
+   },
+   {
+    "firma": "SW Demoscopia",
+    "fecha": "2026-11-15",
+    "muestra": 9000,
+    "pp": 28.6,
+    "psoe": 31.8,
+    "vox": 16.8,
+    "fa": 7.4,
+    "podemos": 1.7
+   },
+   {
+    "firma": "Sigma Dos",
+    "fecha": "2026-11-14",
+    "muestra": 750,
+    "pp": 30.8,
+    "psoe": 26.1,
+    "vox": 19.8,
+    "fa": 6.7,
+    "podemos": 1.4
+   },
+   {
+    "firma": "Sondaxe",
+    "fecha": "2026-11-14",
+    "muestra": 1000,
+    "pp": 30.2,
+    "psoe": 26.7,
+    "vox": 17.6,
+    "fa": 6.5,
+    "podemos": 2.2
+   },
+   {
+    "firma": "40dB",
+    "fecha": "2026-11-14",
+    "muestra": 2000,
+    "pp": 31.4,
+    "psoe": 29.9,
+    "vox": 18.3,
+    "fa": 3.7,
+    "podemos": 1.3
+   },
+   {
+    "firma": "SW Demoscopia",
+    "fecha": "2026-11-14",
+    "muestra": 8500,
+    "pp": 28.4,
+    "psoe": 31.7,
+    "vox": 16.9,
+    "fa": 7.3,
+    "podemos": 1.7
+   },
+   {
     "firma": "SW Demoscopia",
     "fecha": "2026-11-13",
     "muestra": 8000,
@@ -156,6 +216,36 @@
     "vox": 17.1,
     "fa": 7.3,
     "podemos": 1.7
+   },
+   {
+    "firma": "IMOP",
+    "fecha": "2026-11-13",
+    "muestra": 1000,
+    "pp": 31.5,
+    "psoe": 26.9,
+    "vox": 19,
+    "fa": 6.9,
+    "podemos": 0.9
+   },
+   {
+    "firma": "40dB",
+    "fecha": "2026-11-13",
+    "muestra": 1500,
+    "pp": 31.1,
+    "psoe": 29.8,
+    "vox": 18.5,
+    "fa": 3.5,
+    "podemos": 1.3
+   },
+   {
+    "firma": "Sondaxe",
+    "fecha": "2026-11-13",
+    "muestra": 1000,
+    "pp": 30.8,
+    "psoe": 26.4,
+    "vox": 18.2,
+    "fa": 6.7,
+    "podemos": 2.2
    },
    {
     "firma": "SW Demoscopia",
@@ -178,6 +268,16 @@
     "podemos": 1.4
    },
    {
+    "firma": "40dB",
+    "fecha": "2026-11-12",
+    "muestra": 1000,
+    "pp": 31.5,
+    "psoe": 29.4,
+    "vox": 18.8,
+    "fa": 3.5,
+    "podemos": 1.3
+   },
+   {
     "firma": "Sigma Dos",
     "fecha": "2026-11-11",
     "muestra": 3120,
@@ -186,6 +286,26 @@
     "vox": 19.6,
     "fa": 7.3,
     "podemos": 1.4
+   },
+   {
+    "firma": "SW Demoscopia",
+    "fecha": "2026-11-11",
+    "muestra": 7000,
+    "pp": 28.4,
+    "psoe": 31.5,
+    "vox": 17.2,
+    "fa": 7.3,
+    "podemos": 1.7
+   },
+   {
+    "firma": "SW Demoscopia",
+    "fecha": "2026-11-10",
+    "muestra": 6500,
+    "pp": 28.1,
+    "psoe": 31.4,
+    "vox": 17.5,
+    "fa": 7.4,
+    "podemos": 1.7
    },
    {
     "firma": "SW Demoscopia",
@@ -218,6 +338,16 @@
     "podemos": 1.7
    },
    {
+    "firma": "SW Demoscopia",
+    "fecha": "2026-11-07",
+    "muestra": 5000,
+    "pp": 28.7,
+    "psoe": 31,
+    "vox": 17.3,
+    "fa": 7.6,
+    "podemos": 1.7
+   },
+   {
     "firma": "Sigma Dos",
     "fecha": "2026-11-06",
     "muestra": 4172,
@@ -226,6 +356,46 @@
     "vox": 19.4,
     "fa": 8.1,
     "podemos": 1.6
+   },
+   {
+    "firma": "SW Demoscopia",
+    "fecha": "2026-11-06",
+    "muestra": 4500,
+    "pp": 28.6,
+    "psoe": 30.8,
+    "vox": 17.2,
+    "fa": 7.7,
+    "podemos": 1.8
+   },
+   {
+    "firma": "IMOP",
+    "fecha": "2026-11-06",
+    "muestra": 1000,
+    "pp": 29.8,
+    "psoe": 25.9,
+    "vox": 19.9,
+    "fa": 8.1,
+    "podemos": 1.2
+   },
+   {
+    "firma": "DYM",
+    "fecha": "2026-11-06",
+    "muestra": 1025,
+    "pp": 33.1,
+    "psoe": 27.3,
+    "vox": 18.6,
+    "fa": 5.6,
+    "podemos": 1.9
+   },
+   {
+    "firma": "SW Demoscopia",
+    "fecha": "2026-11-05",
+    "muestra": 4000,
+    "pp": 28.3,
+    "psoe": 31,
+    "vox": 17.2,
+    "fa": 7.6,
+    "podemos": 1.2
    }
   ],
   "url": "https://www.politico.eu/europe-poll-of-polls/national-parliament-voting-intention/spain/"
