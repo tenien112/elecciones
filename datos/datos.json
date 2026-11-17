@@ -1,22 +1,22 @@
 {
- "actualizado": "2026-11-17T06:03:26+01:00",
+ "actualizado": "2026-11-17T15:19:35+01:00",
  "nota": "",
  "encuestas": [
   {
    "instituto": "40dB",
    "medio": "El País / Cadena SER",
-   "fecha": "2026-11-16",
+   "fecha": "2026-11-17",
    "pp": {
-    "pct": 31.5,
-    "esc": "125-136"
+    "pct": 31.8,
+    "esc": "126-137"
    },
    "psoe": {
-    "pct": 30.3,
-    "esc": "118-124"
+    "pct": 30.6,
+    "esc": "118-126"
    },
    "vox": {
-    "pct": 18.0,
-    "esc": "57-64"
+    "pct": 17.5,
+    "esc": "55-62"
    },
    "fa": {
     "pct": 4.2,
@@ -26,8 +26,35 @@
     "pct": 1.1,
     "esc": "0-1"
    },
-   "ppvox": "182-200",
-   "url": "https://elpais.com/espana/elecciones-generales/2026-11-16/el-psoe-remonta-pero-no-altera-la-mayoria-de-la-derecha.html"
+   "ppvox": "181-199",
+   "url": "https://elpais.com/espana/elecciones-generales/2026-11-17/vox-se-frena-y-cede-terreno-al-pp.html"
+  },
+  {
+   "instituto": "Sondaxe",
+   "medio": "La Voz de Galicia",
+   "fecha": "2026-11-17",
+   "pp": {
+    "pct": 29.7,
+    "esc": "125"
+   },
+   "psoe": {
+    "pct": 26.7,
+    "esc": "112"
+   },
+   "vox": {
+    "pct": 18.0,
+    "esc": "66"
+   },
+   "fa": {
+    "pct": 6.0,
+    "esc": "9"
+   },
+   "podemos": {
+    "pct": 2.1,
+    "esc": "2"
+   },
+   "ppvox": "191",
+   "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/16/bloque-derecha-mantiene-distancia-sobre-absoluta-pese-subida-psoe/00031794858982187381508.htm"
   },
   {
    "instituto": "EM-Analytics",
@@ -82,33 +109,6 @@
    },
    "ppvox": "167-182",
    "url": "https://media.licdn.com/dms/document/media/v2/D4D1FAQGaqy1LWWU6ig/feedshare-document-sanitized-pdf/B4DaHmH8tOHIBA-/0/1794862207466?e=1795467600&v=beta&t=ja_hBbNUySAFAKb5NmWTOmoROtgqIJszn8h2xG_74Es"
-  },
-  {
-   "instituto": "SocioMétrica",
-   "medio": "El Español",
-   "fecha": "2026-11-15",
-   "pp": {
-    "pct": 32.1,
-    "esc": "132"
-   },
-   "psoe": {
-    "pct": 27.8,
-    "esc": "110"
-   },
-   "vox": {
-    "pct": 19.1,
-    "esc": "67"
-   },
-   "fa": {
-    "pct": 5.1,
-    "esc": "6"
-   },
-   "podemos": {
-    "pct": 1.2,
-    "esc": "0"
-   },
-   "ppvox": "199",
-   "url": "https://www.elespanol.com/espana/politica/20261115/sondeo-semanas-psoe-recorta-medio-punto-pp-derecha-mantiene-escanos-frente-sanchez-socios/1003744459132_0.html"
   }
  ],
  "historial": [
@@ -121,10 +121,10 @@
   },
   {
    "fecha": "2026-11-17",
-   "pp": 30.7,
-   "psoe": 29.2,
-   "vox": 18.2,
-   "fa": 5.7
+   "pp": 30.2,
+   "psoe": 29.0,
+   "vox": 17.8,
+   "fa": 5.9
   }
  ],
  "politico": {
