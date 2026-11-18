@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-17T23:38:19+01:00",
+ "actualizado": "2026-11-18T05:13:47+01:00",
  "nota": "",
  "encuestas": [
   {
@@ -125,18 +125,45 @@
    "psoe": 29.0,
    "vox": 18.1,
    "fa": 5.7
+  },
+  {
+   "fecha": "2026-11-18",
+   "pp": 30.6,
+   "psoe": 29.0,
+   "vox": 18.1,
+   "fa": 5.7
   }
  ],
  "politico": {
-  "fecha": "2026-11-15",
+  "fecha": "2026-11-16",
   "media": {
-   "pp": 29.8,
-   "psoe": 29.9,
-   "vox": 17.8,
-   "fa": 5.9,
-   "podemos": 1.6
+   "pp": 30.1,
+   "psoe": 29.4,
+   "vox": 18.1,
+   "fa": 5.8,
+   "podemos": 1.3
   },
   "encuestas": [
+   {
+    "firma": "Sigma Dos",
+    "fecha": "2026-11-16",
+    "muestra": 3759,
+    "pp": 30.7,
+    "psoe": 26.4,
+    "vox": 19.8,
+    "fa": 6.7,
+    "podemos": null
+   },
+   {
+    "firma": "40dB",
+    "fecha": "2026-11-16",
+    "muestra": 2000,
+    "pp": 31.8,
+    "psoe": 30.6,
+    "vox": 17.5,
+    "fa": 3.7,
+    "podemos": 1.1
+   },
    {
     "firma": "40dB",
     "fecha": "2026-11-15",
@@ -166,6 +193,16 @@
     "vox": 16.8,
     "fa": 7.4,
     "podemos": 1.7
+   },
+   {
+    "firma": "Sondaxe",
+    "fecha": "2026-11-15",
+    "muestra": 1000,
+    "pp": 29.7,
+    "psoe": 26.7,
+    "vox": 18,
+    "fa": 6,
+    "podemos": 2.1
    },
    {
     "firma": "Sigma Dos",
@@ -386,16 +423,6 @@
     "vox": 18.6,
     "fa": 5.6,
     "podemos": 1.9
-   },
-   {
-    "firma": "SW Demoscopia",
-    "fecha": "2026-11-05",
-    "muestra": 4000,
-    "pp": 28.3,
-    "psoe": 31,
-    "vox": 17.2,
-    "fa": 7.6,
-    "podemos": 1.2
    }
   ],
   "url": "https://www.politico.eu/europe-poll-of-polls/national-parliament-voting-intention/spain/"

@@ -1,11 +1,11 @@
 {
- "actualizado": "2026-11-17T23:38:19+01:00",
+ "actualizado": "2026-11-18T05:13:47+01:00",
  "nota": "",
  "ganar": [
   {
    "casa": "Polymarket",
    "mercado": "Partido con más escaños",
-   "fecha": "2026-11-17",
+   "fecha": "2026-11-18",
    "tipo": "prob",
    "pp": 75.5,
    "psoe": 24.5,
@@ -35,7 +35,7 @@
   {
    "casa": "Manifold (dinero ficticio)",
    "mercado": "Partido ganador",
-   "fecha": "2026-11-17",
+   "fecha": "2026-11-18",
    "tipo": "prob",
    "pp": 87.0,
    "psoe": 12.8,
@@ -47,17 +47,17 @@
   {
    "casa": "Polymarket",
    "mercado": "Próximo presidente del Gobierno",
-   "fecha": "2026-11-17",
+   "fecha": "2026-11-18",
    "tipo": "prob",
    "pp": 85.5,
-   "psoe": 12.8,
-   "vox": 1.8,
+   "psoe": 14.1,
+   "vox": 1.5,
    "url": "https://polymarket.com/event/next-prime-minister-of-spain-20260625005215443"
   },
   {
    "casa": "Manifold (dinero ficticio)",
    "mercado": "Próximo presidente del Gobierno",
-   "fecha": "2026-11-17",
+   "fecha": "2026-11-18",
    "tipo": "prob",
    "pp": 83.7,
    "psoe": 14.2,
@@ -79,6 +79,13 @@
    "gan_psoe": 20.9,
    "gob_pp": 84.6,
    "gob_psoe": 13.5
+  },
+  {
+   "fecha": "2026-11-18",
+   "gan_pp": 84.0,
+   "gan_psoe": 20.9,
+   "gob_pp": 84.6,
+   "gob_psoe": 14.1
   }
  ]
 }
