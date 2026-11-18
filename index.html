@@ -61,7 +61,7 @@ footer{margin-top:28px;text-align:center;color:var(--suave);font-size:12px}
 .tabs button.on{background:var(--oro);color:#1B1B1B;border-color:var(--oro)}
 .reg{font-size:14px}.reg .cab{margin-bottom:6px}
 .rg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 8px;margin:4px 0 8px}
-.rg span{white-space:nowrap}.up{color:#7CDB8A;font-size:12px}.dn{color:#ff7a7a;font-size:12px}
+.rg span{white-space:nowrap}.rc{margin:4px 0 8px}.rc div{display:flex;gap:8px;align-items:baseline;padding:2px 0}.rc div>span:first-child{flex:1}.up{color:#7CDB8A;font-size:12px}.dn{color:#ff7a7a;font-size:12px}
 .etq{font-size:12px;color:var(--suave);font-weight:700;letter-spacing:1px;text-transform:uppercase}
 .tu{background:var(--oro);color:#1B1B1B;border-radius:8px;padding:2px 7px;font-size:12px;font-weight:800}
 .au{background:var(--card2);color:var(--suave);border-radius:8px;padding:2px 7px;font-size:12px}
@@ -91,7 +91,7 @@ footer{margin-top:28px;text-align:center;color:var(--suave);font-size:12px}
 
 <div id="vHis" style="display:none">
   <div class="sub" style="margin:6px 0 4px">Cada vez que pulsas ACTUALIZAR se guarda aquí (y también los cambios que encuentra solo).</div>
-  <div class="titulo">Encuestas · media</div>
+  <div class="titulo">Diputados · coaliciones (mayoría 176)</div>
   <div class="card" id="hisEnc"></div>
   <div class="titulo">Apuestas · quién forma gobierno</div>
   <div class="card" id="hisGob"></div>
@@ -315,16 +315,41 @@ function grafico(R,sec,claves,mn,mx,marcas){
   g+=`<text x="${pl}" y="${Hh-4}">${fecha(R[0].t)}</text><text x="${W-pr}" y="${Hh-4}" text-anchor="end">${fecha(R[R.length-1].t)}</text></svg>`;
   return g;
 }
+function escReg(h){const e=h.enc||{};if(e.pp==null)return null;const S=escPct(e);
+  const a=sumaR(S,["pp","vox"]),b=sumaR(S,["psoe","fa","podemos"]);
+  return{pp:S.pp&&S.pp[0],psoe:S.psoe&&S.psoe[0],vox:S.vox&&S.vox[0],ppvox:a&&a[0],izq:b&&b[0],resto:a&&350-a[0]}}
+function difE(a,b){if(a==null||b==null)return"";const d=a-b;if(!d)return"";
+  return `<span class="${d>0?"up":"dn"}">${d>0?"▲":"▼"}${Math.abs(d)}</span>`}
+function marcaM(n){return n==null?"":(n>=176?'<span class="ok">✓</span>':'<span class="no">✗</span>')}
+function graficoEsc(R){
+  const P=R.map(escReg).map((e,i)=>e&&{...e,t:R[i].t}).filter(Boolean);
+  if(P.length<2)return '<small style="color:var(--suave)">El gráfico aparecerá a partir de la segunda actualización.</small>';
+  const W=340,Hh=170,pl=30,pr=8,pt=8,pb=20,mn=120,mx=230;
+  const X=i=>pl+(W-pl-pr)*i/(P.length-1),Y=v=>pt+(Hh-pt-pb)*(1-(Math.max(mn,Math.min(mx,v))-mn)/(mx-mn));
+  let g=`<svg viewBox="0 0 ${W} ${Hh}" width="100%">`;
+  [140,160,200,220].forEach(v=>g+=`<line x1="${pl}" x2="${W-pr}" y1="${Y(v)}" y2="${Y(v)}" stroke="#ffffff14"/><text x="2" y="${Y(v)+3}">${v}</text>`);
+  g+=`<line x1="${pl}" x2="${W-pr}" y1="${Y(176)}" y2="${Y(176)}" stroke="var(--oro)" stroke-dasharray="4 3"/><text x="2" y="${Y(176)+3}" fill="var(--oro)">176</text>`;
+  [["ppvox","var(--pp)"],["izq","var(--psoe)"],["resto","var(--suave)"]].forEach(([k,c])=>{
+    g+=`<polyline points="${P.map((h,i)=>`${X(i)},${Y(h[k])}`).join(" ")}" fill="none" stroke="${c}" stroke-width="2.5" stroke-linejoin="round"/>`;
+    P.forEach((h,i)=>g+=`<circle cx="${X(i)}" cy="${Y(h[k])}" r="2.5" fill="${c}"/>`)});
+  g+=`<text x="${pl}" y="${Hh-4}">${fecha(P[0].t)}</text><text x="${W-pr}" y="${Hh-4}" text-anchor="end">${fecha(P[P.length-1].t)}</text></svg>`;
+  return g+`<div style="font-size:13px;margin-top:4px"><b style="color:var(--pp)">PP+Vox</b> · <b style="color:var(--psoe)">PSOE+FA+Podemos</b> · <b style="color:var(--suave)">Todos menos PP y Vox</b></div>`;
+}
 function pintaReg(d){
   const R=(d&&d.registro)||[];
-  $("hisEnc").innerHTML=grafico(R,"enc",["pp","psoe","vox","fa"],0,40,[10,20,30,40]);
+  $("hisEnc").innerHTML=graficoEsc(R);
   $("hisGob").innerHTML=grafico(R,"gob",["pp","psoe"],0,100,[25,50,75,100]);
-  $("hisLista").innerHTML=R.map((h,i)=>{const p=R[i-1]||{};const e=h.enc||{},pe=p.enc||{},g=h.gob||{},pg=p.gob||{};
+  $("hisLista").innerHTML=R.map((h,i)=>{const p=R[i-1]||{};const g=h.gob||{},pg=p.gob||{};
+    const E=escReg(h)||{},PE=escReg(p)||{};
     return `<div class="card reg"><div class="cab"><b>${hora(h.t)}</b>${h.o==="tu"?'<span class="tu">PULSASTE</span>':'<span class="au">automático</span>'}</div>
-      <div class="etq">Encuestas</div><div class="rg">
-        <span style="color:var(--pp)"><b>PP</b> ${num(e.pp)}% ${dif(e.pp,pe.pp)}</span>
-        <span style="color:var(--psoe)"><b>PSOE</b> ${num(e.psoe)}% ${dif(e.psoe,pe.psoe)}</span>
-        <span style="color:var(--vox)"><b>Vox</b> ${num(e.vox)}% ${dif(e.vox,pe.vox)}</span></div>
+      <div class="etq">Diputados · coaliciones</div><div class="rc">
+        <div><span style="color:var(--pp)"><b>PP + Vox</b></span><b>≈${E.ppvox??"–"}</b> ${difE(E.ppvox,PE.ppvox)} ${marcaM(E.ppvox)}</div>
+        <div><span style="color:var(--psoe)"><b>PSOE + FA + Podemos</b></span><b>≈${E.izq??"–"}</b> ${difE(E.izq,PE.izq)} ${marcaM(E.izq)}</div>
+        <div><span style="color:var(--suave)"><b>Todos menos PP y Vox</b></span><b>≈${E.resto??"–"}</b> ${difE(E.resto,PE.resto)} ${marcaM(E.resto)}</div></div>
+      <div class="etq">Diputados · partidos</div><div class="rg">
+        <span style="color:var(--pp)"><b>PP</b> ${E.pp??"–"} ${difE(E.pp,PE.pp)}</span>
+        <span style="color:var(--psoe)"><b>PSOE</b> ${E.psoe??"–"} ${difE(E.psoe,PE.psoe)}</span>
+        <span style="color:var(--vox)"><b>Vox</b> ${E.vox??"–"} ${difE(E.vox,PE.vox)}</span></div>
       <div class="etq">Apuestas · gobierno</div><div class="rg">
         <span style="color:var(--pp)"><b>Feijóo</b> ${num(g.pp)}% ${dif(g.pp,pg.pp)}</span>
         <span style="color:var(--psoe)"><b>Sánchez</b> ${num(g.psoe)}% ${dif(g.psoe,pg.psoe)}</span>
@@ -337,7 +362,7 @@ async function cargarReg(){
 }
 // ---------- Aviso de actualización ----------
 // Hay que cambiar APP_VERSION en cada actualización.
-const APP_VERSION="2026.11.17-4";
+const APP_VERSION="2026.11.18-1";
 (()=>{const prev=store("elec_version");store("elec_version",APP_VERSION);
   if(prev!==null&&prev!==APP_VERSION)toast("RADAR ELECCIONES-LORENZITO se ha actualizado",4000)})();
 if("serviceWorker" in navigator){
