@@ -1,7 +1,34 @@
 {
- "actualizado": "2026-11-18T22:34:47+01:00",
+ "actualizado": "2026-11-18T23:19:30+01:00",
  "nota": "",
  "encuestas": [
+  {
+   "instituto": "Sondaxe",
+   "medio": "La Voz de Galicia",
+   "fecha": "2026-11-18",
+   "pp": {
+    "pct": 28.5,
+    "esc": "s/d"
+   },
+   "psoe": {
+    "pct": 27.8,
+    "esc": "s/d"
+   },
+   "vox": {
+    "pct": 19.6,
+    "esc": "s/d"
+   },
+   "fa": {
+    "pct": 5.3,
+    "esc": "s/d"
+   },
+   "podemos": {
+    "pct": 1.0,
+    "esc": "s/d"
+   },
+   "ppvox": "s/d",
+   "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/18/psoe-roza-empate-votos-pp-superaria-holgura-absoluta-vox/00031795030786200396610.htm"
+  },
   {
    "instituto": "40dB",
    "medio": "El País / Cadena SER",
@@ -30,6 +57,33 @@
    "url": "https://elpais.com/espana/elecciones-generales/2026-11-18/el-pp-consolida-su-posicion-frente-a-vox.html"
   },
   {
+   "instituto": "Sigma Dos",
+   "medio": "El Mundo",
+   "fecha": "2026-11-18",
+   "pp": {
+    "pct": 30.7,
+    "esc": "123-129"
+   },
+   "psoe": {
+    "pct": 26.7,
+    "esc": "108-114"
+   },
+   "vox": {
+    "pct": 19.7,
+    "esc": "62-67"
+   },
+   "fa": {
+    "pct": 6.9,
+    "esc": "10-14"
+   },
+   "podemos": {
+    "pct": 0.8,
+    "esc": "0"
+   },
+   "ppvox": "185-196",
+   "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/18/6afdd75c21efa083408b45b2.html"
+  },
+  {
    "instituto": "EM-Analytics",
    "medio": "Electomanía",
    "fecha": "2026-11-18",
@@ -55,60 +109,6 @@
    },
    "ppvox": "188",
    "url": "https://electomania.es/tracking-electopanel-18-nov-avance-de-eh-bildu-y-adelante-andalucia/"
-  },
-  {
-   "instituto": "Sondaxe",
-   "medio": "La Voz de Galicia",
-   "fecha": "2026-11-18",
-   "pp": {
-    "pct": 29.0,
-    "esc": "121"
-   },
-   "psoe": {
-    "pct": 27.0,
-    "esc": "111"
-   },
-   "vox": {
-    "pct": 19.4,
-    "esc": "71"
-   },
-   "fa": {
-    "pct": 5.5,
-    "esc": "8"
-   },
-   "podemos": {
-    "pct": 1.2,
-    "esc": "1"
-   },
-   "ppvox": "192",
-   "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/17/pp-psoe-lanzan-llamada-voto-util-diferencia-estrecha/00031794944189590370512.htm"
-  },
-  {
-   "instituto": "Sigma Dos",
-   "medio": "El Mundo",
-   "fecha": "2026-11-17",
-   "pp": {
-    "pct": 30.7,
-    "esc": "123-129"
-   },
-   "psoe": {
-    "pct": 26.4,
-    "esc": "108-114"
-   },
-   "vox": {
-    "pct": 19.8,
-    "esc": "62-67"
-   },
-   "fa": {
-    "pct": 5.3,
-    "esc": "7-9"
-   },
-   "podemos": {
-    "pct": 1.2,
-    "esc": "0"
-   },
-   "ppvox": "185-196",
-   "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/17/6afca438e9cf4a7d7a8b459c.html"
   }
  ],
  "historial": [
@@ -128,10 +128,10 @@
   },
   {
    "fecha": "2026-11-18",
-   "pp": 30.7,
-   "psoe": 27.8,
+   "pp": 30.6,
+   "psoe": 28.1,
    "vox": 18.8,
-   "fa": 5.2
+   "fa": 5.6
   }
  ],
  "politico": {
