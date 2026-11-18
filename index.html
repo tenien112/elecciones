@@ -172,7 +172,7 @@ function cuentaAtras(){
 function filaP(k,nom,pct,esc,max){
   return `<div class="p"><span class="n" style="color:var(--${k})">${nom}</span>
    <div class="barra"><i style="width:${pct==null?0:Math.min(100,pct/max*100)}%;background:var(--${k})"></i></div>
-   <span class="v">${pct==null?"s/d":String(pct).replace(".",",")+"%"}${esc!==undefined&&esc!==null?`<br><small>${esc} esc.</small>`:""}</span></div>`;
+   <span class="v">${esc!==undefined&&esc!==null?`<b style="font-size:17px">${esc}</b> <small>dip.</small><br>`:""}<small style="color:var(--suave)">${pct==null?"s/d":String(pct).replace(".",",")+"%"}</small></span></div>`;
 }
 function pinta(d){
   const E=d.encuestas||[];
@@ -193,8 +193,8 @@ function pinta(d){
     $("polLista").innerHTML=`<table class="tabla"><tr><th>Encuestadora</th><th style="color:var(--pp)">PP</th><th style="color:var(--psoe)">PSOE</th><th style="color:var(--vox)">Vox</th><th style="color:var(--fa)">FA</th><th>PP+<br>Vox</th><th>Izq.</th></tr>`+
       P.encuestas.map(x=>{const S=escPct(x),a=sumaR(S,["pp","vox"]),b=sumaR(S,["psoe","fa","podemos"]);
         const c=r=>r?`<td class="${r[0]>=176?"ok":"no"}">≈${r[0]}</td>`:"<td>–</td>";
-        return `<tr><td>${x.firma}<br><small>${fecha(x.fecha)}</small></td>${["pp","psoe","vox","fa"].map(k=>`<td>${x[k]==null?"–":num(x[k])}${S[k]?`<br><small>≈${S[k][0]}</small>`:""}</td>`).join("")}${c(a)}${c(b)}</tr>`}).join("")+`</table>
-      <div class="aviso">Debajo del %: escaños ≈ calculados. Izq. = PSOE + F. Amplio + Podemos. Verde = llega a 176.</div>`;
+        return `<tr><td>${x.firma}<br><small>${fecha(x.fecha)}</small></td>${["pp","psoe","vox","fa"].map(k=>`<td>${S[k]?`<b>≈${S[k][0]}</b>`:"–"}<br><small style="color:var(--suave)">${x[k]==null?"–":num(x[k])+"%"}</small></td>`).join("")}${c(a)}${c(b)}</tr>`}).join("")+`</table>
+      <div class="aviso">Arriba diputados ≈ calculados, debajo el %. Izq. = PSOE + F. Amplio + Podemos. Verde = llega a 176.</div>`;
   }else{$("polMedia").innerHTML='<small style="color:var(--suave)">Cargando…</small>';$("polLista").innerHTML=""}
   // lista
   $("lista").innerHTML=E.map(x=>{
@@ -362,7 +362,7 @@ async function cargarReg(){
 }
 // ---------- Aviso de actualización ----------
 // Hay que cambiar APP_VERSION en cada actualización.
-const APP_VERSION="2026.11.18-1";
+const APP_VERSION="2026.11.19-1";
 (()=>{const prev=store("elec_version");store("elec_version",APP_VERSION);
   if(prev!==null&&prev!==APP_VERSION)toast("RADAR ELECCIONES-LORENZITO se ha actualizado",4000)})();
 if("serviceWorker" in navigator){
