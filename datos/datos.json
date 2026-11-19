@@ -1,7 +1,61 @@
 {
- "actualizado": "2026-11-19T03:48:51+01:00",
+ "actualizado": "2026-11-19T12:30:07+01:00",
  "nota": "",
  "encuestas": [
+  {
+   "instituto": "40dB",
+   "medio": "El País / Cadena SER",
+   "fecha": "2026-11-19",
+   "pp": {
+    "pct": 32.4,
+    "esc": "128-140"
+   },
+   "psoe": {
+    "pct": 30.4,
+    "esc": "116-125"
+   },
+   "vox": {
+    "pct": 17.2,
+    "esc": "53-61"
+   },
+   "fa": {
+    "pct": 4.2,
+    "esc": "5-8"
+   },
+   "podemos": {
+    "pct": 1.2,
+    "esc": "0-1"
+   },
+   "ppvox": "181-201",
+   "url": "https://elpais.com/espana/elecciones-generales/2026-11-19/90-minutos-cara-a-cara-sanchez-busca-remontar-los-dos-puntos-que-le-separan-del-pp-y-feijoo-repetir-el-exito-de-2023.html"
+  },
+  {
+   "instituto": "Public First",
+   "medio": "Politico",
+   "fecha": "2026-11-19",
+   "pp": {
+    "pct": 29.5,
+    "esc": "s/d"
+   },
+   "psoe": {
+    "pct": 27.2,
+    "esc": "s/d"
+   },
+   "vox": {
+    "pct": 19.6,
+    "esc": "s/d"
+   },
+   "fa": {
+    "pct": 5.9,
+    "esc": "s/d"
+   },
+   "podemos": {
+    "pct": 2.2,
+    "esc": "s/d"
+   },
+   "ppvox": "s/d",
+   "url": "https://www.politico.eu/newsletter/madrid-playbook/a-falta-de-noticias-hemos-hecho-una-encuesta/"
+  },
   {
    "instituto": "Sondaxe",
    "medio": "La Voz de Galicia",
@@ -30,33 +84,6 @@
    "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/18/psoe-roza-empate-votos-pp-superaria-holgura-absoluta-vox/00031795030786200396610.htm"
   },
   {
-   "instituto": "40dB",
-   "medio": "El País / Cadena SER",
-   "fecha": "2026-11-18",
-   "pp": {
-    "pct": 32.2,
-    "esc": "128-139"
-   },
-   "psoe": {
-    "pct": 30.7,
-    "esc": "118-127"
-   },
-   "vox": {
-    "pct": 17.0,
-    "esc": "51-60"
-   },
-   "fa": {
-    "pct": 4.0,
-    "esc": "4-8"
-   },
-   "podemos": {
-    "pct": 1.2,
-    "esc": "0-1"
-   },
-   "ppvox": "179-199",
-   "url": "https://elpais.com/espana/elecciones-generales/2026-11-18/el-pp-consolida-su-posicion-frente-a-vox.html"
-  },
-  {
    "instituto": "Sigma Dos",
    "medio": "El Mundo",
    "fecha": "2026-11-18",
@@ -82,33 +109,6 @@
    },
    "ppvox": "185-196",
    "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/18/6afdd75c21efa083408b45b2.html"
-  },
-  {
-   "instituto": "EM-Analytics",
-   "medio": "Electomanía",
-   "fecha": "2026-11-18",
-   "pp": {
-    "pct": 30.8,
-    "esc": "127"
-   },
-   "psoe": {
-    "pct": 27.0,
-    "esc": "114"
-   },
-   "vox": {
-    "pct": 18.9,
-    "esc": "61"
-   },
-   "fa": {
-    "pct": 6.1,
-    "esc": "12"
-   },
-   "podemos": {
-    "pct": 1.3,
-    "esc": "2"
-   },
-   "ppvox": "188",
-   "url": "https://electomania.es/tracking-electopanel-18-nov-avance-de-eh-bildu-y-adelante-andalucia/"
   }
  ],
  "historial": [
@@ -135,9 +135,9 @@
   },
   {
    "fecha": "2026-11-19",
-   "pp": 30.6,
-   "psoe": 28.1,
-   "vox": 18.8,
+   "pp": 30.3,
+   "psoe": 28.0,
+   "vox": 19.0,
    "fa": 5.6
   }
  ],
