@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-19T12:30:07+01:00",
+ "actualizado": "2026-11-19T20:37:31+01:00",
  "nota": "",
  "encuestas": [
   {
@@ -30,85 +30,85 @@
    "url": "https://elpais.com/espana/elecciones-generales/2026-11-19/90-minutos-cara-a-cara-sanchez-busca-remontar-los-dos-puntos-que-le-separan-del-pp-y-feijoo-repetir-el-exito-de-2023.html"
   },
   {
-   "instituto": "Public First",
-   "medio": "Politico",
+   "instituto": "Data10",
+   "medio": "Okdiario",
    "fecha": "2026-11-19",
    "pp": {
-    "pct": 29.5,
-    "esc": "s/d"
+    "pct": 31.6,
+    "esc": "130"
    },
    "psoe": {
-    "pct": 27.2,
-    "esc": "s/d"
+    "pct": 26.5,
+    "esc": "109"
    },
    "vox": {
-    "pct": 19.6,
-    "esc": "s/d"
+    "pct": 19.4,
+    "esc": "66"
    },
    "fa": {
-    "pct": 5.9,
-    "esc": "s/d"
+    "pct": 6.7,
+    "esc": "10"
    },
    "podemos": {
-    "pct": 2.2,
+    "pct": null,
     "esc": "s/d"
    },
-   "ppvox": "s/d",
-   "url": "https://www.politico.eu/newsletter/madrid-playbook/a-falta-de-noticias-hemos-hecho-una-encuesta/"
-  },
-  {
-   "instituto": "Sondaxe",
-   "medio": "La Voz de Galicia",
-   "fecha": "2026-11-18",
-   "pp": {
-    "pct": 28.5,
-    "esc": "121"
-   },
-   "psoe": {
-    "pct": 27.8,
-    "esc": "112"
-   },
-   "vox": {
-    "pct": 19.6,
-    "esc": "69"
-   },
-   "fa": {
-    "pct": 5.3,
-    "esc": "8"
-   },
-   "podemos": {
-    "pct": 1.0,
-    "esc": "0"
-   },
-   "ppvox": "190",
-   "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/18/psoe-roza-empate-votos-pp-superaria-holgura-absoluta-vox/00031795030786200396610.htm"
+   "ppvox": "196",
+   "url": "https://okdiario.com/espana/pp-saca-5-puntos-psoe-ecuador-primera-semana-campana-tendria-vox-mayoria-196-escanos-21117119"
   },
   {
    "instituto": "Sigma Dos",
    "medio": "El Mundo",
-   "fecha": "2026-11-18",
+   "fecha": "2026-11-19",
    "pp": {
-    "pct": 30.7,
-    "esc": "123-129"
+    "pct": 31.0,
+    "esc": "125-131"
    },
    "psoe": {
-    "pct": 26.7,
-    "esc": "108-114"
+    "pct": 27.1,
+    "esc": "110-116"
    },
    "vox": {
-    "pct": 19.7,
-    "esc": "62-67"
+    "pct": 19.4,
+    "esc": "59-64"
    },
    "fa": {
-    "pct": 6.9,
-    "esc": "10-14"
+    "pct": 7.1,
+    "esc": "11-14"
    },
    "podemos": {
     "pct": 0.8,
     "esc": "0"
    },
-   "ppvox": "185-196",
-   "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/18/6afdd75c21efa083408b45b2.html"
+   "ppvox": "184-195",
+   "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/19/6aff2a9afc6c83886c8b459b.html"
+  },
+  {
+   "instituto": "EM-Analytics",
+   "medio": "Electomanía",
+   "fecha": "2026-11-19",
+   "pp": {
+    "pct": 30.4,
+    "esc": "127"
+   },
+   "psoe": {
+    "pct": 27.6,
+    "esc": "120"
+   },
+   "vox": {
+    "pct": 18.7,
+    "esc": "60"
+   },
+   "fa": {
+    "pct": 5.8,
+    "esc": "11"
+   },
+   "podemos": {
+    "pct": 1.1,
+    "esc": "1"
+   },
+   "ppvox": "187",
+   "url": "https://electomania.es/tracking-electopanel-19-nov-sanchez-mete-el-turbo-a-costa-de-su-izquierda-con-la-derecha-en-187-escanos/"
   }
  ],
  "historial": [
@@ -135,10 +135,10 @@
   },
   {
    "fecha": "2026-11-19",
-   "pp": 30.3,
-   "psoe": 28.0,
-   "vox": 19.0,
-   "fa": 5.6
+   "pp": 31.4,
+   "psoe": 27.9,
+   "vox": 18.7,
+   "fa": 6.0
   }
  ],
  "politico": {
