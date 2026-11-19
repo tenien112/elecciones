@@ -160,7 +160,7 @@ function centro(e){if(!e||e==="s/d")return null;const m=String(e).match(/(\d+)(?
 // Si una encuesta solo da %, se calculan los escaños con la relación %→escaños de las encuestas que sí los dan.
 const RATIO={pp:4.14,psoe:4.14,vox:3.41,fa:1.65,podemos:0.8,erc:3.7,junts:4.4,bildu:4.3,pnv:4.5,bng:1.7,cc:2,upn:4,salf:0.5};
 function rango(e){if(e==null||e==="s/d")return null;if(typeof e==="number")return[e,e];const m=String(e).match(/(\d+)(?:\s*[-–]\s*(\d+))?/);if(!m)return null;return[+m[1],m[2]?+m[2]:+m[1]]}
-function calibra(E){PARTIDOS.forEach(([k])=>{let sx=0,sy=0;E.forEach(x=>{const p=x[k]&&x[k].pct,r=rango(x[k]&&x[k].esc);if(typeof p==="number"&&r){sx+=p;sy+=(r[0]+r[1])/2}});if(sx>=5)RATIO[k]=sy/sx})}
+function calibra(E){PARTIDOS.forEach(([k])=>{let sx=0,sy=0;E.forEach(x=>{const p=x[k]&&x[k].pct,r=rango(x[k]&&x[k].esc);if(typeof p==="number"&&r){sx+=p;sy+=(r[0]+r[1])/2}});if(sx>=1.5)RATIO[k]=sy/sx})}
 function escPct(pct){const o={est:true};new Set([...PARTIDOS.map(p=>p[0]),...Object.keys(pct||{})]).forEach(k=>{const p=pct[k];o[k]=typeof p==="number"?Array(2).fill(Math.round(p*(RATIO[k]??1))):null});return o}
 function escEnc(x){const o={est:false};PARTIDOS.forEach(([k])=>{let r=rango(x[k]&&x[k].esc);if(!r&&x[k]&&typeof x[k].pct==="number"){const n=Math.round(x[k].pct*(RATIO[k]??1));r=[n,n];o.est=true;o["e_"+k]=1}o[k]=r});return o}
 function txtR(r){return r==null?null:(r[0]===r[1]?String(r[0]):r[0]+"-"+r[1])}
@@ -372,7 +372,7 @@ async function cargarReg(){
 }
 // ---------- Aviso de actualización ----------
 // Hay que cambiar APP_VERSION en cada actualización.
-const APP_VERSION="2026.11.19-3";
+const APP_VERSION="2026.11.19-4";
 (()=>{const prev=store("elec_version");store("elec_version",APP_VERSION);
   if(prev!==null&&prev!==APP_VERSION)toast("RADAR ELECCIONES-LORENZITO se ha actualizado",4000)})();
 if("serviceWorker" in navigator){
