@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-18T23:19:30+01:00",
+ "actualizado": "2026-11-19T03:48:51+01:00",
  "nota": "",
  "encuestas": [
   {
@@ -8,25 +8,25 @@
    "fecha": "2026-11-18",
    "pp": {
     "pct": 28.5,
-    "esc": "s/d"
+    "esc": "121"
    },
    "psoe": {
     "pct": 27.8,
-    "esc": "s/d"
+    "esc": "112"
    },
    "vox": {
     "pct": 19.6,
-    "esc": "s/d"
+    "esc": "69"
    },
    "fa": {
     "pct": 5.3,
-    "esc": "s/d"
+    "esc": "8"
    },
    "podemos": {
     "pct": 1.0,
-    "esc": "s/d"
+    "esc": "0"
    },
-   "ppvox": "s/d",
+   "ppvox": "190",
    "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/18/psoe-roza-empate-votos-pp-superaria-holgura-absoluta-vox/00031795030786200396610.htm"
   },
   {
@@ -132,18 +132,35 @@
    "psoe": 28.1,
    "vox": 18.8,
    "fa": 5.6
+  },
+  {
+   "fecha": "2026-11-19",
+   "pp": 30.6,
+   "psoe": 28.1,
+   "vox": 18.8,
+   "fa": 5.6
   }
  ],
  "politico": {
-  "fecha": "2026-11-16",
+  "fecha": "2026-11-17",
   "media": {
-   "pp": 30.1,
-   "psoe": 29.4,
-   "vox": 18.1,
-   "fa": 5.8,
-   "podemos": 1.3
+   "pp": 31.2,
+   "psoe": 28.1,
+   "vox": 18.5,
+   "fa": 4.6,
+   "podemos": 1.2
   },
   "encuestas": [
+   {
+    "firma": "40dB",
+    "fecha": "2026-11-17",
+    "muestra": 2000,
+    "pp": 32.2,
+    "psoe": 30.7,
+    "vox": 17,
+    "fa": 3.5,
+    "podemos": 1.2
+   },
    {
     "firma": "Sigma Dos",
     "fecha": "2026-11-16",
@@ -165,6 +182,16 @@
     "podemos": 1.1
    },
    {
+    "firma": "Sondaxe",
+    "fecha": "2026-11-16",
+    "muestra": 1000,
+    "pp": 29,
+    "psoe": 27,
+    "vox": 19.4,
+    "fa": 5.5,
+    "podemos": 1.2
+   },
+   {
     "firma": "40dB",
     "fecha": "2026-11-15",
     "muestra": 2500,
@@ -183,16 +210,6 @@
     "vox": 19.1,
     "fa": 4.4,
     "podemos": null
-   },
-   {
-    "firma": "SW Demoscopia",
-    "fecha": "2026-11-15",
-    "muestra": 9000,
-    "pp": 28.6,
-    "psoe": 31.8,
-    "vox": 16.8,
-    "fa": 7.4,
-    "podemos": 1.7
    },
    {
     "firma": "Sondaxe",
@@ -235,26 +252,6 @@
     "podemos": 1.3
    },
    {
-    "firma": "SW Demoscopia",
-    "fecha": "2026-11-14",
-    "muestra": 8500,
-    "pp": 28.4,
-    "psoe": 31.7,
-    "vox": 16.9,
-    "fa": 7.3,
-    "podemos": 1.7
-   },
-   {
-    "firma": "SW Demoscopia",
-    "fecha": "2026-11-13",
-    "muestra": 8000,
-    "pp": 28.3,
-    "psoe": 31.7,
-    "vox": 17.1,
-    "fa": 7.3,
-    "podemos": 1.7
-   },
-   {
     "firma": "IMOP",
     "fecha": "2026-11-13",
     "muestra": 1000,
@@ -283,16 +280,6 @@
     "vox": 18.2,
     "fa": 6.7,
     "podemos": 2.2
-   },
-   {
-    "firma": "SW Demoscopia",
-    "fecha": "2026-11-12",
-    "muestra": 7500,
-    "pp": 28.5,
-    "psoe": 31.6,
-    "vox": 17.1,
-    "fa": 7.3,
-    "podemos": 1.7
    },
    {
     "firma": "Sigma Dos",
@@ -325,36 +312,6 @@
     "podemos": 1.4
    },
    {
-    "firma": "SW Demoscopia",
-    "fecha": "2026-11-11",
-    "muestra": 7000,
-    "pp": 28.4,
-    "psoe": 31.5,
-    "vox": 17.2,
-    "fa": 7.3,
-    "podemos": 1.7
-   },
-   {
-    "firma": "SW Demoscopia",
-    "fecha": "2026-11-10",
-    "muestra": 6500,
-    "pp": 28.1,
-    "psoe": 31.4,
-    "vox": 17.5,
-    "fa": 7.4,
-    "podemos": 1.7
-   },
-   {
-    "firma": "SW Demoscopia",
-    "fecha": "2026-11-09",
-    "muestra": 6000,
-    "pp": 28.3,
-    "psoe": 31.2,
-    "vox": 17.5,
-    "fa": 7.5,
-    "podemos": 1.7
-   },
-   {
     "firma": "SocioMétrica",
     "fecha": "2026-11-08",
     "muestra": 5460,
@@ -363,66 +320,6 @@
     "vox": 18.9,
     "fa": 4.4,
     "podemos": 1.2
-   },
-   {
-    "firma": "SW Demoscopia",
-    "fecha": "2026-11-08",
-    "muestra": 5500,
-    "pp": 28.3,
-    "psoe": 31.1,
-    "vox": 17.3,
-    "fa": 7.6,
-    "podemos": 1.7
-   },
-   {
-    "firma": "SW Demoscopia",
-    "fecha": "2026-11-07",
-    "muestra": 5000,
-    "pp": 28.7,
-    "psoe": 31,
-    "vox": 17.3,
-    "fa": 7.6,
-    "podemos": 1.7
-   },
-   {
-    "firma": "Sigma Dos",
-    "fecha": "2026-11-06",
-    "muestra": 4172,
-    "pp": 31,
-    "psoe": 25.2,
-    "vox": 19.4,
-    "fa": 8.1,
-    "podemos": 1.6
-   },
-   {
-    "firma": "SW Demoscopia",
-    "fecha": "2026-11-06",
-    "muestra": 4500,
-    "pp": 28.6,
-    "psoe": 30.8,
-    "vox": 17.2,
-    "fa": 7.7,
-    "podemos": 1.8
-   },
-   {
-    "firma": "IMOP",
-    "fecha": "2026-11-06",
-    "muestra": 1000,
-    "pp": 29.8,
-    "psoe": 25.9,
-    "vox": 19.9,
-    "fa": 8.1,
-    "podemos": 1.2
-   },
-   {
-    "firma": "DYM",
-    "fecha": "2026-11-06",
-    "muestra": 1025,
-    "pp": 33.1,
-    "psoe": 27.3,
-    "vox": 18.6,
-    "fa": 5.6,
-    "podemos": 1.9
    }
   ],
   "url": "https://www.politico.eu/europe-poll-of-polls/national-parliament-voting-intention/spain/"
