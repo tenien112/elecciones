@@ -73,7 +73,7 @@ def celdas(fila):
             m2 = re.match(r'\s*(\{\{Party shading[^}]*\}\}|style="[^"]*")\s*\|(.*)', c, re.S)
             if m2:
                 c = m2.group(2)
-        res.extend([c] * span)
+        res.extend([c] + [""] * (span - 1))  # una cifra compartida por varias columnas no se repite
     return res
 
 
@@ -121,11 +121,18 @@ CLAVES = {"pp": "pp", "psoe": "psoe", "vox": "vox", "fa": "fa", "sumar": "fa", "
           "erc": "erc", "junts": "junts", "jxcat": "junts", "ehbildu": "bildu", "bildu": "bildu",
           "pnv": "pnv", "eajpnv": "pnv", "bng": "bng", "cc": "cc", "cca": "cc", "ccnc": "cc",
           "upn": "upn", "salf": "salf", "se": "salf", "cup": "cup", "cs": "cs", "ciudadanos": "cs",
-          "nc": "nc", "pacma": "pacma", "teruelexiste": "te", "te": "te", "ap": "ap"}
+          "nc": "nc", "pnveaj": "pnv", "juntsxcat": "junts", "adelanteandalucia": "aa", "aa": "aa", "pacma": "pacma", "teruelexiste": "te", "te": "te", "ap": "ap"}
+NOMBRE_CORTO = {"aa": "Adelante And.", "cc": "CC", "bildu": "Bildu"}
 NO_PARTIDO = ("polling", "fieldwork", "sample", "turnout", "lead", "other", "others")
 
 
 def clave(nombre):
+    m = re.search(r"link=([^|\]]+)", nombre)
+    if m:
+        nombre = m.group(1)
+    nombre = re.sub(r"\s*\(.*?\)", "", nombre)
+    for a, b in (("á", "a"), ("é", "e"), ("í", "i"), ("ó", "o"), ("ú", "u")):
+        nombre = nombre.replace(a, b)
     n = re.sub(r"[^a-z0-9]", "", nombre.lower().replace("ñ", "n"))
     return CLAVES.get(n, n)
 
@@ -138,7 +145,7 @@ def partidos_cab(cols):
             continue
         k = clave(n)
         if k and k not in vistos:
-            out.append((k, n, i))
+            out.append((k, NOMBRE_CORTO.get(k, n), i))
             vistos.add(k)
     return out
 

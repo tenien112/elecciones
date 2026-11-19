@@ -14,7 +14,7 @@
 <style>
 :root{--bg:#0E1A14;--card:#16241C;--card2:#1C2D23;--borde:#2A3D31;--txt:#F4F1E8;--suave:#9DB0A3;--oro:#E9C46A;
   --pp:#1D84CE;--psoe:#E30613;--vox:#63BE21;--fa:#E5007E;--podemos:#7B3F8C;
-  --erc:#FFB232;--junts:#20C0B0;--bildu:#B5CF18;--pnv:#3BA55C;--bng:#7FC4EA;--cc:#F2D03B;--upn:#3E6FD8;--salf:#C49A6C;--cup:#FFED00}
+  --erc:#FFB232;--junts:#20C0B0;--bildu:#B5CF18;--pnv:#3BA55C;--bng:#7FC4EA;--cc:#F2D03B;--upn:#3E6FD8;--salf:#C49A6C;--cup:#FFED00;--aa:#4CAF50}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--txt);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   padding:16px 14px calc(30px + env(safe-area-inset-bottom))}
@@ -140,7 +140,7 @@ footer{margin-top:28px;text-align:center;color:var(--suave);font-size:12px}
 <script>
 const DATOS="https://raw.githubusercontent.com/tenien112/elecciones/main/datos/";
 // Todos los partidos que se presentan (el orden y la lista salen de las encuestas)
-const NOMBRES={pp:"PP",psoe:"PSOE",vox:"Vox",fa:"F. Amplio",podemos:"Podemos",erc:"ERC",junts:"Junts",bildu:"Bildu",pnv:"PNV",bng:"BNG",cc:"CC",upn:"UPN",salf:"SALF",cup:"CUP",cs:"Cs"};
+const NOMBRES={pp:"PP",psoe:"PSOE",vox:"Vox",fa:"F. Amplio",podemos:"Podemos",erc:"ERC",junts:"Junts",bildu:"Bildu",pnv:"PNV",bng:"BNG",cc:"CC",upn:"UPN",salf:"SALF",cup:"CUP",cs:"Cs",aa:"Adelante And."};
 let PARTIDOS=["pp","psoe","vox","fa","podemos","erc","junts","bildu","pnv","bng","cc","upn"].map(k=>[k,NOMBRES[k]]);
 const nom=k=>NOMBRES[k]||k.toUpperCase();
 const col=k=>`var(--${k},#9DB0A3)`;
@@ -372,7 +372,7 @@ async function cargarReg(){
 }
 // ---------- Aviso de actualización ----------
 // Hay que cambiar APP_VERSION en cada actualización.
-const APP_VERSION="2026.11.19-2";
+const APP_VERSION="2026.11.19-3";
 (()=>{const prev=store("elec_version");store("elec_version",APP_VERSION);
   if(prev!==null&&prev!==APP_VERSION)toast("RADAR ELECCIONES-LORENZITO se ha actualizado",4000)})();
 if("serviceWorker" in navigator){
