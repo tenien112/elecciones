@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-19T20:37:31+01:00",
+ "actualizado": "2026-11-19T21:53:44+01:00",
  "nota": "",
  "encuestas": [
   {
@@ -7,27 +7,63 @@
    "medio": "El País / Cadena SER",
    "fecha": "2026-11-19",
    "pp": {
-    "pct": 32.4,
-    "esc": "128-140"
+    "pct": 32.2,
+    "esc": "127-139"
    },
    "psoe": {
-    "pct": 30.4,
-    "esc": "116-125"
+    "pct": 30.2,
+    "esc": "115-123"
    },
    "vox": {
-    "pct": 17.2,
-    "esc": "53-61"
+    "pct": 17.6,
+    "esc": "56-62"
    },
    "fa": {
-    "pct": 4.2,
+    "pct": 4.1,
     "esc": "5-8"
    },
-   "podemos": {
+   "fv": {
     "pct": 1.2,
+    "esc": "3"
+   },
+   "erc": {
+    "pct": null,
+    "esc": "10"
+   },
+   "junts": {
+    "pct": null,
+    "esc": "3"
+   },
+   "bildu": {
+    "pct": null,
+    "esc": "7"
+   },
+   "pnv": {
+    "pct": null,
+    "esc": "3"
+   },
+   "bng": {
+    "pct": null,
+    "esc": "2"
+   },
+   "cc": {
+    "pct": null,
+    "esc": "1"
+   },
+   "30pxlinkadelanteandaluca2021": {
+    "pct": null,
+    "esc": "3"
+   },
+   "podemos": {
+    "pct": 1.1,
     "esc": "0-1"
    },
-   "ppvox": "181-201",
-   "url": "https://elpais.com/espana/elecciones-generales/2026-11-19/90-minutos-cara-a-cara-sanchez-busca-remontar-los-dos-puntos-que-le-separan-del-pp-y-feijoo-repetir-el-exito-de-2023.html"
+   "salf": {
+    "pct": 1.7,
+    "esc": "0"
+   },
+   "ppvox": "183-201",
+   "url": "https://elpais.com/espana/elecciones-generales/2026-11-19/la-encuesta-antes-del-debate-ligera-ventaja-del-pp-y-muy-clara-del-bloque-derechista.html"
   },
   {
    "instituto": "Data10",
@@ -49,7 +85,43 @@
     "pct": 6.7,
     "esc": "10"
    },
+   "fv": {
+    "pct": 6.7,
+    "esc": "10"
+   },
+   "erc": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "junts": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "bildu": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "pnv": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "bng": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "cc": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "30pxlinkadelanteandaluca2021": {
+    "pct": null,
+    "esc": "s/d"
+   },
    "podemos": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "salf": {
     "pct": null,
     "esc": "s/d"
    },
@@ -76,9 +148,45 @@
     "pct": 7.1,
     "esc": "11-14"
    },
+   "fv": {
+    "pct": 7.1,
+    "esc": "11-14"
+   },
+   "erc": {
+    "pct": 2.3,
+    "esc": "8-9"
+   },
+   "junts": {
+    "pct": 1.4,
+    "esc": "4-5"
+   },
+   "bildu": {
+    "pct": 1.6,
+    "esc": "6-8"
+   },
+   "pnv": {
+    "pct": 1.0,
+    "esc": "4-5"
+   },
+   "bng": {
+    "pct": 1.1,
+    "esc": "2-3"
+   },
+   "cc": {
+    "pct": 0.4,
+    "esc": "0-1"
+   },
+   "30pxlinkadelanteandaluca2021": {
+    "pct": 1.7,
+    "esc": "3-4"
+   },
    "podemos": {
     "pct": 0.8,
     "esc": "0"
+   },
+   "salf": {
+    "pct": null,
+    "esc": "s/d"
    },
    "ppvox": "184-195",
    "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/19/6aff2a9afc6c83886c8b459b.html"
@@ -103,9 +211,45 @@
     "pct": 5.8,
     "esc": "11"
    },
+   "fv": {
+    "pct": 1.6,
+    "esc": "2"
+   },
+   "erc": {
+    "pct": 2.3,
+    "esc": "8"
+   },
+   "junts": {
+    "pct": 1.2,
+    "esc": "5"
+   },
+   "bildu": {
+    "pct": 1.5,
+    "esc": "7"
+   },
+   "pnv": {
+    "pct": 0.8,
+    "esc": "3"
+   },
+   "bng": {
+    "pct": 0.9,
+    "esc": "2"
+   },
+   "cc": {
+    "pct": 0.3,
+    "esc": "0"
+   },
+   "30pxlinkadelanteandaluca2021": {
+    "pct": 1.6,
+    "esc": "4"
+   },
    "podemos": {
     "pct": 1.1,
     "esc": "1"
+   },
+   "salf": {
+    "pct": 2.4,
+    "esc": "0"
    },
    "ppvox": "187",
    "url": "https://electomania.es/tracking-electopanel-19-nov-sanchez-mete-el-turbo-a-costa-de-su-izquierda-con-la-derecha-en-187-escanos/"
@@ -135,10 +279,10 @@
   },
   {
    "fecha": "2026-11-19",
-   "pp": 31.4,
+   "pp": 31.3,
    "psoe": 27.9,
-   "vox": 18.7,
-   "fa": 6.0
+   "vox": 18.8,
+   "fa": 5.9
   }
  ],
  "politico": {
@@ -146,9 +290,16 @@
   "media": {
    "pp": 31.2,
    "psoe": 28.1,
+   "podemos": 1.2,
+   "pnveaj": 0.8,
+   "cc": 0.3,
+   "bildu": 1.7,
    "vox": 18.5,
-   "fa": 4.6,
-   "podemos": 1.2
+   "bng": 1,
+   "juntsxcat": 1.2,
+   "salf": 1.9,
+   "erc": 2.4,
+   "fa": 4.6
   },
   "encuestas": [
    {
@@ -157,9 +308,10 @@
     "muestra": 2000,
     "pp": 32.2,
     "psoe": 30.7,
+    "podemos": 1.2,
     "vox": 17,
-    "fa": 3.5,
-    "podemos": 1.2
+    "salf": 1.7,
+    "fa": 3.5
    },
    {
     "firma": "Sigma Dos",
@@ -167,9 +319,14 @@
     "muestra": 3759,
     "pp": 30.7,
     "psoe": 26.4,
+    "pnveaj": 0.9,
+    "cc": 0.3,
+    "bildu": 1.5,
     "vox": 19.8,
-    "fa": 6.7,
-    "podemos": null
+    "bng": 1,
+    "juntsxcat": 1.3,
+    "erc": 2.4,
+    "fa": 6.7
    },
    {
     "firma": "40dB",
@@ -177,9 +334,10 @@
     "muestra": 2000,
     "pp": 31.8,
     "psoe": 30.6,
+    "podemos": 1.1,
     "vox": 17.5,
-    "fa": 3.7,
-    "podemos": 1.1
+    "salf": 1.6,
+    "fa": 3.7
    },
    {
     "firma": "Sondaxe",
@@ -187,9 +345,16 @@
     "muestra": 1000,
     "pp": 29,
     "psoe": 27,
+    "podemos": 1.2,
+    "pnveaj": 0.7,
+    "cc": 0.3,
+    "bildu": 2.1,
     "vox": 19.4,
-    "fa": 5.5,
-    "podemos": 1.2
+    "bng": 1,
+    "juntsxcat": 1,
+    "salf": 3.1,
+    "erc": 2.4,
+    "fa": 5.5
    },
    {
     "firma": "40dB",
@@ -197,9 +362,10 @@
     "muestra": 2500,
     "pp": 31.5,
     "psoe": 30.3,
+    "podemos": 1.1,
     "vox": 18,
-    "fa": 3.7,
-    "podemos": 1.1
+    "salf": 1.7,
+    "fa": 3.7
    },
    {
     "firma": "SocioMetrica",
@@ -207,9 +373,15 @@
     "muestra": 5923,
     "pp": 31.6,
     "psoe": 27.8,
+    "pnveaj": 0.8,
+    "cc": 0.4,
+    "bildu": 1.5,
     "vox": 19.1,
-    "fa": 4.4,
-    "podemos": null
+    "bng": 1,
+    "juntsxcat": 1.3,
+    "salf": 2.2,
+    "erc": 2.5,
+    "fa": 4.4
    },
    {
     "firma": "Sondaxe",
@@ -217,9 +389,16 @@
     "muestra": 1000,
     "pp": 29.7,
     "psoe": 26.7,
+    "podemos": 2.1,
+    "pnveaj": 0.9,
+    "cc": 0.3,
+    "bildu": 2.1,
     "vox": 18,
-    "fa": 6,
-    "podemos": 2.1
+    "bng": 0.9,
+    "juntsxcat": 1,
+    "salf": 3,
+    "erc": 2.3,
+    "fa": 6
    },
    {
     "firma": "Sigma Dos",
@@ -227,9 +406,15 @@
     "muestra": 750,
     "pp": 30.8,
     "psoe": 26.1,
+    "podemos": 1.4,
+    "pnveaj": 0.9,
+    "cc": 0.4,
+    "bildu": 1.5,
     "vox": 19.8,
-    "fa": 6.7,
-    "podemos": 1.4
+    "bng": 1,
+    "juntsxcat": 1.2,
+    "erc": 2.5,
+    "fa": 6.7
    },
    {
     "firma": "Sondaxe",
@@ -237,9 +422,15 @@
     "muestra": 1000,
     "pp": 30.2,
     "psoe": 26.7,
+    "podemos": 2.2,
+    "pnveaj": 1,
+    "cc": 0.4,
+    "bildu": 1.8,
     "vox": 17.6,
-    "fa": 6.5,
-    "podemos": 2.2
+    "bng": 1,
+    "juntsxcat": 1.4,
+    "erc": 2.7,
+    "fa": 6.5
    },
    {
     "firma": "40dB",
@@ -247,9 +438,10 @@
     "muestra": 2000,
     "pp": 31.4,
     "psoe": 29.9,
+    "podemos": 1.3,
     "vox": 18.3,
-    "fa": 3.7,
-    "podemos": 1.3
+    "salf": 1.8,
+    "fa": 3.7
    },
    {
     "firma": "IMOP",
@@ -257,9 +449,16 @@
     "muestra": 1000,
     "pp": 31.5,
     "psoe": 26.9,
+    "podemos": 0.9,
+    "pnveaj": 0.9,
+    "cc": 0.5,
+    "bildu": 1.7,
     "vox": 19,
-    "fa": 6.9,
-    "podemos": 0.9
+    "bng": 1.3,
+    "juntsxcat": 1.1,
+    "salf": 1.6,
+    "erc": 2.9,
+    "fa": 6.9
    },
    {
     "firma": "40dB",
@@ -267,9 +466,11 @@
     "muestra": 1500,
     "pp": 31.1,
     "psoe": 29.8,
+    "podemos": 1.3,
     "vox": 18.5,
-    "fa": 3.5,
-    "podemos": 1.3
+    "salf": 1.6,
+    "erc": 1.7,
+    "fa": 3.5
    },
    {
     "firma": "Sondaxe",
@@ -277,9 +478,15 @@
     "muestra": 1000,
     "pp": 30.8,
     "psoe": 26.4,
+    "podemos": 2.2,
+    "pnveaj": 1,
+    "cc": 0.4,
+    "bildu": 1.9,
     "vox": 18.2,
-    "fa": 6.7,
-    "podemos": 2.2
+    "bng": 1,
+    "juntsxcat": 1.3,
+    "erc": 2.5,
+    "fa": 6.7
    },
    {
     "firma": "Sigma Dos",
@@ -287,9 +494,15 @@
     "muestra": 4606,
     "pp": 31,
     "psoe": 25.4,
+    "podemos": 1.4,
+    "pnveaj": 0.8,
+    "cc": 0.3,
+    "bildu": 1.4,
     "vox": 19.7,
-    "fa": 7.3,
-    "podemos": 1.4
+    "bng": 1.1,
+    "juntsxcat": 1.4,
+    "erc": 2.7,
+    "fa": 7.3
    },
    {
     "firma": "40dB",
@@ -297,9 +510,10 @@
     "muestra": 1000,
     "pp": 31.5,
     "psoe": 29.4,
+    "podemos": 1.3,
     "vox": 18.8,
-    "fa": 3.5,
-    "podemos": 1.3
+    "salf": 1.7,
+    "fa": 3.5
    },
    {
     "firma": "Sigma Dos",
@@ -307,9 +521,9 @@
     "muestra": 3120,
     "pp": 30.8,
     "psoe": 25.3,
+    "podemos": 1.4,
     "vox": 19.6,
-    "fa": 7.3,
-    "podemos": 1.4
+    "fa": 7.3
    },
    {
     "firma": "SocioMétrica",
@@ -317,11 +531,76 @@
     "muestra": 5460,
     "pp": 32,
     "psoe": 27.7,
+    "podemos": 1.2,
+    "pnveaj": 0.8,
+    "cc": 0.5,
+    "bildu": 1.6,
     "vox": 18.9,
-    "fa": 4.4,
-    "podemos": 1.2
+    "bng": 1,
+    "juntsxcat": 1.4,
+    "salf": 2.2,
+    "erc": 2.4,
+    "fa": 4.4
    }
   ],
   "url": "https://www.politico.eu/europe-poll-of-polls/national-parliament-voting-intention/spain/"
- }
+ },
+ "partidos": [
+  [
+   "pp",
+   "PP"
+  ],
+  [
+   "psoe",
+   "PSOE"
+  ],
+  [
+   "vox",
+   "Vox"
+  ],
+  [
+   "fa",
+   "FA"
+  ],
+  [
+   "fv",
+   "FV"
+  ],
+  [
+   "erc",
+   "ERC"
+  ],
+  [
+   "junts",
+   "Junts"
+  ],
+  [
+   "bildu",
+   "EH Bildu"
+  ],
+  [
+   "pnv",
+   "PNV"
+  ],
+  [
+   "bng",
+   "BNG"
+  ],
+  [
+   "cc",
+   "CCa"
+  ],
+  [
+   "30pxlinkadelanteandaluca2021",
+   "30px|link=Adelante Andalucía (2021)"
+  ],
+  [
+   "podemos",
+   "Podemos"
+  ],
+  [
+   "salf",
+   "SALF"
+  ]
+ ]
 }

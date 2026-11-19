@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-19T20:37:31+01:00",
+ "actualizado": "2026-11-19T21:53:44+01:00",
  "nota": "",
  "ganar": [
   {
@@ -8,8 +8,8 @@
    "fecha": "2026-11-19",
    "tipo": "prob",
    "pp": 78.5,
-   "psoe": 22.0,
-   "vox": 0.7,
+   "psoe": 21.5,
+   "vox": 0.2,
    "url": "https://polymarket.com/event/spain-general-election-winner"
   },
   {
@@ -50,8 +50,8 @@
    "fecha": "2026-11-19",
    "tipo": "prob",
    "pp": 86.5,
-   "psoe": 12.2,
-   "vox": 1.8,
+   "psoe": 12.6,
+   "vox": 1.4,
    "url": "https://polymarket.com/event/next-prime-minister-of-spain-20260625005215443"
   },
   {
@@ -90,9 +90,9 @@
   {
    "fecha": "2026-11-19",
    "gan_pp": 84.8,
-   "gan_psoe": 20.2,
+   "gan_psoe": 20.1,
    "gob_pp": 85.1,
-   "gob_psoe": 13.2
+   "gob_psoe": 13.4
   }
  ]
 }
