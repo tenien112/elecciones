@@ -116,16 +116,51 @@ def suma_esc(a, b):
     return str(lo) if lo == hi else f"{lo}-{hi}"
 
 
+# Todos los partidos que se presentan: clave interna de cada nombre (Wikipedia / POLITICO)
+CLAVES = {"pp": "pp", "psoe": "psoe", "vox": "vox", "fa": "fa", "sumar": "fa", "podemos": "podemos",
+          "erc": "erc", "junts": "junts", "jxcat": "junts", "ehbildu": "bildu", "bildu": "bildu",
+          "pnv": "pnv", "eajpnv": "pnv", "bng": "bng", "cc": "cc", "cca": "cc", "ccnc": "cc",
+          "upn": "upn", "salf": "salf", "se": "salf", "cup": "cup", "cs": "cs", "ciudadanos": "cs",
+          "nc": "nc", "pacma": "pacma", "teruelexiste": "te", "te": "te", "ap": "ap"}
+NO_PARTIDO = ("polling", "fieldwork", "sample", "turnout", "lead", "other", "others")
+
+
+def clave(nombre):
+    n = re.sub(r"[^a-z0-9]", "", nombre.lower().replace("ñ", "n"))
+    return CLAVES.get(n, n)
+
+
+def partidos_cab(cols):
+    """[(clave, nombre, índice de columna)] de todos los partidos de la cabecera."""
+    out, vistos = [], set()
+    for i, n in enumerate(cols):
+        if not n or any(n.lower().startswith(x) for x in NO_PARTIDO):
+            continue
+        k = clave(n)
+        if k and k not in vistos:
+            out.append((k, n, i))
+            vistos.add(k)
+    return out
+
+
+PARTIDOS = []  # se rellena al leer Wikipedia: [[clave, nombre], ...]
+
+
 def encuestas():
     tabla = primera_tabla(wikitext())
     cols = columnas(tabla)
-    idx = {k: cols.index(n) for k, n in
-           [("pp", "PP"), ("psoe", "PSOE"), ("vox", "Vox"), ("fa", "FA"), ("podemos", "Podemos")]}
+    print("Columnas Wikipedia:", cols)
+    pc = partidos_cab(cols)
+    PARTIDOS[:] = [[k, n] for k, n, _ in pc]
+    idx = {k: i for k, _, i in pc}
+    for k in ("pp", "psoe", "vox"):
+        if k not in idx:
+            raise RuntimeError("No encuentro la columna " + k + " en " + str(cols))
     filas = tabla.split("\n|-")[3:]
     vistos, lista = set(), []
     for f in filas:
         c = celdas(f)
-        if len(c) < max(idx.values()) + 1:
+        if len(c) < max(idx[k] for k in ("pp", "psoe", "vox")) + 1:
             continue
         nombre = re.split(r"<ref|\{\{", c[0])[0].strip()
         if "election" in nombre.lower() or "/" not in nombre:
@@ -135,7 +170,7 @@ def encuestas():
         medio = MEDIOS.get(medio, medio)
         if inst.lower() in vistos:
             continue
-        datos = {k: valor(c[i]) for k, i in idx.items()}
+        datos = {k: (valor(c[i]) if i < len(c) else (None, "s/d")) for k, i in idx.items()}
         if datos["pp"][0] is None or datos["psoe"][0] is None:
             continue
         url = re.search(r"\|\s*url=(\S+)", c[0])
@@ -173,14 +208,14 @@ def politico():
     """Media de TODAS las encuestas (POLITICO Poll of Polls) y las encuestas de los últimos 10 días."""
     d = json.loads(get("https://www.politico.eu/wp-json/politico/v1/poll-of-polls/ES-parliament", True))
     t = d["trends"]["kalman"][-1]
-    media = {v: round(t["parties"][k], 1) for k, v in POL_P.items() if k in t["parties"]}
+    media = {clave(k): round(v, 1) for k, v in t["parties"].items() if isinstance(v, (int, float))}
     lim = (dt.date.fromisoformat(t["date"]) - dt.timedelta(days=10)).isoformat()
     lista = []
     for x in reversed(d["polls"]):
         if x.get("date", "") < lim:
             break
         lista.append({"firma": x.get("firm"), "fecha": x.get("date"), "muestra": x.get("sample_size"),
-                      **{v: x["parties"].get(k) for k, v in POL_P.items()}})
+                      **{clave(k): v for k, v in x["parties"].items()}})
     return {"fecha": t["date"], "media": media, "encuestas": lista,
             "url": "https://www.politico.eu/europe-poll-of-polls/national-parliament-voting-intention/spain/"}
 
@@ -291,7 +326,7 @@ def registrar(sello, d, a):
     lista = d.get("encuestas", [])
     f2 = lambda x, k: (x.get(k) or {}).get("pct")
     ent = {
-        "enc": {k: media(lista, k, f2) for k in ("pp", "psoe", "vox", "fa", "podemos")},
+        "enc": {k: media(lista, k, f2) for k in ([p[0] for p in d.get("partidos", [])] or ["pp", "psoe", "vox", "fa", "podemos"])},
         "fuentes": [f"{x.get('instituto')} {x.get('fecha')}" for x in lista],
         "todas": (d.get("politico") or {}).get("media"),
         "gob": {k: media(a.get("gobierno", []), k, prob) for k in ("pp", "psoe", "vox")},
@@ -318,6 +353,7 @@ def main():
     try:
         lista = encuestas()
         d["encuestas"] = lista
+        d["partidos"] = list(PARTIDOS)
         f2 = lambda x, k: x[k]["pct"]
         d["historial"] = historial(d.get("historial", []), {"fecha": hoy, **{k: media(lista, k, f2) for k in ("pp", "psoe", "vox", "fa")}})
         if t.date() >= dt.date(2026, 11, 24) and t.date() < dt.date(2026, 11, 29):

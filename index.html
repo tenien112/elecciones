@@ -13,7 +13,8 @@
 <link rel="apple-touch-icon" href="icon-192.png">
 <style>
 :root{--bg:#0E1A14;--card:#16241C;--card2:#1C2D23;--borde:#2A3D31;--txt:#F4F1E8;--suave:#9DB0A3;--oro:#E9C46A;
-  --pp:#1D84CE;--psoe:#E30613;--vox:#63BE21;--fa:#E5007E;--podemos:#7B3F8C}
+  --pp:#1D84CE;--psoe:#E30613;--vox:#63BE21;--fa:#E5007E;--podemos:#7B3F8C;
+  --erc:#FFB232;--junts:#20C0B0;--bildu:#B5CF18;--pnv:#3BA55C;--bng:#7FC4EA;--cc:#F2D03B;--upn:#3E6FD8;--salf:#C49A6C;--cup:#FFED00}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--txt);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   padding:16px 14px calc(30px + env(safe-area-inset-bottom))}
@@ -33,7 +34,7 @@ button.sec{background:var(--card2);color:var(--txt);border:1px solid var(--borde
 .cab{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:10px}
 .cab b{font-size:18px}
 .cab small{color:var(--suave)}
-.p{display:grid;grid-template-columns:62px 1fr 88px;gap:8px;align-items:center;margin:6px 0;font-size:14px}
+.p{display:grid;grid-template-columns:70px 1fr 88px;gap:8px;align-items:center;margin:6px 0;font-size:14px}
 .p .n{font-weight:800}
 .barra{height:16px;background:#ffffff10;border-radius:8px;overflow:hidden}
 .barra i{display:block;height:100%;border-radius:8px}
@@ -46,7 +47,7 @@ button.sec{background:var(--card2);color:var(--txt);border:1px solid var(--borde
 .mayo span{position:absolute;top:26px;font-size:11px;color:var(--oro);transform:translateX(-50%);left:50.29%}
 .ok{color:var(--vox);font-weight:800}.no{color:#ff7a7a;font-weight:800}
 .fuente{display:block;margin-top:12px;color:var(--oro);font-size:13px;text-decoration:none}
-.media .p{grid-template-columns:62px 1fr 78px}
+.media .p{grid-template-columns:70px 1fr 78px}
 .coal{margin-top:12px;border-top:1px solid var(--borde);padding-top:10px}
 .coal .c{display:grid;grid-template-columns:1fr auto 92px;gap:8px;align-items:center;font-size:14px;margin:5px 0}
 .coal .c b{font-variant-numeric:tabular-nums;font-size:16px}
@@ -138,7 +139,16 @@ footer{margin-top:28px;text-align:center;color:var(--suave);font-size:12px}
 
 <script>
 const DATOS="https://raw.githubusercontent.com/tenien112/elecciones/main/datos/";
-const PARTIDOS=[["pp","PP"],["psoe","PSOE"],["vox","Vox"],["fa","F. Amplio"],["podemos","Podemos"]];
+// Todos los partidos que se presentan (el orden y la lista salen de las encuestas)
+const NOMBRES={pp:"PP",psoe:"PSOE",vox:"Vox",fa:"F. Amplio",podemos:"Podemos",erc:"ERC",junts:"Junts",bildu:"Bildu",pnv:"PNV",bng:"BNG",cc:"CC",upn:"UPN",salf:"SALF",cup:"CUP",cs:"Cs"};
+let PARTIDOS=["pp","psoe","vox","fa","podemos","erc","junts","bildu","pnv","bng","cc","upn"].map(k=>[k,NOMBRES[k]]);
+const nom=k=>NOMBRES[k]||k.toUpperCase();
+const col=k=>`var(--${k},#9DB0A3)`;
+function fijaPartidos(d,E){
+  const tiene=k=>E.some(x=>x[k]&&(typeof x[k].pct==="number"||rango(x[k].esc)));
+  const L=(d.partidos&&d.partidos.length?d.partidos.map(p=>p[0]):PARTIDOS.map(p=>p[0])).filter(tiene);
+  if(L.length)PARTIDOS=L.map(k=>[k,nom(k)]);
+}
 const ELECCION=new Date("2026-11-29T09:00:00+01:00");
 const $=id=>document.getElementById(id);
 function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
@@ -148,20 +158,20 @@ function hora(s){const d=new Date(s);return d.toLocaleString("es-ES",{weekday:"s
 function centro(e){if(!e||e==="s/d")return null;const m=String(e).match(/(\d+)(?:\s*[-–]\s*(\d+))?/);if(!m)return null;return m[2]?(+m[1]+ +m[2])/2:+m[1]}
 // ---------- ESCAÑOS Y COALICIONES ----------
 // Si una encuesta solo da %, se calculan los escaños con la relación %→escaños de las encuestas que sí los dan.
-const RATIO={pp:4.14,psoe:4.14,vox:3.41,fa:1.65,podemos:0.8};
+const RATIO={pp:4.14,psoe:4.14,vox:3.41,fa:1.65,podemos:0.8,erc:3.7,junts:4.4,bildu:4.3,pnv:4.5,bng:1.7,cc:2,upn:4,salf:0.5};
 function rango(e){if(e==null||e==="s/d")return null;if(typeof e==="number")return[e,e];const m=String(e).match(/(\d+)(?:\s*[-–]\s*(\d+))?/);if(!m)return null;return[+m[1],m[2]?+m[2]:+m[1]]}
 function calibra(E){PARTIDOS.forEach(([k])=>{let sx=0,sy=0;E.forEach(x=>{const p=x[k]&&x[k].pct,r=rango(x[k]&&x[k].esc);if(typeof p==="number"&&r){sx+=p;sy+=(r[0]+r[1])/2}});if(sx>=5)RATIO[k]=sy/sx})}
-function escPct(pct){const o={est:true};PARTIDOS.forEach(([k])=>{const p=pct[k];o[k]=typeof p==="number"?Array(2).fill(Math.round(p*RATIO[k])):null});return o}
-function escEnc(x){const o={est:false};PARTIDOS.forEach(([k])=>{let r=rango(x[k]&&x[k].esc);if(!r&&x[k]&&typeof x[k].pct==="number"){const n=Math.round(x[k].pct*RATIO[k]);r=[n,n];o.est=true;o["e_"+k]=1}o[k]=r});return o}
+function escPct(pct){const o={est:true};new Set([...PARTIDOS.map(p=>p[0]),...Object.keys(pct||{})]).forEach(k=>{const p=pct[k];o[k]=typeof p==="number"?Array(2).fill(Math.round(p*(RATIO[k]??1))):null});return o}
+function escEnc(x){const o={est:false};PARTIDOS.forEach(([k])=>{let r=rango(x[k]&&x[k].esc);if(!r&&x[k]&&typeof x[k].pct==="number"){const n=Math.round(x[k].pct*(RATIO[k]??1));r=[n,n];o.est=true;o["e_"+k]=1}o[k]=r});return o}
 function txtR(r){return r==null?null:(r[0]===r[1]?String(r[0]):r[0]+"-"+r[1])}
 function txtEsc(S,k){const r=S[k];if(!r)return null;return (S.est?"≈":"")+txtR(r)}
 function sumaR(S,ks){let lo=0,hi=0;for(const k of ks){if(!S[k])return null;lo+=S[k][0];hi+=S[k][1]}return[lo,hi]}
-const COALI=[["PP + Vox",["pp","vox"]],["PSOE + F. Amplio + Podemos",["psoe","fa","podemos"]],["Todos menos PP y Vox",["pp","vox"],true],["PP + PSOE",["pp","psoe"]]];
+const COALI=[["PP + Vox",["pp","vox"]],["Todos los demás",["pp","vox"],true]];
 function bloqueCoal(S,ppvox){
   return `<div class="coal"><div class="etq">Coaliciones · mayoría 176</div>`+COALI.map(([nom,ks,resto],i)=>{
-    let r=i===0&&rango(ppvox)?rango(ppvox):sumaR(S,ks);if(!r)return "";
+    let r=rango(ppvox)||sumaR(S,ks);if(!r)return "";
     if(resto)r=[350-r[1],350-r[0]];
-    const est=S.est&&!(i===0&&rango(ppvox))&&ks.some(k=>S.mix?S["e_"+k]:true);
+    const est=S.est&&!rango(ppvox)&&ks.some(k=>S.mix?S["e_"+k]:true);
     const e=r[0]>=176?'<span class="ok">✓ mayoría</span>':(r[1]<176?'<span class="no">✗ no llega</span>':'<span class="filo">≈ en el filo</span>');
     return `<div class="c"><span>${nom}</span><b>${est?"≈":""}${txtR(r)}</b><span class="e">${e}</span></div>`}).join("")+`</div>`;
 }
@@ -170,8 +180,8 @@ function cuentaAtras(){
   $("faltan").innerHTML=dias>0?`<b>${dias}</b> días para el 29N`:(dias===0?"<b>Hoy</b> se vota":"<b>29N</b> celebrado");
 }
 function filaP(k,nom,pct,esc,max){
-  return `<div class="p"><span class="n" style="color:var(--${k})">${nom}</span>
-   <div class="barra"><i style="width:${pct==null?0:Math.min(100,pct/max*100)}%;background:var(--${k})"></i></div>
+  return `<div class="p"><span class="n" style="color:${col(k)}">${nom}</span>
+   <div class="barra"><i style="width:${pct==null?0:Math.min(100,pct/max*100)}%;background:${col(k)}"></i></div>
    <span class="v">${esc!==undefined&&esc!==null?`<b style="font-size:17px">${esc}</b> <small>dip.</small><br>`:""}<small style="color:var(--suave)">${pct==null?"s/d":String(pct).replace(".",",")+"%"}</small></span></div>`;
 }
 function pinta(d){
@@ -179,7 +189,7 @@ function pinta(d){
   $("act").textContent="Actualizado: "+hora(d.actualizado);
   $("nota").innerHTML=d.nota?`<div class="nota">${d.nota}</div>`:"";
   // media
-  calibra(E);
+  fijaPartidos(d,E);calibra(E);
   const med={};PARTIDOS.forEach(([k])=>{const v=E.map(x=>x[k]&&x[k].pct).filter(x=>typeof x==="number");med[k]=v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length*10)/10:null});
   const SM=escPct(med);
   $("media").innerHTML=PARTIDOS.map(([k,n])=>filaP(k,n,med[k],txtEsc(SM,k),40)).join("")+bloqueCoal(SM)+
@@ -188,13 +198,14 @@ function pinta(d){
   const P=d.politico;
   if(P){
     const SP=escPct(P.media);
-    $("polMedia").innerHTML=PARTIDOS.map(([k,n])=>filaP(k,n,P.media[k],txtEsc(SP,k),40)).join("")+bloqueCoal(SP)+
+    const KP=[...PARTIDOS.map(p=>p[0]).filter(k=>P.media[k]!=null),...Object.keys(P.media).filter(k=>!PARTIDOS.some(p=>p[0]===k))];
+    $("polMedia").innerHTML=KP.map(k=>filaP(k,nom(k),P.media[k],txtEsc(SP,k),40)).join("")+bloqueCoal(SP)+
       `<small style="color:var(--suave);display:block;margin-top:8px">POLITICO Poll of Polls · ${fecha(P.fecha)}</small><a class="fuente" href="${P.url}" target="_blank" rel="noopener">Ver la fuente ›</a>`;
-    $("polLista").innerHTML=`<table class="tabla"><tr><th>Encuestadora</th><th style="color:var(--pp)">PP</th><th style="color:var(--psoe)">PSOE</th><th style="color:var(--vox)">Vox</th><th style="color:var(--fa)">FA</th><th>PP+<br>Vox</th><th>Izq.</th></tr>`+
-      P.encuestas.map(x=>{const S=escPct(x),a=sumaR(S,["pp","vox"]),b=sumaR(S,["psoe","fa","podemos"]);
+    $("polLista").innerHTML=`<table class="tabla"><tr><th>Encuestadora</th><th style="color:var(--pp)">PP</th><th style="color:var(--psoe)">PSOE</th><th style="color:var(--vox)">Vox</th><th style="color:var(--fa)">FA</th><th>PP+<br>Vox</th><th>Los<br>demás</th></tr>`+
+      P.encuestas.map(x=>{const S=escPct(x),a=sumaR(S,["pp","vox"]),b=a&&[350-a[1],350-a[0]];
         const c=r=>r?`<td class="${r[0]>=176?"ok":"no"}">≈${r[0]}</td>`:"<td>–</td>";
         return `<tr><td>${x.firma}<br><small>${fecha(x.fecha)}</small></td>${["pp","psoe","vox","fa"].map(k=>`<td>${S[k]?`<b>≈${S[k][0]}</b>`:"–"}<br><small style="color:var(--suave)">${x[k]==null?"–":num(x[k])+"%"}</small></td>`).join("")}${c(a)}${c(b)}</tr>`}).join("")+`</table>
-      <div class="aviso">Arriba diputados ≈ calculados, debajo el %. Izq. = PSOE + F. Amplio + Podemos. Verde = llega a 176.</div>`;
+      <div class="aviso">Arriba diputados ≈ calculados, debajo el %. Los demás = todos los partidos menos PP y Vox (350 − PP+Vox). Verde = llega a 176.</div>`;
   }else{$("polMedia").innerHTML='<small style="color:var(--suave)">Cargando…</small>';$("polLista").innerHTML=""}
   // lista
   $("lista").innerHTML=E.map(x=>{
@@ -316,8 +327,8 @@ function grafico(R,sec,claves,mn,mx,marcas){
   return g;
 }
 function escReg(h){const e=h.enc||{};if(e.pp==null)return null;const S=escPct(e);
-  const a=sumaR(S,["pp","vox"]),b=sumaR(S,["psoe","fa","podemos"]);
-  return{pp:S.pp&&S.pp[0],psoe:S.psoe&&S.psoe[0],vox:S.vox&&S.vox[0],ppvox:a&&a[0],izq:b&&b[0],resto:a&&350-a[0]}}
+  const a=sumaR(S,["pp","vox"]),b=a&&[350-a[1],350-a[0]];
+  return{pp:S.pp&&S.pp[0],psoe:S.psoe&&S.psoe[0],vox:S.vox&&S.vox[0],ppvox:a&&a[0],resto:a&&350-a[0]}}
 function difE(a,b){if(a==null||b==null)return"";const d=a-b;if(!d)return"";
   return `<span class="${d>0?"up":"dn"}">${d>0?"▲":"▼"}${Math.abs(d)}</span>`}
 function marcaM(n){return n==null?"":(n>=176?'<span class="ok">✓</span>':'<span class="no">✗</span>')}
@@ -329,11 +340,11 @@ function graficoEsc(R){
   let g=`<svg viewBox="0 0 ${W} ${Hh}" width="100%">`;
   [140,160,200,220].forEach(v=>g+=`<line x1="${pl}" x2="${W-pr}" y1="${Y(v)}" y2="${Y(v)}" stroke="#ffffff14"/><text x="2" y="${Y(v)+3}">${v}</text>`);
   g+=`<line x1="${pl}" x2="${W-pr}" y1="${Y(176)}" y2="${Y(176)}" stroke="var(--oro)" stroke-dasharray="4 3"/><text x="2" y="${Y(176)+3}" fill="var(--oro)">176</text>`;
-  [["ppvox","var(--pp)"],["izq","var(--psoe)"],["resto","var(--suave)"]].forEach(([k,c])=>{
+  [["ppvox","var(--pp)"],["resto","var(--psoe)"]].forEach(([k,c])=>{
     g+=`<polyline points="${P.map((h,i)=>`${X(i)},${Y(h[k])}`).join(" ")}" fill="none" stroke="${c}" stroke-width="2.5" stroke-linejoin="round"/>`;
     P.forEach((h,i)=>g+=`<circle cx="${X(i)}" cy="${Y(h[k])}" r="2.5" fill="${c}"/>`)});
   g+=`<text x="${pl}" y="${Hh-4}">${fecha(P[0].t)}</text><text x="${W-pr}" y="${Hh-4}" text-anchor="end">${fecha(P[P.length-1].t)}</text></svg>`;
-  return g+`<div style="font-size:13px;margin-top:4px"><b style="color:var(--pp)">PP+Vox</b> · <b style="color:var(--psoe)">PSOE+FA+Podemos</b> · <b style="color:var(--suave)">Todos menos PP y Vox</b></div>`;
+  return g+`<div style="font-size:13px;margin-top:4px"><b style="color:var(--pp)">PP+Vox</b> · <b style="color:var(--psoe)">Todos los demás</b></div>`;
 }
 function pintaReg(d){
   const R=(d&&d.registro)||[];
@@ -344,8 +355,7 @@ function pintaReg(d){
     return `<div class="card reg"><div class="cab"><b>${hora(h.t)}</b>${h.o==="tu"?'<span class="tu">PULSASTE</span>':'<span class="au">automático</span>'}</div>
       <div class="etq">Diputados · coaliciones</div><div class="rc">
         <div><span style="color:var(--pp)"><b>PP + Vox</b></span><b>≈${E.ppvox??"–"}</b> ${difE(E.ppvox,PE.ppvox)} ${marcaM(E.ppvox)}</div>
-        <div><span style="color:var(--psoe)"><b>PSOE + FA + Podemos</b></span><b>≈${E.izq??"–"}</b> ${difE(E.izq,PE.izq)} ${marcaM(E.izq)}</div>
-        <div><span style="color:var(--suave)"><b>Todos menos PP y Vox</b></span><b>≈${E.resto??"–"}</b> ${difE(E.resto,PE.resto)} ${marcaM(E.resto)}</div></div>
+        <div><span style="color:var(--psoe)"><b>Todos los demás</b></span><b>≈${E.resto??"–"}</b> ${difE(E.resto,PE.resto)} ${marcaM(E.resto)}</div></div>
       <div class="etq">Diputados · partidos</div><div class="rg">
         <span style="color:var(--pp)"><b>PP</b> ${E.pp??"–"} ${difE(E.pp,PE.pp)}</span>
         <span style="color:var(--psoe)"><b>PSOE</b> ${E.psoe??"–"} ${difE(E.psoe,PE.psoe)}</span>
@@ -362,7 +372,7 @@ async function cargarReg(){
 }
 // ---------- Aviso de actualización ----------
 // Hay que cambiar APP_VERSION en cada actualización.
-const APP_VERSION="2026.11.19-1";
+const APP_VERSION="2026.11.19-2";
 (()=>{const prev=store("elec_version");store("elec_version",APP_VERSION);
   if(prev!==null&&prev!==APP_VERSION)toast("RADAR ELECCIONES-LORENZITO se ha actualizado",4000)})();
 if("serviceWorker" in navigator){
