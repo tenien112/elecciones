@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-20T10:57:06+01:00",
+ "actualizado": "2026-11-20T19:34:21+01:00",
  "nota": "",
  "encuestas": [
   {
@@ -7,20 +7,20 @@
    "medio": "Okdiario",
    "fecha": "2026-11-20",
    "pp": {
-    "pct": 31.5,
-    "esc": "129"
+    "pct": 32.5,
+    "esc": "137"
    },
    "psoe": {
-    "pct": 26.9,
-    "esc": "112"
+    "pct": 26.5,
+    "esc": "106"
    },
    "vox": {
-    "pct": 19.4,
-    "esc": "66"
+    "pct": 18.8,
+    "esc": "62"
    },
    "fa": {
-    "pct": 6.5,
-    "esc": "9"
+    "pct": 6.8,
+    "esc": "12"
    },
    "fv": {
     "pct": null,
@@ -62,27 +62,27 @@
     "pct": null,
     "esc": "s/d"
    },
-   "ppvox": "195",
-   "url": "https://okdiario.com/espana/feijoo-llega-debate-46-puntos-ventaja-sobre-sanchez-historica-mayoria-absoluta-vox-21189868"
+   "ppvox": "199",
+   "url": "https://okdiario.com/espana/feijoo-roba-70-000-votantes-sanchez-debate-rescata-150-000-abstencion-pp-sube-8-escanos-21232736"
   },
   {
    "instituto": "40dB",
    "medio": "El País / Cadena SER",
-   "fecha": "2026-11-19",
+   "fecha": "2026-11-20",
    "pp": {
-    "pct": 32.2,
-    "esc": "127-139"
+    "pct": 31.9,
+    "esc": "127-137"
    },
    "psoe": {
-    "pct": 30.2,
-    "esc": "115-123"
+    "pct": 31.2,
+    "esc": "121-129"
    },
    "vox": {
-    "pct": 17.6,
-    "esc": "56-62"
+    "pct": 17.1,
+    "esc": "50-60"
    },
    "fa": {
-    "pct": 4.1,
+    "pct": 4.3,
     "esc": "5-8"
    },
    "fv": {
@@ -122,11 +122,74 @@
     "esc": "0-1"
    },
    "salf": {
-    "pct": 1.7,
+    "pct": 1.5,
     "esc": "0"
    },
-   "ppvox": "183-201",
-   "url": "https://elpais.com/espana/elecciones-generales/2026-11-19/la-encuesta-antes-del-debate-ligera-ventaja-del-pp-y-muy-clara-del-bloque-derechista.html"
+   "ppvox": "177-197",
+   "url": "https://elpais.com/espana/elecciones-generales/2026-11-20/la-distancia-entre-el-pp-y-el-psoe-se-estrecha-al-minimo-pese-a-la-victoria-de-feijoo-en-el-debate.html"
+  },
+  {
+   "instituto": "EM-Analytics",
+   "medio": "Electomanía",
+   "fecha": "2026-11-20",
+   "pp": {
+    "pct": 31.0,
+    "esc": "129"
+   },
+   "psoe": {
+    "pct": 27.6,
+    "esc": "121"
+   },
+   "vox": {
+    "pct": 18.2,
+    "esc": "56"
+   },
+   "fa": {
+    "pct": 6.0,
+    "esc": "12"
+   },
+   "fv": {
+    "pct": 1.6,
+    "esc": "2"
+   },
+   "erc": {
+    "pct": 2.3,
+    "esc": "8"
+   },
+   "junts": {
+    "pct": 1.1,
+    "esc": "4"
+   },
+   "bildu": {
+    "pct": 1.5,
+    "esc": "7"
+   },
+   "pnv": {
+    "pct": 0.8,
+    "esc": "3"
+   },
+   "bng": {
+    "pct": 0.9,
+    "esc": "2"
+   },
+   "cc": {
+    "pct": 0.3,
+    "esc": "0"
+   },
+   "aa": {
+    "pct": 1.6,
+    "esc": "4"
+   },
+   "podemos": {
+    "pct": 0.9,
+    "esc": "2"
+   },
+   "salf": {
+    "pct": 2.3,
+    "esc": "0"
+   },
+   "ppvox": "185",
+   "url": "https://electomania.es/tracking-electopanel-20-nov-el-pp-sale-reforzado-del-cara-a-cara/"
   },
   {
    "instituto": "Sondaxe",
@@ -190,69 +253,6 @@
    },
    "ppvox": "193",
    "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/19/feijoo-repunta-primera-vez-campana-debate-sanchez/00031795116567415444664.htm"
-  },
-  {
-   "instituto": "Sigma Dos",
-   "medio": "El Mundo",
-   "fecha": "2026-11-19",
-   "pp": {
-    "pct": 31.0,
-    "esc": "125-131"
-   },
-   "psoe": {
-    "pct": 27.1,
-    "esc": "110-116"
-   },
-   "vox": {
-    "pct": 19.4,
-    "esc": "59-64"
-   },
-   "fa": {
-    "pct": 7.1,
-    "esc": "11-14"
-   },
-   "fv": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "erc": {
-    "pct": 2.3,
-    "esc": "8-9"
-   },
-   "junts": {
-    "pct": 1.4,
-    "esc": "4-5"
-   },
-   "bildu": {
-    "pct": 1.6,
-    "esc": "6-8"
-   },
-   "pnv": {
-    "pct": 1.0,
-    "esc": "4-5"
-   },
-   "bng": {
-    "pct": 1.1,
-    "esc": "2-3"
-   },
-   "cc": {
-    "pct": 0.4,
-    "esc": "0-1"
-   },
-   "aa": {
-    "pct": 1.7,
-    "esc": "3-4"
-   },
-   "podemos": {
-    "pct": 0.8,
-    "esc": "0"
-   },
-   "salf": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "ppvox": "184-195",
-   "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/19/6aff2a9afc6c83886c8b459b.html"
   }
  ],
  "historial": [
@@ -286,10 +286,10 @@
   },
   {
    "fecha": "2026-11-20",
-   "pp": 31.0,
-   "psoe": 28.0,
-   "vox": 19.0,
-   "fa": 5.8
+   "pp": 31.2,
+   "psoe": 28.3,
+   "vox": 18.4,
+   "fa": 5.6
   }
  ],
  "politico": {
