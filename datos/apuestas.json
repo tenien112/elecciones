@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-20T02:45:08+01:00",
+ "actualizado": "2026-11-20T10:57:06+01:00",
  "nota": "",
  "ganar": [
   {
@@ -49,9 +49,9 @@
    "mercado": "Próximo presidente del Gobierno",
    "fecha": "2026-11-20",
    "tipo": "prob",
-   "pp": 86.5,
-   "psoe": 13.0,
-   "vox": 1.6,
+   "pp": 87.5,
+   "psoe": 11.7,
+   "vox": 1.2,
    "url": "https://polymarket.com/event/next-prime-minister-of-spain-20260625005215443"
   },
   {
@@ -98,8 +98,8 @@
    "fecha": "2026-11-20",
    "gan_pp": 84.8,
    "gan_psoe": 20.1,
-   "gob_pp": 85.1,
-   "gob_psoe": 13.6
+   "gob_pp": 85.6,
+   "gob_psoe": 12.9
   }
  ]
 }

@@ -1,7 +1,70 @@
 {
- "actualizado": "2026-11-20T02:45:08+01:00",
+ "actualizado": "2026-11-20T10:57:06+01:00",
  "nota": "",
  "encuestas": [
+  {
+   "instituto": "Data10",
+   "medio": "Okdiario",
+   "fecha": "2026-11-20",
+   "pp": {
+    "pct": 31.5,
+    "esc": "129"
+   },
+   "psoe": {
+    "pct": 26.9,
+    "esc": "112"
+   },
+   "vox": {
+    "pct": 19.4,
+    "esc": "66"
+   },
+   "fa": {
+    "pct": 6.5,
+    "esc": "9"
+   },
+   "fv": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "erc": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "junts": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "bildu": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "pnv": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "bng": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "cc": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "aa": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "podemos": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "salf": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "ppvox": "195",
+   "url": "https://okdiario.com/espana/feijoo-llega-debate-46-puntos-ventaja-sobre-sanchez-historica-mayoria-absoluta-vox-21189868"
+  },
   {
    "instituto": "40dB",
    "medio": "El País / Cadena SER",
@@ -66,67 +129,67 @@
    "url": "https://elpais.com/espana/elecciones-generales/2026-11-19/la-encuesta-antes-del-debate-ligera-ventaja-del-pp-y-muy-clara-del-bloque-derechista.html"
   },
   {
-   "instituto": "Data10",
-   "medio": "Okdiario",
-   "fecha": "2026-11-19",
+   "instituto": "Sondaxe",
+   "medio": "La Voz de Galicia",
+   "fecha": "2026-11-20",
    "pp": {
-    "pct": 31.6,
-    "esc": "130"
+    "pct": 29.3,
+    "esc": "123"
    },
    "psoe": {
-    "pct": 26.5,
-    "esc": "109"
+    "pct": 27.8,
+    "esc": "110"
    },
    "vox": {
-    "pct": 19.4,
-    "esc": "66"
+    "pct": 19.7,
+    "esc": "70"
    },
    "fa": {
-    "pct": 6.7,
-    "esc": "10"
+    "pct": 5.3,
+    "esc": "7"
    },
    "fv": {
-    "pct": null,
-    "esc": "s/d"
+    "pct": 1.7,
+    "esc": "5"
    },
    "erc": {
-    "pct": null,
-    "esc": "s/d"
+    "pct": 2.5,
+    "esc": "10"
    },
    "junts": {
-    "pct": null,
-    "esc": "s/d"
+    "pct": 1.4,
+    "esc": "6"
    },
    "bildu": {
-    "pct": null,
-    "esc": "s/d"
+    "pct": 1.8,
+    "esc": "9"
    },
    "pnv": {
-    "pct": null,
-    "esc": "s/d"
+    "pct": 0.4,
+    "esc": "3"
    },
    "bng": {
-    "pct": null,
-    "esc": "s/d"
+    "pct": 1.0,
+    "esc": "2"
    },
    "cc": {
-    "pct": null,
-    "esc": "s/d"
+    "pct": 0.3,
+    "esc": "1"
    },
    "aa": {
-    "pct": null,
-    "esc": "s/d"
+    "pct": 1.6,
+    "esc": "3"
    },
    "podemos": {
-    "pct": null,
-    "esc": "s/d"
+    "pct": 0.9,
+    "esc": "1"
    },
    "salf": {
     "pct": null,
-    "esc": "s/d"
+    "esc": "0"
    },
-   "ppvox": "196",
-   "url": "https://okdiario.com/espana/pp-saca-5-puntos-psoe-ecuador-primera-semana-campana-tendria-vox-mayoria-196-escanos-21117119"
+   "ppvox": "193",
+   "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/19/feijoo-repunta-primera-vez-campana-debate-sanchez/00031795116567415444664.htm"
   },
   {
    "instituto": "Sigma Dos",
@@ -190,69 +253,6 @@
    },
    "ppvox": "184-195",
    "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/19/6aff2a9afc6c83886c8b459b.html"
-  },
-  {
-   "instituto": "EM-Analytics",
-   "medio": "Electomanía",
-   "fecha": "2026-11-19",
-   "pp": {
-    "pct": 30.4,
-    "esc": "127"
-   },
-   "psoe": {
-    "pct": 27.6,
-    "esc": "120"
-   },
-   "vox": {
-    "pct": 18.7,
-    "esc": "60"
-   },
-   "fa": {
-    "pct": 5.8,
-    "esc": "11"
-   },
-   "fv": {
-    "pct": 1.6,
-    "esc": "2"
-   },
-   "erc": {
-    "pct": 2.3,
-    "esc": "8"
-   },
-   "junts": {
-    "pct": 1.2,
-    "esc": "5"
-   },
-   "bildu": {
-    "pct": 1.5,
-    "esc": "7"
-   },
-   "pnv": {
-    "pct": 0.8,
-    "esc": "3"
-   },
-   "bng": {
-    "pct": 0.9,
-    "esc": "2"
-   },
-   "cc": {
-    "pct": 0.3,
-    "esc": "0"
-   },
-   "aa": {
-    "pct": 1.6,
-    "esc": "4"
-   },
-   "podemos": {
-    "pct": 1.1,
-    "esc": "1"
-   },
-   "salf": {
-    "pct": 2.4,
-    "esc": "0"
-   },
-   "ppvox": "187",
-   "url": "https://electomania.es/tracking-electopanel-19-nov-sanchez-mete-el-turbo-a-costa-de-su-izquierda-con-la-derecha-en-187-escanos/"
   }
  ],
  "historial": [
@@ -286,10 +286,10 @@
   },
   {
    "fecha": "2026-11-20",
-   "pp": 31.3,
-   "psoe": 27.9,
-   "vox": 18.8,
-   "fa": 5.9
+   "pp": 31.0,
+   "psoe": 28.0,
+   "vox": 19.0,
+   "fa": 5.8
   }
  ],
  "politico": {
