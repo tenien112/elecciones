@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-21T01:13:25+01:00",
+ "actualizado": "2026-11-21T08:41:10+01:00",
  "nota": "",
  "ganar": [
   {
@@ -37,8 +37,8 @@
    "mercado": "Partido ganador",
    "fecha": "2026-11-21",
    "tipo": "prob",
-   "pp": 87.0,
-   "psoe": 12.8,
+   "pp": 91.1,
+   "psoe": 8.8,
    "vox": 0.1,
    "url": "https://manifold.markets/JoseReyesTolentino/which-party-will-win-the-2026-spani"
   }
@@ -50,7 +50,7 @@
    "fecha": "2026-11-21",
    "tipo": "prob",
    "pp": 87.5,
-   "psoe": 11.2,
+   "psoe": 11.8,
    "vox": 1.2,
    "url": "https://polymarket.com/event/next-prime-minister-of-spain-20260625005215443"
   },
@@ -103,10 +103,10 @@
   },
   {
    "fecha": "2026-11-21",
-   "gan_pp": 84.0,
-   "gan_psoe": 20.9,
+   "gan_pp": 85.0,
+   "gan_psoe": 19.9,
    "gob_pp": 85.6,
-   "gob_psoe": 12.7
+   "gob_psoe": 13.0
   }
  ]
 }
