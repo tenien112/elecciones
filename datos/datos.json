@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-20T19:34:21+01:00",
+ "actualizado": "2026-11-21T01:13:25+01:00",
  "nota": "",
  "encuestas": [
   {
@@ -196,63 +196,63 @@
    "medio": "La Voz de Galicia",
    "fecha": "2026-11-20",
    "pp": {
-    "pct": 29.3,
-    "esc": "123"
+    "pct": 29.5,
+    "esc": "125"
    },
    "psoe": {
-    "pct": 27.8,
+    "pct": 27.9,
     "esc": "110"
    },
    "vox": {
-    "pct": 19.7,
+    "pct": 19.8,
     "esc": "70"
    },
    "fa": {
-    "pct": 5.3,
+    "pct": 4.9,
     "esc": "7"
    },
    "fv": {
-    "pct": 1.7,
-    "esc": "5"
+    "pct": null,
+    "esc": "6"
    },
    "erc": {
-    "pct": 2.5,
-    "esc": "10"
+    "pct": null,
+    "esc": "11"
    },
    "junts": {
-    "pct": 1.4,
+    "pct": null,
     "esc": "6"
    },
    "bildu": {
-    "pct": 1.8,
-    "esc": "9"
+    "pct": null,
+    "esc": "8"
    },
    "pnv": {
-    "pct": 0.4,
-    "esc": "3"
+    "pct": null,
+    "esc": "2"
    },
    "bng": {
-    "pct": 1.0,
+    "pct": null,
     "esc": "2"
    },
    "cc": {
-    "pct": 0.3,
+    "pct": null,
     "esc": "1"
    },
    "aa": {
-    "pct": 1.6,
+    "pct": null,
     "esc": "3"
    },
    "podemos": {
-    "pct": 0.9,
-    "esc": "1"
+    "pct": null,
+    "esc": "0"
    },
    "salf": {
     "pct": null,
     "esc": "0"
    },
-   "ppvox": "193",
-   "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/19/feijoo-repunta-primera-vez-campana-debate-sanchez/00031795116567415444664.htm"
+   "ppvox": "195",
+   "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/20/pp-concentra-voto-util-minimiza-fugas-partidos-galicia/00031795200518832464353.htm"
   }
  ],
  "historial": [
@@ -290,6 +290,13 @@
    "psoe": 28.3,
    "vox": 18.4,
    "fa": 5.6
+  },
+  {
+   "fecha": "2026-11-21",
+   "pp": 31.2,
+   "psoe": 28.3,
+   "vox": 18.5,
+   "fa": 5.5
   }
  ],
  "politico": {
