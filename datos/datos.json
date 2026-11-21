@@ -1,26 +1,89 @@
 {
- "actualizado": "2026-11-21T08:41:10+01:00",
+ "actualizado": "2026-11-21T17:06:20+01:00",
  "nota": "",
  "encuestas": [
   {
-   "instituto": "Data10",
-   "medio": "Okdiario",
-   "fecha": "2026-11-20",
+   "instituto": "EM-Analytics",
+   "medio": "Electomanía",
+   "fecha": "2026-11-21",
    "pp": {
-    "pct": 32.5,
-    "esc": "137"
+    "pct": 31.0,
+    "esc": "126"
    },
    "psoe": {
-    "pct": 26.5,
-    "esc": "106"
+    "pct": 27.9,
+    "esc": "121"
    },
    "vox": {
-    "pct": 18.8,
-    "esc": "62"
+    "pct": 18.5,
+    "esc": "59"
    },
    "fa": {
-    "pct": 6.8,
-    "esc": "12"
+    "pct": 5.7,
+    "esc": "11"
+   },
+   "fv": {
+    "pct": 1.6,
+    "esc": "2"
+   },
+   "erc": {
+    "pct": 2.5,
+    "esc": "9"
+   },
+   "junts": {
+    "pct": 1.1,
+    "esc": "4"
+   },
+   "bildu": {
+    "pct": 1.5,
+    "esc": "7"
+   },
+   "pnv": {
+    "pct": 0.8,
+    "esc": "3"
+   },
+   "bng": {
+    "pct": 0.9,
+    "esc": "2"
+   },
+   "cc": {
+    "pct": 0.3,
+    "esc": "0"
+   },
+   "aa": {
+    "pct": 1.6,
+    "esc": "4"
+   },
+   "podemos": {
+    "pct": 0.9,
+    "esc": "2"
+   },
+   "salf": {
+    "pct": 2.1,
+    "esc": "0"
+   },
+   "ppvox": "185",
+   "url": "https://electomania.es/tracking-electopanel-21-nov-psoe-y-vox-al-alza-con-34-escanos-en-disputa/"
+  },
+  {
+   "instituto": "Data10",
+   "medio": "Okdiario",
+   "fecha": "2026-11-21",
+   "pp": {
+    "pct": 32.3,
+    "esc": "135"
+   },
+   "psoe": {
+    "pct": 26.6,
+    "esc": "108"
+   },
+   "vox": {
+    "pct": 19.0,
+    "esc": "63"
+   },
+   "fa": {
+    "pct": 6.7,
+    "esc": "11"
    },
    "fv": {
     "pct": null,
@@ -62,8 +125,8 @@
     "pct": null,
     "esc": "s/d"
    },
-   "ppvox": "199",
-   "url": "https://okdiario.com/espana/feijoo-roba-70-000-votantes-sanchez-debate-rescata-150-000-abstencion-pp-sube-8-escanos-21232736"
+   "ppvox": "198",
+   "url": "https://okdiario.com/espana/debate-impulsa-pp-hasta-135-escanos-costa-vox-psoe-que-retrocede-4-diputados-21236645"
   },
   {
    "instituto": "40dB",
@@ -129,69 +192,6 @@
    "url": "https://elpais.com/espana/elecciones-generales/2026-11-20/la-distancia-entre-el-pp-y-el-psoe-se-estrecha-al-minimo-pese-a-la-victoria-de-feijoo-en-el-debate.html"
   },
   {
-   "instituto": "EM-Analytics",
-   "medio": "Electomanía",
-   "fecha": "2026-11-20",
-   "pp": {
-    "pct": 31.0,
-    "esc": "129"
-   },
-   "psoe": {
-    "pct": 27.6,
-    "esc": "121"
-   },
-   "vox": {
-    "pct": 18.2,
-    "esc": "56"
-   },
-   "fa": {
-    "pct": 6.0,
-    "esc": "12"
-   },
-   "fv": {
-    "pct": 1.6,
-    "esc": "2"
-   },
-   "erc": {
-    "pct": 2.3,
-    "esc": "8"
-   },
-   "junts": {
-    "pct": 1.1,
-    "esc": "4"
-   },
-   "bildu": {
-    "pct": 1.5,
-    "esc": "7"
-   },
-   "pnv": {
-    "pct": 0.8,
-    "esc": "3"
-   },
-   "bng": {
-    "pct": 0.9,
-    "esc": "2"
-   },
-   "cc": {
-    "pct": 0.3,
-    "esc": "0"
-   },
-   "aa": {
-    "pct": 1.6,
-    "esc": "4"
-   },
-   "podemos": {
-    "pct": 0.9,
-    "esc": "2"
-   },
-   "salf": {
-    "pct": 2.3,
-    "esc": "0"
-   },
-   "ppvox": "185",
-   "url": "https://electomania.es/tracking-electopanel-20-nov-el-pp-sale-reforzado-del-cara-a-cara/"
-  },
-  {
    "instituto": "Sondaxe",
    "medio": "La Voz de Galicia",
    "fecha": "2026-11-20",
@@ -208,39 +208,39 @@
     "esc": "70"
    },
    "fa": {
-    "pct": 4.9,
+    "pct": 5.0,
     "esc": "7"
    },
    "fv": {
-    "pct": null,
+    "pct": 1.9,
     "esc": "6"
    },
    "erc": {
-    "pct": null,
+    "pct": 2.7,
     "esc": "11"
    },
    "junts": {
-    "pct": null,
+    "pct": 1.5,
     "esc": "6"
    },
    "bildu": {
-    "pct": null,
+    "pct": 1.5,
     "esc": "8"
    },
    "pnv": {
-    "pct": null,
+    "pct": 0.4,
     "esc": "2"
    },
    "bng": {
-    "pct": null,
+    "pct": 1.0,
     "esc": "2"
    },
    "cc": {
-    "pct": null,
+    "pct": 0.5,
     "esc": "1"
    },
    "aa": {
-    "pct": null,
+    "pct": 1.4,
     "esc": "3"
    },
    "podemos": {
@@ -294,28 +294,50 @@
   {
    "fecha": "2026-11-21",
    "pp": 31.2,
-   "psoe": 28.3,
-   "vox": 18.5,
-   "fa": 5.5
+   "psoe": 28.4,
+   "vox": 18.6,
+   "fa": 5.4
   }
  ],
  "politico": {
-  "fecha": "2026-11-17",
+  "fecha": "2026-11-19",
   "media": {
-   "pp": 31.2,
-   "psoe": 28.1,
-   "podemos": 1.2,
+   "pp": 31.5,
+   "psoe": 28.8,
+   "podemos": 1.1,
    "pnv": 0.8,
    "cc": 0.3,
    "bildu": 1.7,
-   "vox": 18.5,
+   "vox": 18.1,
    "bng": 1,
    "junts": 1.2,
-   "salf": 1.9,
+   "salf": 1.8,
    "erc": 2.4,
-   "fa": 4.6
+   "fa": 4.0
   },
   "encuestas": [
+   {
+    "firma": "40dB",
+    "fecha": "2026-11-19",
+    "muestra": 2000,
+    "pp": 32.2,
+    "psoe": 30.2,
+    "podemos": 1.1,
+    "vox": 17.6,
+    "salf": 1.7,
+    "fa": 3.6
+   },
+   {
+    "firma": "40dB",
+    "fecha": "2026-11-18",
+    "muestra": 2000,
+    "pp": 32.4,
+    "psoe": 30.4,
+    "podemos": 1.2,
+    "vox": 17.2,
+    "salf": 1.7,
+    "fa": 3.7
+   },
    {
     "firma": "40dB",
     "fecha": "2026-11-17",
@@ -538,23 +560,6 @@
     "podemos": 1.4,
     "vox": 19.6,
     "fa": 7.3
-   },
-   {
-    "firma": "SocioMétrica",
-    "fecha": "2026-11-08",
-    "muestra": 5460,
-    "pp": 32,
-    "psoe": 27.7,
-    "podemos": 1.2,
-    "pnv": 0.8,
-    "cc": 0.5,
-    "bildu": 1.6,
-    "vox": 18.9,
-    "bng": 1,
-    "junts": 1.4,
-    "salf": 2.2,
-    "erc": 2.4,
-    "fa": 4.4
    }
   ],
   "url": "https://www.politico.eu/europe-poll-of-polls/national-parliament-voting-intention/spain/"
