@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-22T11:37:09+01:00",
+ "actualizado": "2026-11-22T19:01:19+01:00",
  "nota": "",
  "encuestas": [
   {
@@ -68,7 +68,7 @@
   {
    "instituto": "40dB",
    "medio": "El País / Cadena SER",
-   "fecha": "2026-11-21",
+   "fecha": "2026-11-22",
    "pp": {
     "pct": 31.9,
     "esc": "127-138"
@@ -126,38 +126,38 @@
     "esc": "0"
    },
    "ppvox": "176-197",
-   "url": "https://elpais.com/espana/elecciones-generales/2026-11-21/el-psoe-acaricia-el-empate-con-el-pp-segun-el-tracking-de-40db.html"
+   "url": "https://elpais.com/espana/elecciones-generales/2026-11-22/el-psoe-acaricia-el-empate-con-el-pp-segun-el-tracking-de-40db.html"
   },
   {
    "instituto": "EM-Analytics",
    "medio": "Electomanía",
-   "fecha": "2026-11-21",
+   "fecha": "2026-11-22",
    "pp": {
-    "pct": 31.0,
-    "esc": "126"
+    "pct": 31.2,
+    "esc": "129"
    },
    "psoe": {
-    "pct": 27.9,
-    "esc": "121"
+    "pct": 28.4,
+    "esc": "122"
    },
    "vox": {
-    "pct": 18.5,
-    "esc": "59"
+    "pct": 18.3,
+    "esc": "57"
    },
    "fa": {
-    "pct": 5.7,
-    "esc": "11"
+    "pct": 5.8,
+    "esc": "9"
    },
    "fv": {
-    "pct": 1.6,
+    "pct": 1.8,
     "esc": "2"
    },
    "erc": {
-    "pct": 2.5,
+    "pct": 2.6,
     "esc": "9"
    },
    "junts": {
-    "pct": 1.1,
+    "pct": 1.2,
     "esc": "4"
    },
    "bildu": {
@@ -177,7 +177,7 @@
     "esc": "0"
    },
    "aa": {
-    "pct": 1.6,
+    "pct": 1.7,
     "esc": "4"
    },
    "podemos": {
@@ -188,8 +188,8 @@
     "pct": 2.1,
     "esc": "0"
    },
-   "ppvox": "185",
-   "url": "https://electomania.es/tracking-electopanel-21-nov-psoe-y-vox-al-alza-con-34-escanos-en-disputa/"
+   "ppvox": "186",
+   "url": "https://electomania.es/tracking-electopanel-22-nov-psoe-y-pp-meten-el-turbo-en-la-recta-final-de-campana-con-mas-escanos-cojos-que-nunca/"
   },
   {
    "instituto": "SocioMétrica",
@@ -300,9 +300,9 @@
   },
   {
    "fecha": "2026-11-22",
-   "pp": 31.8,
-   "psoe": 28.8,
-   "vox": 18.3,
+   "pp": 31.9,
+   "psoe": 28.9,
+   "vox": 18.2,
    "fa": 5.3
   }
  ],

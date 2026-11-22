@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-22T11:37:09+01:00",
+ "actualizado": "2026-11-22T19:01:19+01:00",
  "nota": "",
  "ganar": [
   {
@@ -7,8 +7,8 @@
    "mercado": "Partido con más escaños",
    "fecha": "2026-11-22",
    "tipo": "prob",
-   "pp": 71.5,
-   "psoe": 27.5,
+   "pp": 73.5,
+   "psoe": 25.5,
    "vox": 0.4,
    "url": "https://polymarket.com/event/spain-general-election-winner"
   },
@@ -28,7 +28,7 @@
    "fecha": "2026-11-22",
    "tipo": "prob",
    "pp": null,
-   "psoe": 28.5,
+   "psoe": 26.5,
    "vox": 1.7,
    "url": "https://kalshi.com/markets/kxspainparli"
   },
@@ -37,9 +37,9 @@
    "mercado": "Partido con más escaños",
    "fecha": "2026-11-22",
    "tipo": "prob",
-   "pp": 91.3,
-   "psoe": 8.5,
-   "vox": 0.1,
+   "pp": 90.9,
+   "psoe": 8.9,
+   "vox": 0.0,
    "url": "https://manifold.markets/AlbertoMC/which-party-will-win-the-most-seats-c09AA2cR00"
   }
  ],
@@ -50,7 +50,7 @@
    "fecha": "2026-11-22",
    "tipo": "prob",
    "pp": 89.5,
-   "psoe": 8.2,
+   "psoe": 8.3,
    "vox": 1.1,
    "url": "https://polymarket.com/event/next-prime-minister-of-spain-20260625005215443"
   },
@@ -59,8 +59,8 @@
    "mercado": "Próximo presidente del Gobierno",
    "fecha": "2026-11-22",
    "tipo": "prob",
-   "pp": 83.7,
-   "psoe": 14.2,
+   "pp": 81.4,
+   "psoe": 17.1,
    "vox": null,
    "url": "https://manifold.markets/Jack1/prime-minister-of-spain-after-novem"
   },
@@ -69,8 +69,8 @@
    "mercado": "Próximo presidente del Gobierno",
    "fecha": "2026-11-22",
    "tipo": "prob",
-   "pp": 89.0,
-   "psoe": 9.5,
+   "pp": 89.5,
+   "psoe": 8.5,
    "vox": 2.0,
    "url": "https://kalshi.com/markets/kxspanishpm"
   }
@@ -120,10 +120,10 @@
   },
   {
    "fecha": "2026-11-22",
-   "gan_pp": 84.6,
-   "gan_psoe": 18.4,
-   "gob_pp": 87.4,
-   "gob_psoe": 10.6
+   "gan_pp": 85.1,
+   "gan_psoe": 17.4,
+   "gob_pp": 86.8,
+   "gob_psoe": 11.3
   }
  ]
 }
