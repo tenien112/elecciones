@@ -1,7 +1,70 @@
 {
- "actualizado": "2026-11-22T11:14:57+01:00",
+ "actualizado": "2026-11-22T11:27:44+01:00",
  "nota": "",
  "encuestas": [
+  {
+   "instituto": "Data10",
+   "medio": "Okdiario",
+   "fecha": "2026-11-22",
+   "pp": {
+    "pct": 32.1,
+    "esc": "133"
+   },
+   "psoe": {
+    "pct": 27.0,
+    "esc": "111"
+   },
+   "vox": {
+    "pct": 19.0,
+    "esc": "63"
+   },
+   "fa": {
+    "pct": 6.6,
+    "esc": "10"
+   },
+   "fv": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "erc": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "junts": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "bildu": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "pnv": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "bng": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "cc": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "aa": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "podemos": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "salf": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "ppvox": "196",
+   "url": "https://okdiario.com/espana/psoe-recorta-distancias-pero-pp-sigue-cinco-puntos-delante-socialistas-suma-vox-roza-200-escanos-21240493"
+  },
   {
    "instituto": "40dB",
    "medio": "El País / Cadena SER",
@@ -190,69 +253,6 @@
    },
    "ppvox": "199",
    "url": "https://www.elespanol.com/espana/politica/20261121/tracking-semana-feijoo-sanchez-ganan-escanos-costa-aliados-oposicion-mantiene-debate/1003744467538_0.html"
-  },
-  {
-   "instituto": "Data10",
-   "medio": "Okdiario",
-   "fecha": "2026-11-21",
-   "pp": {
-    "pct": 32.3,
-    "esc": "135"
-   },
-   "psoe": {
-    "pct": 26.6,
-    "esc": "108"
-   },
-   "vox": {
-    "pct": 19.0,
-    "esc": "63"
-   },
-   "fa": {
-    "pct": 6.7,
-    "esc": "11"
-   },
-   "fv": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "erc": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "junts": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "bildu": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "pnv": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "bng": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "cc": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "aa": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "podemos": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "salf": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "ppvox": "198",
-   "url": "https://okdiario.com/espana/debate-impulsa-pp-hasta-135-escanos-costa-vox-psoe-que-retrocede-4-diputados-21236645"
   }
  ],
  "historial": [
@@ -300,8 +300,8 @@
   },
   {
    "fecha": "2026-11-22",
-   "pp": 31.9,
-   "psoe": 28.6,
+   "pp": 31.8,
+   "psoe": 28.8,
    "vox": 18.3,
    "fa": 5.3
   }
