@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-22T11:27:44+01:00",
+ "actualizado": "2026-11-22T11:37:09+01:00",
  "nota": "",
  "ganar": [
   {
@@ -21,6 +21,26 @@
    "psoe": 8.9,
    "vox": 0.1,
    "url": "https://manifold.markets/JoseReyesTolentino/which-party-will-win-the-2026-spani"
+  },
+  {
+   "casa": "Kalshi",
+   "mercado": "Partido ganador",
+   "fecha": "2026-11-22",
+   "tipo": "prob",
+   "pp": null,
+   "psoe": 28.5,
+   "vox": 1.7,
+   "url": "https://kalshi.com/markets/kxspainparli"
+  },
+  {
+   "casa": "Manifold 2 (dinero ficticio)",
+   "mercado": "Partido con más escaños",
+   "fecha": "2026-11-22",
+   "tipo": "prob",
+   "pp": 91.3,
+   "psoe": 8.5,
+   "vox": 0.1,
+   "url": "https://manifold.markets/AlbertoMC/which-party-will-win-the-most-seats-c09AA2cR00"
   }
  ],
  "gobierno": [
@@ -43,6 +63,16 @@
    "psoe": 14.2,
    "vox": null,
    "url": "https://manifold.markets/Jack1/prime-minister-of-spain-after-novem"
+  },
+  {
+   "casa": "Kalshi",
+   "mercado": "Próximo presidente del Gobierno",
+   "fecha": "2026-11-22",
+   "tipo": "prob",
+   "pp": 89.0,
+   "psoe": 9.5,
+   "vox": 2.0,
+   "url": "https://kalshi.com/markets/kxspanishpm"
   }
  ],
  "historial": [
@@ -90,10 +120,10 @@
   },
   {
    "fecha": "2026-11-22",
-   "gan_pp": 81.2,
-   "gan_psoe": 18.2,
-   "gob_pp": 86.6,
-   "gob_psoe": 11.2
+   "gan_pp": 84.6,
+   "gan_psoe": 18.4,
+   "gob_pp": 87.4,
+   "gob_psoe": 10.6
   }
  ]
 }
