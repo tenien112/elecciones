@@ -1,11 +1,11 @@
 {
- "actualizado": "2026-11-22T19:01:19+01:00",
+ "actualizado": "2026-11-23T00:34:02+01:00",
  "nota": "",
  "ganar": [
   {
    "casa": "Polymarket",
    "mercado": "Partido con más escaños",
-   "fecha": "2026-11-22",
+   "fecha": "2026-11-23",
    "tipo": "prob",
    "pp": 73.5,
    "psoe": 25.5,
@@ -15,7 +15,7 @@
   {
    "casa": "Manifold (dinero ficticio)",
    "mercado": "Partido ganador",
-   "fecha": "2026-11-22",
+   "fecha": "2026-11-23",
    "tipo": "prob",
    "pp": 91.0,
    "psoe": 8.9,
@@ -25,17 +25,17 @@
   {
    "casa": "Kalshi",
    "mercado": "Partido ganador",
-   "fecha": "2026-11-22",
+   "fecha": "2026-11-23",
    "tipo": "prob",
    "pp": null,
-   "psoe": 26.5,
+   "psoe": 25.5,
    "vox": 1.7,
    "url": "https://kalshi.com/markets/kxspainparli"
   },
   {
    "casa": "Manifold 2 (dinero ficticio)",
    "mercado": "Partido con más escaños",
-   "fecha": "2026-11-22",
+   "fecha": "2026-11-23",
    "tipo": "prob",
    "pp": 90.9,
    "psoe": 8.9,
@@ -47,17 +47,17 @@
   {
    "casa": "Polymarket",
    "mercado": "Próximo presidente del Gobierno",
-   "fecha": "2026-11-22",
+   "fecha": "2026-11-23",
    "tipo": "prob",
-   "pp": 89.5,
-   "psoe": 8.3,
-   "vox": 1.1,
+   "pp": 90.5,
+   "psoe": 8.6,
+   "vox": 0.5,
    "url": "https://polymarket.com/event/next-prime-minister-of-spain-20260625005215443"
   },
   {
    "casa": "Manifold (dinero ficticio)",
    "mercado": "Próximo presidente del Gobierno",
-   "fecha": "2026-11-22",
+   "fecha": "2026-11-23",
    "tipo": "prob",
    "pp": 81.4,
    "psoe": 17.1,
@@ -67,7 +67,7 @@
   {
    "casa": "Kalshi",
    "mercado": "Próximo presidente del Gobierno",
-   "fecha": "2026-11-22",
+   "fecha": "2026-11-23",
    "tipo": "prob",
    "pp": 89.5,
    "psoe": 8.5,
@@ -124,6 +124,13 @@
    "gan_psoe": 17.4,
    "gob_pp": 86.8,
    "gob_psoe": 11.3
+  },
+  {
+   "fecha": "2026-11-23",
+   "gan_pp": 85.1,
+   "gan_psoe": 17.2,
+   "gob_pp": 87.1,
+   "gob_psoe": 11.4
   }
  ]
 }
