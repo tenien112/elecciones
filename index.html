@@ -57,6 +57,11 @@ button.sec{background:var(--card2);color:var(--txt);border:1px solid var(--borde
 .nota{background:#E9C46A22;border:1px solid var(--oro);border-radius:14px;padding:10px 12px;font-size:14px;margin:10px 0}
 svg text{fill:var(--suave);font-size:10px}
 footer{margin-top:28px;text-align:center;color:var(--suave);font-size:12px}
+.fia{display:flex;align-items:center;gap:8px;margin-top:10px;padding:8px 10px;border-radius:12px;font-size:13px;border:1px solid}
+.fia b{font-size:13px;letter-spacing:.5px}
+.fia small{color:var(--suave)}
+.escala{display:grid;grid-template-columns:auto 1fr auto;gap:4px 10px;font-size:13px;align-items:center}
+.escala i{display:inline-block;width:10px;height:10px;border-radius:3px}
 .tabs{display:flex;gap:8px;margin:16px 0 4px}
 .tabs button{flex:1;padding:14px 6px;font-size:14px;background:var(--card2);color:var(--txt);border:1px solid var(--borde)}
 .tabs button.on{background:var(--oro);color:#1B1B1B;border-color:var(--oro)}
@@ -111,6 +116,9 @@ footer{margin-top:28px;text-align:center;color:var(--suave);font-size:12px}
   <div id="apuMedia" class="card media"></div>
   <div class="titulo">Por casa de apuestas</div>
   <div id="apuLista"></div>
+  <div class="titulo">Fiabilidad de las apuestas</div>
+  <div class="card"><div class="escala" id="apuEscala"></div>
+  <div class="aviso">Según el historial de los mercados de apuestas, lo que sale al 90% ocurre más o menos 9 de cada 10 veces. Orientativo, no es una certeza.</div></div>
   <div class="titulo">Evolución (PP vs PSOE)</div>
   <div class="card" id="apuEvol"></div>
   <div style="color:var(--suave);font-size:12px">% = probabilidad que da cada casa (1 ÷ cuota). Lo que apuesta la gente, no el resultado.</div>
@@ -280,15 +288,28 @@ function filaA(k,nom,pct,cuota){
    <div class="barra"><i style="width:${pct==null?0:Math.min(100,pct)}%;background:var(--${k})"></i></div>
    <span class="v">${pct==null?"–":String(pct).replace(".",",")+"%"}${cuota?`<br><small>cuota ${String(cuota.toFixed(2)).replace(".",",")}</small>`:""}</span></div>`;
 }
+const FIA=[[95,"CASI SEGURO","#2ecc71"],[85,"MUY PROBABLE","#8bd36a"],[65,"FAVORITO","#E9C46A"],[35,"INCIERTO","#9aa5a0"],[0,"POCO PROBABLE","#ff7a7a"]];
+function nivel(p){return FIA.find(f=>p>=f[0])}
+function cadaN(p){const n=Math.round(100/(100-p));return n>=100?"menos de 1 de cada 100":"1 de cada "+n}
+function fiab(probs){
+  const v=APU_P.map(([k,n,c])=>[c,probs[k]]).filter(x=>typeof x[1]==="number");if(!v.length)return"";
+  const tot=v.reduce((a,x)=>a+x[1],0),f=tot>100?100/tot:1;
+  v.sort((a,b)=>b[1]-a[1]);const [nom,raw]=v[0],p=Math.round(raw*f*10)/10,[,et,col]=nivel(p);
+  return `<div class="fia" style="border-color:${col};background:${col}1f"><b style="color:${col}">${et}</b><span>${nom} ${String(p).replace(".",",")}% · <small>falla ${cadaN(p)}</small></span></div>`;
+}
+function pintaEscala(){const T=[["95% o más","menos de 1 de cada 20"],["85–95%","1 de cada 7 a 10"],["65–85%","1 de cada 3 a 6"],["35–65%","moneda al aire"],["menos de 35%","lo normal es que no pase"]];
+  $("apuEscala").innerHTML=FIA.map((f,i)=>`<span><i style="background:${f[2]}"></i></span><span><b style="color:${f[2]}">${f[1]}</b> <small style="color:var(--suave)">${T[i][0]}</small></span><small style="color:var(--suave)">${i<3?"falla ":""}${T[i][1]}</small>`).join("")}
 function pintaApu(d){
+  pintaEscala();
   const L=d[apuSub]||[];
   $("apuAct").textContent="Actualizado: "+hora(d.actualizado);
   $("apuNota").innerHTML=d.nota?`<div class="nota">${d.nota}</div>`:"";
   $("apuTit").textContent=apuSub==="gobierno"?"¿Quién forma gobierno? · media":"¿Quién gana las elecciones? · media";
   const med={};APU_P.forEach(([k])=>{const v=L.map(x=>prob(x,k)).filter(x=>x!=null);med[k]=v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length*10)/10:null});
-  $("apuMedia").innerHTML=APU_P.map(([k,n])=>filaA(k,n,med[k])).join("");
+  $("apuMedia").innerHTML=APU_P.map(([k,n])=>filaA(k,n,med[k])).join("")+fiab(med);
   $("apuLista").innerHTML=L.map(x=>`<div class="card"><div class="cab"><div><b>${x.casa}</b><br><small>${x.mercado}</small></div><small>${fecha(x.fecha)}</small></div>
     ${APU_P.map(([k,n])=>filaA(k,n,prob(x,k),x.tipo==="cuota"&&typeof x[k]==="number"?x[k]:null)).join("")}
+    ${fiab(Object.fromEntries(APU_P.map(([k])=>[k,prob(x,k)])))}
     ${x.url?`<a class="fuente" href="${x.url}" target="_blank" rel="noopener">Ver la fuente ›</a>`:""}</div>`).join("")||'<div class="card">Sin datos todavía.</div>';
   const pre=apuSub==="gobierno"?"gob_":"gan_",H=(d.historial||[]).slice(-30);
   if(H.length<2){$("apuEvol").innerHTML='<small style="color:var(--suave)">Se irá dibujando con cada actualización (mañana y noche).</small>';return}
@@ -372,7 +393,7 @@ async function cargarReg(){
 }
 // ---------- Aviso de actualización ----------
 // Hay que cambiar APP_VERSION en cada actualización.
-const APP_VERSION="2026.11.19-4";
+const APP_VERSION="2026-11-22-fiab";
 (()=>{const prev=store("elec_version");store("elec_version",APP_VERSION);
   if(prev!==null&&prev!==APP_VERSION)toast("RADAR ELECCIONES-LORENZITO se ha actualizado",4000)})();
 if("serviceWorker" in navigator){
