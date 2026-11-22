@@ -255,20 +255,57 @@ def polymarket(slug_ini, buscar):
 
 # ---------------------------------------------------------------- MANIFOLD (dinero ficticio)
 MANIFOLD = {"gobierno": ("t2hIcyupSt", "Próximo presidente del Gobierno"),
-            "ganar": ("dssO0cOpPU", "Partido ganador")}
+            "ganar": ("dssO0cOpPU", "Partido ganador"),
+            "escanos": ("PNEAp0I5yn", "Partido con más escaños")}
 MF_NOMBRES = {"pp": ("feij", "pp"), "psoe": ("s\u00e1nchez", "sanchez", "psoe"), "vox": ("abascal", "vox")}
 
 
 def manifold(clave, hoy):
     mid, mercado = MANIFOLD[clave]
     m = json.loads(get("https://api.manifold.markets/v0/market/" + mid, True))
-    ent = {"casa": "Manifold (dinero ficticio)", "mercado": mercado, "fecha": hoy, "tipo": "prob",
+    casa = "Manifold (dinero ficticio)" if clave != "escanos" else "Manifold 2 (dinero ficticio)"
+    ent = {"casa": casa, "mercado": mercado, "fecha": hoy, "tipo": "prob",
            "pp": None, "psoe": None, "vox": None, "url": m.get("url") or "https://manifold.markets"}
     for a in m.get("answers", []):
         t = a.get("text", "").lower()
         for k, cl in MF_NOMBRES.items():
             if ent[k] is None and any(re.search(r"\b" + re.escape(c), t) for c in cl):
                 ent[k] = round(a.get("probability", 0) * 100, 1)
+    return ent
+
+
+# ---------------------------------------------------------------- KALSHI (dinero real, EE. UU.)
+KALSHI = {"gobierno": ("KXSPANISHPM", "Próximo presidente del Gobierno",
+                       {"pp": ("feij",), "psoe": ("s\u00e1nchez", "sanchez"), "vox": ("abascal",)}),
+          "ganar": ("KXSPAINPARLI", "Partido ganador",
+                    {"pp": ("partido popular",), "psoe": ("socialista", "psoe"), "vox": ("vox",)})}
+
+
+def kalshi(clave, hoy):
+    serie, mercado, nombres = KALSHI[clave]
+    r = json.loads(get("https://api.elections.kalshi.com/trade-api/v2/events?status=open&with_nested_markets=true&series_ticker=" + serie, True))
+    evs = r.get("events") or []
+    if not evs:
+        raise RuntimeError("Kalshi sin mercado " + serie)
+    ent = {"casa": "Kalshi", "mercado": mercado, "fecha": hoy, "tipo": "prob",
+           "pp": None, "psoe": None, "vox": None,
+           "url": "https://kalshi.com/markets/" + serie.lower()}
+    for m in evs[0].get("markets", []):
+        if m.get("status") != "active":
+            continue
+        t = (m.get("yes_sub_title", "") + " " + m.get("subtitle", "")).lower()
+        def f(x):
+            try:
+                return float(m.get(x) or 0)
+            except Exception:
+                return 0.0
+        bid, ask, last = f("yes_bid_dollars"), f("yes_ask_dollars"), f("last_price_dollars")
+        p = (bid + ask) / 2 if bid > 0 and ask > 0 and ask - bid <= 0.05 else last
+        for k, cl in nombres.items():
+            if ent[k] is None and any(c in t for c in cl):
+                ent[k] = round(p * 100, 1)
+    if ent["pp"] is None and ent["psoe"] is None:
+        raise RuntimeError("Kalshi sin precios")
     return ent
 
 
@@ -298,6 +335,19 @@ def apuestas(d, hoy):
             hechos.append("manifold-" + clave)
         except Exception as e:
             print("Manifold", clave, ":", e)
+    for clave in ("gobierno", "ganar"):
+        try:
+            ent = kalshi(clave, hoy)
+            d[clave] = [x for x in d.get(clave, []) if x.get("casa") != ent["casa"]] + [ent]
+            hechos.append("kalshi-" + clave)
+        except Exception as e:
+            print("Kalshi", clave, ":", e)
+    try:
+        ent = manifold("escanos", hoy)
+        d["ganar"] = [x for x in d.get("ganar", []) if x.get("casa") != ent["casa"]] + [ent]
+        hechos.append("manifold-escanos")
+    except Exception as e:
+        print("Manifold escaños:", e)
     # Fuera las cuotas de casas que llevan más de 7 días sin renovarse
     lim = (dt.date.fromisoformat(hoy) - dt.timedelta(days=7)).isoformat()
     for clave in ("gobierno", "ganar"):
