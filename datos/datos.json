@@ -1,7 +1,70 @@
 {
- "actualizado": "2026-11-23T00:34:02+01:00",
+ "actualizado": "2026-11-23T04:59:41+01:00",
  "nota": "",
  "encuestas": [
+  {
+   "instituto": "40dB",
+   "medio": "El País / Cadena SER",
+   "fecha": "2026-11-23",
+   "pp": {
+    "pct": 31.8,
+    "esc": "127-136"
+   },
+   "psoe": {
+    "pct": 30.9,
+    "esc": "116-127"
+   },
+   "vox": {
+    "pct": 17.3,
+    "esc": "51-61"
+   },
+   "fa": {
+    "pct": 4.4,
+    "esc": "5-8"
+   },
+   "fv": {
+    "pct": 1.3,
+    "esc": "3"
+   },
+   "erc": {
+    "pct": null,
+    "esc": "10"
+   },
+   "junts": {
+    "pct": null,
+    "esc": "4"
+   },
+   "bildu": {
+    "pct": null,
+    "esc": "7"
+   },
+   "pnv": {
+    "pct": null,
+    "esc": "3"
+   },
+   "bng": {
+    "pct": null,
+    "esc": "2"
+   },
+   "cc": {
+    "pct": null,
+    "esc": "1"
+   },
+   "aa": {
+    "pct": null,
+    "esc": "3"
+   },
+   "podemos": {
+    "pct": 1.1,
+    "esc": "0-1"
+   },
+   "salf": {
+    "pct": null,
+    "esc": "0"
+   },
+   "ppvox": "178-197",
+   "url": "https://elpais.com/hemeroteca/portadas-papel/el-pais/2026-11-23/"
+  },
   {
    "instituto": "SocioMétrica",
    "medio": "El Español",
@@ -190,69 +253,6 @@
    },
    "ppvox": "188",
    "url": "https://pbs.twimg.com/media/HXv0qh4WoAAhDom?format=jpg&name=large"
-  },
-  {
-   "instituto": "40dB",
-   "medio": "El País / Cadena SER",
-   "fecha": "2026-11-22",
-   "pp": {
-    "pct": 31.9,
-    "esc": "127-138"
-   },
-   "psoe": {
-    "pct": 31.6,
-    "esc": "119-130"
-   },
-   "vox": {
-    "pct": 16.9,
-    "esc": "49-59"
-   },
-   "fa": {
-    "pct": 4.1,
-    "esc": "5-8"
-   },
-   "fv": {
-    "pct": 1.2,
-    "esc": "3"
-   },
-   "erc": {
-    "pct": null,
-    "esc": "11"
-   },
-   "junts": {
-    "pct": null,
-    "esc": "3"
-   },
-   "bildu": {
-    "pct": null,
-    "esc": "7"
-   },
-   "pnv": {
-    "pct": null,
-    "esc": "3"
-   },
-   "bng": {
-    "pct": null,
-    "esc": "2"
-   },
-   "cc": {
-    "pct": null,
-    "esc": "1"
-   },
-   "aa": {
-    "pct": null,
-    "esc": "3"
-   },
-   "podemos": {
-    "pct": 1.0,
-    "esc": "0-1"
-   },
-   "salf": {
-    "pct": 1.4,
-    "esc": "0"
-   },
-   "ppvox": "176-197",
-   "url": "https://elpais.com/espana/elecciones-generales/2026-11-22/el-psoe-acaricia-el-empate-con-el-pp-segun-el-tracking-de-40db.html"
   }
  ],
  "historial": [
@@ -308,9 +308,9 @@
   {
    "fecha": "2026-11-23",
    "pp": 31.8,
-   "psoe": 28.9,
-   "vox": 17.9,
-   "fa": 5.2
+   "psoe": 28.7,
+   "vox": 18.0,
+   "fa": 5.3
   }
  ],
  "politico": {
