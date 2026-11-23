@@ -1,69 +1,69 @@
 {
- "actualizado": "2026-11-23T04:59:41+01:00",
+ "actualizado": "2026-11-23T15:29:20+01:00",
  "nota": "",
  "encuestas": [
   {
-   "instituto": "40dB",
-   "medio": "El País / Cadena SER",
-   "fecha": "2026-11-23",
+   "instituto": "Data10",
+   "medio": "Okdiario",
+   "fecha": "2026-11-22",
    "pp": {
-    "pct": 31.8,
-    "esc": "127-136"
+    "pct": 31.7,
+    "esc": "130"
    },
    "psoe": {
-    "pct": 30.9,
-    "esc": "116-127"
+    "pct": 27.3,
+    "esc": "113"
    },
    "vox": {
-    "pct": 17.3,
-    "esc": "51-61"
+    "pct": 19.1,
+    "esc": "64"
    },
    "fa": {
-    "pct": 4.4,
-    "esc": "5-8"
+    "pct": 6.5,
+    "esc": "9"
    },
    "fv": {
-    "pct": 1.3,
-    "esc": "3"
+    "pct": null,
+    "esc": "s/d"
    },
    "erc": {
     "pct": null,
-    "esc": "10"
+    "esc": "s/d"
    },
    "junts": {
     "pct": null,
-    "esc": "4"
+    "esc": "s/d"
    },
    "bildu": {
     "pct": null,
-    "esc": "7"
+    "esc": "s/d"
    },
    "pnv": {
     "pct": null,
-    "esc": "3"
+    "esc": "s/d"
    },
    "bng": {
     "pct": null,
-    "esc": "2"
+    "esc": "s/d"
    },
    "cc": {
     "pct": null,
-    "esc": "1"
+    "esc": "s/d"
    },
    "aa": {
     "pct": null,
-    "esc": "3"
+    "esc": "s/d"
    },
    "podemos": {
-    "pct": 1.1,
-    "esc": "0-1"
+    "pct": null,
+    "esc": "s/d"
    },
    "salf": {
     "pct": null,
-    "esc": "0"
+    "esc": "s/d"
    },
-   "ppvox": "178-197",
-   "url": "https://elpais.com/hemeroteca/portadas-papel/el-pais/2026-11-23/"
+   "ppvox": "194",
+   "url": "https://okdiario.com/espana/derecha-aguanta-empuje-sanchez-pp-vox-sumarian-194-escanos-mayoria-absoluta-holgada-seis-dias-del-29-n-21244630"
   },
   {
    "instituto": "SocioMétrica",
@@ -129,24 +129,24 @@
    "url": "https://www.elespanol.com/espana/politica/20261122/penultimo-sondeo-pp-aventaja-psoe-puntos-escanos-oposicion-semana/1003744468035_0.html"
   },
   {
-   "instituto": "Data10",
-   "medio": "Okdiario",
-   "fecha": "2026-11-22",
+   "instituto": "Target Point",
+   "medio": "El Debate",
+   "fecha": "2026-11-23",
    "pp": {
-    "pct": 32.1,
-    "esc": "133"
+    "pct": 31.5,
+    "esc": "127-131"
    },
    "psoe": {
-    "pct": 27.0,
-    "esc": "111"
+    "pct": 28.8,
+    "esc": "114-118"
    },
    "vox": {
-    "pct": 19.0,
-    "esc": "63"
+    "pct": 17.4,
+    "esc": "59-63"
    },
    "fa": {
-    "pct": 6.6,
-    "esc": "10"
+    "pct": 7.3,
+    "esc": "11-12"
    },
    "fv": {
     "pct": null,
@@ -154,19 +154,19 @@
    },
    "erc": {
     "pct": null,
-    "esc": "s/d"
+    "esc": "10-12"
    },
    "junts": {
     "pct": null,
-    "esc": "s/d"
+    "esc": "4-5"
    },
    "bildu": {
     "pct": null,
-    "esc": "s/d"
+    "esc": "6-7"
    },
    "pnv": {
     "pct": null,
-    "esc": "s/d"
+    "esc": "3-4"
    },
    "bng": {
     "pct": null,
@@ -181,78 +181,78 @@
     "esc": "s/d"
    },
    "podemos": {
-    "pct": null,
-    "esc": "s/d"
+    "pct": 1.0,
+    "esc": "0-1"
    },
    "salf": {
     "pct": null,
     "esc": "s/d"
    },
-   "ppvox": "196",
-   "url": "https://okdiario.com/espana/psoe-recorta-distancias-pero-pp-sigue-cinco-puntos-delante-socialistas-suma-vox-roza-200-escanos-21240493"
+   "ppvox": "186-194",
+   "url": "https://www.eldebate.com/espana/20261123/feijoo-sanchez-crecen-pelean-primer-puesto-mayoria-absoluta-derecha-sigue-solida_483831.html"
   },
   {
-   "instituto": "Sondaxe",
-   "medio": "La Voz de Galicia",
-   "fecha": "2026-11-22",
+   "instituto": "Cluster17",
+   "medio": "Agenda Pública",
+   "fecha": "2026-11-23",
    "pp": {
-    "pct": 31.1,
-    "esc": "130"
+    "pct": 30.2,
+    "esc": "123"
    },
    "psoe": {
-    "pct": 28.2,
-    "esc": "115"
+    "pct": 32.6,
+    "esc": "133"
    },
    "vox": {
-    "pct": 17.3,
-    "esc": "58"
+    "pct": 16.9,
+    "esc": "57"
    },
    "fa": {
-    "pct": 5.4,
-    "esc": "8"
+    "pct": 5.2,
+    "esc": "7"
    },
    "fv": {
-    "pct": 2.0,
-    "esc": "5"
+    "pct": null,
+    "esc": "s/d"
    },
    "erc": {
-    "pct": 2.7,
-    "esc": "10"
+    "pct": null,
+    "esc": "8"
    },
    "junts": {
-    "pct": 1.7,
-    "esc": "7"
+    "pct": null,
+    "esc": "6"
    },
    "bildu": {
-    "pct": 1.4,
-    "esc": "7"
+    "pct": null,
+    "esc": "8"
    },
    "pnv": {
-    "pct": 0.8,
-    "esc": "4"
+    "pct": null,
+    "esc": "3"
    },
    "bng": {
-    "pct": 1.0,
+    "pct": null,
     "esc": "2"
    },
    "cc": {
-    "pct": 0.6,
+    "pct": null,
     "esc": "1"
    },
    "aa": {
-    "pct": 1.7,
-    "esc": "3"
+    "pct": null,
+    "esc": "2"
    },
    "podemos": {
-    "pct": 1.5,
+    "pct": 1.0,
     "esc": "0"
    },
    "salf": {
-    "pct": 1.7,
+    "pct": 1.4,
     "esc": "0"
    },
-   "ppvox": "188",
-   "url": "https://pbs.twimg.com/media/HXv0qh4WoAAhDom?format=jpg&name=large"
+   "ppvox": "180",
+   "url": "https://agendapublica.es/noticia/21726/encuesta-29n-mayoria-absoluta-de-pp-y-vox-con-un-psoe-lider-a-costa-de-su-izquierda"
   }
  ],
  "historial": [
@@ -307,10 +307,10 @@
   },
   {
    "fecha": "2026-11-23",
-   "pp": 31.8,
-   "psoe": 28.7,
-   "vox": 18.0,
-   "fa": 5.3
+   "pp": 31.4,
+   "psoe": 29.4,
+   "vox": 17.9,
+   "fa": 6.0
   }
  ],
  "politico": {
