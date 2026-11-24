@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-24T13:23:29+01:00",
+ "actualizado": "2026-11-24T23:44:24+01:00",
  "nota": "",
  "ganar": [
   {
@@ -7,8 +7,8 @@
    "mercado": "Partido con más escaños",
    "fecha": "2026-11-24",
    "tipo": "prob",
-   "pp": 75.5,
-   "psoe": 24.5,
+   "pp": 74.5,
+   "psoe": 25.5,
    "vox": 0.4,
    "url": "https://polymarket.com/event/spain-general-election-winner"
   },
@@ -17,8 +17,8 @@
    "mercado": "Partido ganador",
    "fecha": "2026-11-24",
    "tipo": "prob",
-   "pp": 91.5,
-   "psoe": 8.4,
+   "pp": 91.0,
+   "psoe": 8.9,
    "vox": 0.1,
    "url": "https://manifold.markets/JoseReyesTolentino/which-party-will-win-the-2026-spani"
   },
@@ -28,7 +28,7 @@
    "fecha": "2026-11-24",
    "tipo": "prob",
    "pp": null,
-   "psoe": 25.5,
+   "psoe": 26.5,
    "vox": 1.1,
    "url": "https://kalshi.com/markets/kxspainparli"
   },
@@ -37,8 +37,8 @@
    "mercado": "Partido con más escaños",
    "fecha": "2026-11-24",
    "tipo": "prob",
-   "pp": 91.6,
-   "psoe": 8.3,
+   "pp": 92.2,
+   "psoe": 7.7,
    "vox": 0.0,
    "url": "https://manifold.markets/AlbertoMC/which-party-will-win-the-most-seats-c09AA2cR00"
   }
@@ -50,8 +50,8 @@
    "fecha": "2026-11-24",
    "tipo": "prob",
    "pp": 88.5,
-   "psoe": 11.2,
-   "vox": 0.4,
+   "psoe": 11.7,
+   "vox": 0.2,
    "url": "https://polymarket.com/event/next-prime-minister-of-spain-20260625005215443"
   },
   {
@@ -134,10 +134,10 @@
   },
   {
    "fecha": "2026-11-24",
-   "gan_pp": 86.2,
-   "gan_psoe": 16.7,
+   "gan_pp": 85.9,
+   "gan_psoe": 17.1,
    "gob_pp": 86.4,
-   "gob_psoe": 13.0
+   "gob_psoe": 13.2
   }
  ]
 }
