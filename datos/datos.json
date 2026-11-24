@@ -1,93 +1,30 @@
 {
- "actualizado": "2026-11-23T15:29:20+01:00",
- "nota": "",
+ "actualizado": "2026-11-24T02:52:39+01:00",
+ "nota": "Veda de encuestas en España desde el 24/11: se muestran las últimas publicadas.",
  "encuestas": [
   {
    "instituto": "Data10",
    "medio": "Okdiario",
-   "fecha": "2026-11-22",
+   "fecha": "2026-11-23",
    "pp": {
-    "pct": 31.7,
-    "esc": "130"
+    "pct": 31.8,
+    "esc": "131"
    },
    "psoe": {
-    "pct": 27.3,
-    "esc": "113"
-   },
-   "vox": {
-    "pct": 19.1,
-    "esc": "64"
-   },
-   "fa": {
-    "pct": 6.5,
-    "esc": "9"
-   },
-   "fv": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "erc": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "junts": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "bildu": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "pnv": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "bng": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "cc": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "aa": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "podemos": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "salf": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "ppvox": "194",
-   "url": "https://okdiario.com/espana/derecha-aguanta-empuje-sanchez-pp-vox-sumarian-194-escanos-mayoria-absoluta-holgada-seis-dias-del-29-n-21244630"
-  },
-  {
-   "instituto": "SocioMétrica",
-   "medio": "El Español",
-   "fecha": "2026-11-22",
-   "pp": {
-    "pct": 32.1,
-    "esc": "134"
-   },
-   "psoe": {
-    "pct": 28.7,
-    "esc": "114"
+    "pct": 28.3,
+    "esc": "117"
    },
    "vox": {
     "pct": 18.4,
-    "esc": "63"
+    "esc": "62"
    },
    "fa": {
-    "pct": 4.9,
-    "esc": "5"
+    "pct": 6.3,
+    "esc": "8"
    },
    "fv": {
-    "pct": 1.0,
-    "esc": "3"
+    "pct": null,
+    "esc": "s/d"
    },
    "erc": {
     "pct": 2.5,
@@ -103,10 +40,10 @@
    },
    "pnv": {
     "pct": 0.8,
-    "esc": "3"
+    "esc": "4"
    },
    "bng": {
-    "pct": 1.0,
+    "pct": 0.9,
     "esc": "2"
    },
    "cc": {
@@ -114,145 +51,208 @@
     "esc": "1"
    },
    "aa": {
-    "pct": 1.7,
+    "pct": 1.6,
     "esc": "3"
    },
    "podemos": {
-    "pct": 1.0,
+    "pct": 1.2,
     "esc": "0"
+   },
+   "salf": {
+    "pct": 1.8,
+    "esc": "0"
+   },
+   "ppvox": "193",
+   "url": "https://okdiario.com/espana/ultima-encuesta-publicada-espana-antes-del-29-n-pp-saca-psoe-14-escanos-tendra-vox-mayoria-absoluta-193-21252508"
+  },
+  {
+   "instituto": "AtlasIntel",
+   "medio": "PollsterGraph",
+   "fecha": "2026-11-23",
+   "pp": {
+    "pct": 29.1,
+    "esc": "121"
+   },
+   "psoe": {
+    "pct": 29.8,
+    "esc": "120"
+   },
+   "vox": {
+    "pct": 17.8,
+    "esc": "64"
+   },
+   "fa": {
+    "pct": 7.4,
+    "esc": "13"
+   },
+   "fv": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "erc": {
+    "pct": 2.7,
+    "esc": "11"
+   },
+   "junts": {
+    "pct": 1.3,
+    "esc": "5"
+   },
+   "bildu": {
+    "pct": 1.4,
+    "esc": "7"
+   },
+   "pnv": {
+    "pct": 0.9,
+    "esc": "4"
+   },
+   "bng": {
+    "pct": 0.9,
+    "esc": "2"
+   },
+   "cc": {
+    "pct": 0.6,
+    "esc": "3"
+   },
+   "aa": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "podemos": {
+    "pct": 1.2,
+    "esc": "0"
+   },
+   "salf": {
+    "pct": 2.1,
+    "esc": "0"
+   },
+   "ppvox": "185",
+   "url": "https://web.archive.org/web/20261123222750/https://pollstergraph.com/uploads/reports/atlas/atlas-pollstergraph-es-20261123-f8115c808c94.pdf"
+  },
+  {
+   "instituto": "Sigma Dos",
+   "medio": "El Mundo",
+   "fecha": "2026-11-23",
+   "pp": {
+    "pct": 31.9,
+    "esc": "124-130"
+   },
+   "psoe": {
+    "pct": 28.6,
+    "esc": "114-120"
+   },
+   "vox": {
+    "pct": 17.8,
+    "esc": "58-63"
+   },
+   "fa": {
+    "pct": 5.5,
+    "esc": "8-10"
+   },
+   "fv": {
+    "pct": 1.6,
+    "esc": "3-4"
+   },
+   "erc": {
+    "pct": 2.7,
+    "esc": "10-12"
+   },
+   "junts": {
+    "pct": 1.4,
+    "esc": "3-4"
+   },
+   "bildu": {
+    "pct": 1.6,
+    "esc": "6-7"
+   },
+   "pnv": {
+    "pct": 0.9,
+    "esc": "3-4"
+   },
+   "bng": {
+    "pct": 1.1,
+    "esc": "2-3"
+   },
+   "cc": {
+    "pct": 0.4,
+    "esc": "0-1"
+   },
+   "aa": {
+    "pct": 1.8,
+    "esc": "4-5"
+   },
+   "podemos": {
+    "pct": 0.6,
+    "esc": "0"
+   },
+   "salf": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "ppvox": "182-193",
+   "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/23/6b048219e9cf4a411a8b4580.html"
+  },
+  {
+   "instituto": "EM-Analytics",
+   "medio": "Electomanía",
+   "fecha": "2026-11-23",
+   "pp": {
+    "pct": 31.5,
+    "esc": "130"
+   },
+   "psoe": {
+    "pct": 28.9,
+    "esc": "122"
+   },
+   "vox": {
+    "pct": 17.9,
+    "esc": "55"
+   },
+   "fa": {
+    "pct": 5.9,
+    "esc": "9"
+   },
+   "fv": {
+    "pct": 1.8,
+    "esc": "3"
+   },
+   "erc": {
+    "pct": 2.7,
+    "esc": "9"
+   },
+   "junts": {
+    "pct": 1.2,
+    "esc": "4"
+   },
+   "bildu": {
+    "pct": 1.5,
+    "esc": "7"
+   },
+   "pnv": {
+    "pct": 0.8,
+    "esc": "3"
+   },
+   "bng": {
+    "pct": 0.9,
+    "esc": "2"
+   },
+   "cc": {
+    "pct": 0.3,
+    "esc": "0"
+   },
+   "aa": {
+    "pct": 1.7,
+    "esc": "4"
+   },
+   "podemos": {
+    "pct": 0.9,
+    "esc": "2"
    },
    "salf": {
     "pct": 2.2,
     "esc": "0"
    },
-   "ppvox": "197",
-   "url": "https://www.elespanol.com/espana/politica/20261122/penultimo-sondeo-pp-aventaja-psoe-puntos-escanos-oposicion-semana/1003744468035_0.html"
-  },
-  {
-   "instituto": "Target Point",
-   "medio": "El Debate",
-   "fecha": "2026-11-23",
-   "pp": {
-    "pct": 31.5,
-    "esc": "127-131"
-   },
-   "psoe": {
-    "pct": 28.8,
-    "esc": "114-118"
-   },
-   "vox": {
-    "pct": 17.4,
-    "esc": "59-63"
-   },
-   "fa": {
-    "pct": 7.3,
-    "esc": "11-12"
-   },
-   "fv": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "erc": {
-    "pct": null,
-    "esc": "10-12"
-   },
-   "junts": {
-    "pct": null,
-    "esc": "4-5"
-   },
-   "bildu": {
-    "pct": null,
-    "esc": "6-7"
-   },
-   "pnv": {
-    "pct": null,
-    "esc": "3-4"
-   },
-   "bng": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "cc": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "aa": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "podemos": {
-    "pct": 1.0,
-    "esc": "0-1"
-   },
-   "salf": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "ppvox": "186-194",
-   "url": "https://www.eldebate.com/espana/20261123/feijoo-sanchez-crecen-pelean-primer-puesto-mayoria-absoluta-derecha-sigue-solida_483831.html"
-  },
-  {
-   "instituto": "Cluster17",
-   "medio": "Agenda Pública",
-   "fecha": "2026-11-23",
-   "pp": {
-    "pct": 30.2,
-    "esc": "123"
-   },
-   "psoe": {
-    "pct": 32.6,
-    "esc": "133"
-   },
-   "vox": {
-    "pct": 16.9,
-    "esc": "57"
-   },
-   "fa": {
-    "pct": 5.2,
-    "esc": "7"
-   },
-   "fv": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "erc": {
-    "pct": null,
-    "esc": "8"
-   },
-   "junts": {
-    "pct": null,
-    "esc": "6"
-   },
-   "bildu": {
-    "pct": null,
-    "esc": "8"
-   },
-   "pnv": {
-    "pct": null,
-    "esc": "3"
-   },
-   "bng": {
-    "pct": null,
-    "esc": "2"
-   },
-   "cc": {
-    "pct": null,
-    "esc": "1"
-   },
-   "aa": {
-    "pct": null,
-    "esc": "2"
-   },
-   "podemos": {
-    "pct": 1.0,
-    "esc": "0"
-   },
-   "salf": {
-    "pct": 1.4,
-    "esc": "0"
-   },
-   "ppvox": "180",
-   "url": "https://agendapublica.es/noticia/21726/encuesta-29n-mayoria-absoluta-de-pp-y-vox-con-un-psoe-lider-a-costa-de-su-izquierda"
+   "ppvox": "185",
+   "url": "https://electomania.es/tracking-electopanel-23-nov-la-prohibicion-de-publicar-sondeos-entra-en-vigor-con-pp-y-psoe-en-empate-tecnico-y-un-vox-en-descenso/"
   }
  ],
  "historial": [
@@ -311,25 +311,166 @@
    "psoe": 29.4,
    "vox": 17.9,
    "fa": 6.0
+  },
+  {
+   "fecha": "2026-11-24",
+   "pp": 31.1,
+   "psoe": 28.9,
+   "vox": 18.0,
+   "fa": 6.3
   }
  ],
  "politico": {
-  "fecha": "2026-11-19",
+  "fecha": "2026-11-22",
   "media": {
-   "pp": 31.5,
-   "psoe": 28.8,
-   "podemos": 1.1,
+   "pp": 31.6,
+   "psoe": 28.9,
+   "podemos": 1.0,
    "pnv": 0.8,
-   "cc": 0.3,
-   "bildu": 1.7,
-   "vox": 18.1,
-   "bng": 1,
-   "junts": 1.2,
-   "salf": 1.8,
-   "erc": 2.4,
-   "fa": 4.0
+   "cc": 0.4,
+   "bildu": 1.5,
+   "vox": 18.2,
+   "bng": 1.0,
+   "junts": 1.4,
+   "salf": 2,
+   "erc": 2.5,
+   "fa": 4.6
   },
   "encuestas": [
+   {
+    "firma": "SocioMetrica",
+    "fecha": "2026-11-22",
+    "muestra": 7266,
+    "pp": 31.7,
+    "psoe": 28.7,
+    "podemos": 1,
+    "pnv": 0.8,
+    "cc": 0.4,
+    "bildu": 1.5,
+    "vox": 18.4,
+    "bng": 1,
+    "junts": 1.4,
+    "salf": 2.2,
+    "erc": 2.4,
+    "fa": 4.2
+   },
+   {
+    "firma": "Cluster17",
+    "fecha": "2026-11-21",
+    "muestra": 1358,
+    "pp": 30.2,
+    "psoe": 32.6,
+    "podemos": 1,
+    "vox": 16.9,
+    "salf": 1.4,
+    "fa": 4.2
+   },
+   {
+    "firma": "GESOP",
+    "fecha": "2026-11-21",
+    "muestra": 905,
+    "pp": 32.9,
+    "psoe": 29,
+    "podemos": 0.7,
+    "vox": 17.5,
+    "junts": 1.1,
+    "salf": 1.3,
+    "erc": 2.5,
+    "fa": 6.7
+   },
+   {
+    "firma": "Sondaxe",
+    "fecha": "2026-11-21",
+    "muestra": 1000,
+    "pp": 30,
+    "psoe": 27.7,
+    "podemos": 1.2,
+    "pnv": 0.6,
+    "cc": 0.5,
+    "bildu": 1.5,
+    "vox": 18.8,
+    "bng": 1,
+    "junts": 1.6,
+    "salf": 1.6,
+    "erc": 2.7,
+    "fa": 6.1
+   },
+   {
+    "firma": "40dB",
+    "fecha": "2026-11-21",
+    "muestra": 2000,
+    "pp": 31.9,
+    "psoe": 31.6,
+    "podemos": 1,
+    "vox": 16.9,
+    "salf": 1.4,
+    "fa": 3.6
+   },
+   {
+    "firma": "Sigma Dos",
+    "fecha": "2026-11-21",
+    "muestra": 4616,
+    "pp": 31.7,
+    "psoe": 28.3,
+    "podemos": 0.7,
+    "pnv": 0.9,
+    "cc": 0.4,
+    "bildu": 1.6,
+    "vox": 17.9,
+    "bng": 1.1,
+    "junts": 1.4,
+    "erc": 2.8,
+    "fa": 5.6
+   },
+   {
+    "firma": "SocioMetrica",
+    "fecha": "2026-11-21",
+    "muestra": 6842,
+    "pp": 32.3,
+    "psoe": 28.5,
+    "podemos": 1,
+    "pnv": 0.8,
+    "cc": 0.4,
+    "bildu": 1.5,
+    "vox": 18.8,
+    "bng": 1,
+    "junts": 1.3,
+    "salf": 2.1,
+    "erc": 2.5,
+    "fa": 4.9
+   },
+   {
+    "firma": "Celeste-Tel",
+    "fecha": "2026-11-20",
+    "muestra": 1100,
+    "pp": 31.8,
+    "psoe": 28.1,
+    "podemos": 0.8,
+    "pnv": 0.8,
+    "cc": 0.4,
+    "bildu": 1.6,
+    "vox": 18.9,
+    "bng": 0.9,
+    "junts": 1.3,
+    "salf": 1.8,
+    "erc": 2.4,
+    "fa": 5.7
+   },
+   {
+    "firma": "Sondaxe",
+    "fecha": "2026-11-20",
+    "muestra": 1000,
+    "pp": 30,
+    "psoe": 27.7,
+    "pnv": 0.6,
+    "cc": 0.5,
+    "bildu": 1.5,
+    "vox": 18.8,
+    "bng": 1,
+    "junts": 1.6,
+    "erc": 2.7,
+    "fa": 6.1
+   },
    {
     "firma": "40dB",
     "fecha": "2026-11-19",
@@ -564,16 +705,6 @@
     "vox": 18.8,
     "salf": 1.7,
     "fa": 3.5
-   },
-   {
-    "firma": "Sigma Dos",
-    "fecha": "2026-11-11",
-    "muestra": 3120,
-    "pp": 30.8,
-    "psoe": 25.3,
-    "podemos": 1.4,
-    "vox": 19.6,
-    "fa": 7.3
    }
   ],
   "url": "https://www.politico.eu/europe-poll-of-polls/national-parliament-voting-intention/spain/"
