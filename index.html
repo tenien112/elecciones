@@ -57,7 +57,7 @@ button.sec{background:var(--card2);color:var(--txt);border:1px solid var(--borde
 .nota{background:#E9C46A22;border:1px solid var(--oro);border-radius:14px;padding:10px 12px;font-size:14px;margin:10px 0}
 svg text{fill:var(--suave);font-size:10px}
 footer{margin-top:28px;text-align:center;color:var(--suave);font-size:12px}
-.fia{display:flex;align-items:center;gap:8px;margin-top:10px;padding:8px 10px;border-radius:12px;font-size:13px;border:1px solid}
+.fia{display:flex;align-items:center;gap:8px;margin-top:6px;padding:8px 10px;border-radius:12px;font-size:13px;border:1px solid}
 .fia b{font-size:13px;letter-spacing:.5px}
 .fia small{color:var(--suave)}
 .escala{display:grid;grid-template-columns:auto 1fr auto;gap:4px 10px;font-size:13px;align-items:center}
@@ -291,11 +291,13 @@ function filaA(k,nom,pct,cuota){
 const FIA=[[95,"CASI SEGURO","#2ecc71"],[85,"MUY PROBABLE","#8bd36a"],[65,"FAVORITO","#E9C46A"],[35,"INCIERTO","#9aa5a0"],[0,"POCO PROBABLE","#ff7a7a"]];
 function nivel(p){return FIA.find(f=>p>=f[0])}
 function cadaN(p){const n=Math.round(100/(100-p));return n>=100?"menos de 1 de cada 100":"1 de cada "+n}
+function fallaTxt(p){if(p>=50)return cadaN(p);if(p<=0)return"siempre";const n=Math.round(100/p);return n>=100?"más de 99 de cada 100":(n-1)+" de cada "+n}
 function fiab(probs){
   const v=APU_P.map(([k,n,c])=>[c,probs[k]]).filter(x=>typeof x[1]==="number");if(!v.length)return"";
   const tot=v.reduce((a,x)=>a+x[1],0),f=tot>100?100/tot:1;
-  v.sort((a,b)=>b[1]-a[1]);const [nom,raw]=v[0],p=Math.round(raw*f*10)/10,[,et,col]=nivel(p);
-  return `<div class="fia" style="border-color:${col};background:${col}1f"><b style="color:${col}">${et}</b><span>${nom} ${String(p).replace(".",",")}% · <small>falla ${cadaN(p)}</small></span></div>`;
+  v.sort((a,b)=>b[1]-a[1]);
+  return v.map(([nom,raw])=>{const p=Math.round(raw*f*10)/10,[,et,col]=nivel(p);
+    return `<div class="fia" style="border-color:${col};background:${col}1f"><b style="color:${col}">${et}</b><span>${nom} ${String(p).replace(".",",")}% · <small>falla ${fallaTxt(p)}</small></span></div>`}).join("");
 }
 function pintaEscala(){const T=[["95% o más","menos de 1 de cada 20"],["85–95%","1 de cada 7 a 10"],["65–85%","1 de cada 3 a 6"],["35–65%","moneda al aire"],["menos de 35%","lo normal es que no pase"]];
   $("apuEscala").innerHTML=FIA.map((f,i)=>`<span><i style="background:${f[2]}"></i></span><span><b style="color:${f[2]}">${f[1]}</b> <small style="color:var(--suave)">${T[i][0]}</small></span><small style="color:var(--suave)">${i<3?"falla ":""}${T[i][1]}</small>`).join("")}
