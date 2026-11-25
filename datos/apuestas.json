@@ -1,13 +1,13 @@
 {
- "actualizado": "2026-11-24T23:44:24+01:00",
+ "actualizado": "2026-11-25T06:24:06+01:00",
  "nota": "",
  "ganar": [
   {
    "casa": "Polymarket",
    "mercado": "Partido con más escaños",
-   "fecha": "2026-11-24",
+   "fecha": "2026-11-25",
    "tipo": "prob",
-   "pp": 74.5,
+   "pp": 75.5,
    "psoe": 25.5,
    "vox": 0.4,
    "url": "https://polymarket.com/event/spain-general-election-winner"
@@ -15,7 +15,7 @@
   {
    "casa": "Manifold (dinero ficticio)",
    "mercado": "Partido ganador",
-   "fecha": "2026-11-24",
+   "fecha": "2026-11-25",
    "tipo": "prob",
    "pp": 91.0,
    "psoe": 8.9,
@@ -25,17 +25,17 @@
   {
    "casa": "Kalshi",
    "mercado": "Partido ganador",
-   "fecha": "2026-11-24",
+   "fecha": "2026-11-25",
    "tipo": "prob",
    "pp": null,
-   "psoe": 26.5,
+   "psoe": 25.5,
    "vox": 1.1,
    "url": "https://kalshi.com/markets/kxspainparli"
   },
   {
    "casa": "Manifold 2 (dinero ficticio)",
    "mercado": "Partido con más escaños",
-   "fecha": "2026-11-24",
+   "fecha": "2026-11-25",
    "tipo": "prob",
    "pp": 92.2,
    "psoe": 7.7,
@@ -47,27 +47,27 @@
   {
    "casa": "Polymarket",
    "mercado": "Próximo presidente del Gobierno",
-   "fecha": "2026-11-24",
+   "fecha": "2026-11-25",
    "tipo": "prob",
    "pp": 88.5,
-   "psoe": 11.7,
+   "psoe": 10.8,
    "vox": 0.2,
    "url": "https://polymarket.com/event/next-prime-minister-of-spain-20260625005215443"
   },
   {
    "casa": "Manifold (dinero ficticio)",
    "mercado": "Próximo presidente del Gobierno",
-   "fecha": "2026-11-24",
+   "fecha": "2026-11-25",
    "tipo": "prob",
-   "pp": 82.3,
-   "psoe": 16.4,
+   "pp": 82.7,
+   "psoe": 15.9,
    "vox": null,
    "url": "https://manifold.markets/Jack1/prime-minister-of-spain-after-novem"
   },
   {
    "casa": "Kalshi",
    "mercado": "Próximo presidente del Gobierno",
-   "fecha": "2026-11-24",
+   "fecha": "2026-11-25",
    "tipo": "prob",
    "pp": 88.5,
    "psoe": 11.5,
@@ -138,6 +138,13 @@
    "gan_psoe": 17.1,
    "gob_pp": 86.4,
    "gob_psoe": 13.2
+  },
+  {
+   "fecha": "2026-11-25",
+   "gan_pp": 86.2,
+   "gan_psoe": 16.9,
+   "gob_pp": 86.6,
+   "gob_psoe": 12.7
   }
  ]
 }
