@@ -1,7 +1,70 @@
 {
- "actualizado": "2026-11-25T10:43:37+01:00",
+ "actualizado": "2026-11-25T17:01:36+01:00",
  "nota": "Veda de encuestas en España desde el 24/11: se muestran las últimas publicadas.",
  "encuestas": [
+  {
+   "instituto": "GESOP",
+   "medio": "The Adelaide Review",
+   "fecha": "2026-11-25",
+   "pp": {
+    "pct": 31.9,
+    "esc": "128-135"
+   },
+   "psoe": {
+    "pct": 28.4,
+    "esc": "108-118"
+   },
+   "vox": {
+    "pct": 17.2,
+    "esc": "55-60"
+   },
+   "fa": {
+    "pct": 7.2,
+    "esc": "9-15"
+   },
+   "fv": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "erc": {
+    "pct": 2.6,
+    "esc": "9-12"
+   },
+   "junts": {
+    "pct": 1.4,
+    "esc": "3-5"
+   },
+   "bildu": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "pnv": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "bng": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "cc": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "aa": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "podemos": {
+    "pct": 0.7,
+    "esc": "0"
+   },
+   "salf": {
+    "pct": 1.8,
+    "esc": "0"
+   },
+   "ppvox": "183-195",
+   "url": "https://encuestas.adelaidereview.com.au/segundo-sondeo-elecciones-generales-espana-2026-29n-przj-4tR8v3L.html"
+  },
   {
    "instituto": "Data10",
    "medio": "Okdiario",
@@ -64,69 +127,6 @@
    },
    "ppvox": "193",
    "url": "https://okdiario.com/espana/ultima-encuesta-publicada-espana-antes-del-29-n-pp-saca-psoe-14-escanos-tendra-vox-mayoria-absoluta-193-21252508"
-  },
-  {
-   "instituto": "GESOP",
-   "medio": "The Adelaide Review",
-   "fecha": "2026-11-24",
-   "pp": {
-    "pct": 31.9,
-    "esc": "128-132"
-   },
-   "psoe": {
-    "pct": 28.2,
-    "esc": "108-114"
-   },
-   "vox": {
-    "pct": 18.3,
-    "esc": "59-63"
-   },
-   "fa": {
-    "pct": 7.6,
-    "esc": "9-13"
-   },
-   "fv": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "erc": {
-    "pct": 2.6,
-    "esc": "9-12"
-   },
-   "junts": {
-    "pct": 1.4,
-    "esc": "3-5"
-   },
-   "bildu": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "pnv": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "bng": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "cc": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "aa": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "podemos": {
-    "pct": 0.5,
-    "esc": "0"
-   },
-   "salf": {
-    "pct": 1.4,
-    "esc": "0"
-   },
-   "ppvox": "187-195",
-   "url": "https://encuestas.adelaidereview.com.au/primer-sondeo-elecciones-generales-espana-2026-29n-przj-K7m2Q9b.html"
   },
   {
    "instituto": "AtlasIntel",
@@ -322,9 +322,9 @@
   {
    "fecha": "2026-11-25",
    "pp": 31.2,
-   "psoe": 28.7,
-   "vox": 18.1,
-   "fa": 6.7
+   "psoe": 28.8,
+   "vox": 17.8,
+   "fa": 6.6
   }
  ],
  "politico": {
