@@ -80,6 +80,7 @@ footer{margin-top:28px;text-align:center;color:var(--suave);font-size:12px}
 </style>
 </head>
 <body>
+<div id="ver" style="text-align:right;font-size:11px;color:var(--suave);margin-bottom:-6px">versión…</div>
 <h1>RADAR <span>ELECCIONES</span></h1>
 <div class="sub">Generales del 29 de noviembre · las 4 últimas encuestas de medios distintos</div>
 
@@ -409,5 +410,6 @@ async function buscarVersionNueva(){
 }
 document.addEventListener("visibilitychange",()=>{if(!document.hidden)buscarVersionNueva()});
 </script>
+<script>fetch("sw.js",{cache:"no-cache"}).then(r=>r.text()).then(t=>{const m=t.match(/elecciones-v(\d+)/);document.getElementById("ver").textContent=m?"versión "+m[1]:""}).catch(()=>{document.getElementById("ver").textContent=""})</script>
 </body>
 </html>
