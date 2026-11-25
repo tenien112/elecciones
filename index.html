@@ -395,20 +395,27 @@ async function cargarReg(){
   catch(e){$("hisLista").innerHTML='<div class="card">Todavía no hay nada guardado.</div>'}
 }
 // ---------- Aviso de actualización ----------
-// Hay que cambiar APP_VERSION en cada actualización.
-const APP_VERSION="2026-11-22-fiab";
-(()=>{const prev=store("elec_version");store("elec_version",APP_VERSION);
-  if(prev!==null&&prev!==APP_VERSION)toast("RADAR ELECCIONES-LORENZITO se ha actualizado",4000)})();
+// Automático: se compara una huella del propio index.html publicado; no hace falta tocar nada al actualizar.
+function huella(t){let h=5381;for(let i=0;i<t.length;i++)h=((h<<5)+h+t.charCodeAt(i))|0;return (h>>>0).toString(36)+"-"+t.length}
+async function huellaPublicada(){const t=await (await fetch("index.html?t="+Date.now(),{cache:"no-store"})).text();return huella(t)}
+let HUELLA_CARGADA=null;
+(async()=>{try{
+  const h=await huellaPublicada();HUELLA_CARGADA=h;
+  const prev=store("elec_huella"),antigua=store("elec_version");
+  store("elec_huella",h);
+  if((prev!==null&&prev!==h)||(prev===null&&antigua!==null)){
+    try{localStorage.removeItem("elec_version")}catch(e){}
+    toast("✅ RADAR ELECCIONES-LORENZITO se ha actualizado",5000);
+  }
+}catch(e){}})();
 if("serviceWorker" in navigator){
   navigator.serviceWorker.register("sw.js",{updateViaCache:"none"}).then(r=>r.update()).catch(()=>{});
 }
 async function buscarVersionNueva(){
-  try{const t=await (await fetch("index.html?t="+Date.now(),{cache:"no-store"})).text();
-    const m=t.match(/const APP_VERSION="([^"]+)"/);
-    if(m&&m[1]!==APP_VERSION)location.reload();
-  }catch(e){}
+  try{const h=await huellaPublicada();if(HUELLA_CARGADA&&h!==HUELLA_CARGADA)location.reload();}catch(e){}
 }
 document.addEventListener("visibilitychange",()=>{if(!document.hidden)buscarVersionNueva()});
+setInterval(()=>{if(!document.hidden)buscarVersionNueva()},10*60*1000);
 </script>
 <script>fetch("sw.js",{cache:"no-cache"}).then(r=>r.text()).then(t=>{const m=t.match(/elecciones-v(\d+)/);document.getElementById("ver").textContent=m?"versión "+m[1]:""}).catch(()=>{document.getElementById("ver").textContent=""})</script>
 </body>
