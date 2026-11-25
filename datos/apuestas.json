@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-25T17:01:36+01:00",
+ "actualizado": "2026-11-25T23:23:49+01:00",
  "nota": "",
  "ganar": [
   {
@@ -7,9 +7,9 @@
    "mercado": "Partido con más escaños",
    "fecha": "2026-11-25",
    "tipo": "prob",
-   "pp": 75.5,
-   "psoe": 24.5,
-   "vox": 0.4,
+   "pp": 74.5,
+   "psoe": 25.5,
+   "vox": 0.2,
    "url": "https://polymarket.com/event/spain-general-election-winner"
   },
   {
@@ -49,9 +49,9 @@
    "mercado": "Próximo presidente del Gobierno",
    "fecha": "2026-11-25",
    "tipo": "prob",
-   "pp": 88.5,
-   "psoe": 11.7,
-   "vox": 0.4,
+   "pp": 87.5,
+   "psoe": 12.5,
+   "vox": 0.2,
    "url": "https://polymarket.com/event/next-prime-minister-of-spain-20260625005215443"
   },
   {
@@ -69,7 +69,7 @@
    "mercado": "Próximo presidente del Gobierno",
    "fecha": "2026-11-25",
    "tipo": "prob",
-   "pp": 89.5,
+   "pp": 89.0,
    "psoe": 11.5,
    "vox": 3.0,
    "url": "https://kalshi.com/markets/kxspanishpm"
@@ -141,10 +141,10 @@
   },
   {
    "fecha": "2026-11-25",
-   "gan_pp": 86.2,
-   "gan_psoe": 16.6,
-   "gob_pp": 86.9,
-   "gob_psoe": 13.0
+   "gan_pp": 85.9,
+   "gan_psoe": 16.9,
+   "gob_pp": 86.4,
+   "gob_psoe": 13.3
   }
  ]
 }
