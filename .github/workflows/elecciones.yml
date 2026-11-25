@@ -2,7 +2,7 @@ name: elecciones
 on:
   workflow_dispatch:
   push:
-    paths: ["datos/actualizar.py", ".github/workflows/elecciones.yml"]
+    paths: ["datos/actualizar.py", ".github/workflows/elecciones.yml", "index.html", "sw.js", "manifest.json"]
   schedule:
     - cron: "7,37 * * * *"
 permissions:
