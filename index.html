@@ -292,7 +292,7 @@ function filaA(k,nom,pct,cuota){
 const FIA=[[95,"CASI SEGURO","#2ecc71"],[85,"MUY PROBABLE","#8bd36a"],[65,"FAVORITO","#E9C46A"],[35,"INCIERTO","#9aa5a0"],[0,"POCO PROBABLE","#ff7a7a"]];
 function nivel(p){return FIA.find(f=>p>=f[0])}
 function cadaN(p){const n=Math.round(100/(100-p));return n>=100?"menos de 1 de cada 100":"1 de cada "+n}
-function fallaTxt(p){if(p>=50)return"falla "+cadaN(p);const v=apuSub==="ganar"?"gana":"gobierna";if(p<=0)return v+" casi nunca";const n=Math.round(100/p);return n>=100?v+" menos de 1 de cada 100":v+" 1 de cada "+n}
+function fallaTxt(p){const v=apuSub==="ganar"?"gana":"gobierna";if(p>=50){if(p>=100)return v+" casi siempre";const n=Math.round(100/(100-p));return n>=100?v+" más de 99 de cada 100":v+" "+(n-1)+" de cada "+n}if(p<=0)return v+" casi nunca";const n=Math.round(100/p);return n>=100?v+" menos de 1 de cada 100":v+" 1 de cada "+n}
 function fiab(probs){
   const v=APU_P.map(([k,n,c])=>[c,probs[k]]).filter(x=>typeof x[1]==="number");if(!v.length)return"";
   const tot=v.reduce((a,x)=>a+x[1],0),f=tot>100?100/tot:1;
@@ -300,8 +300,8 @@ function fiab(probs){
   return v.map(([nom,raw])=>{const p=Math.round(raw*f*10)/10,[,et,col]=nivel(p);
     return `<div class="fia" style="border-color:${col};background:${col}1f"><b style="color:${col}">${et}</b><span>${nom} ${String(p).replace(".",",")}% · <small>${fallaTxt(p)}</small></span></div>`}).join("");
 }
-function pintaEscala(){const T=[["95% o más","menos de 1 de cada 20"],["85–95%","1 de cada 7 a 10"],["65–85%","1 de cada 3 a 6"],["35–65%","moneda al aire"],["menos de 35%","lo consigue 1 de cada 3 o menos"]];
-  $("apuEscala").innerHTML=FIA.map((f,i)=>`<span><i style="background:${f[2]}"></i></span><span><b style="color:${f[2]}">${f[1]}</b> <small style="color:var(--suave)">${T[i][0]}</small></span><small style="color:var(--suave)">${i<3?"falla ":""}${T[i][1]}</small>`).join("")}
+function pintaEscala(){const T=[["95% o más","19 de cada 20 o más"],["85–95%","de 6 de cada 7 a 9 de cada 10"],["65–85%","de 2 de cada 3 a 5 de cada 6"],["35–65%","moneda al aire"],["menos de 35%","lo consigue 1 de cada 3 o menos"]];
+  $("apuEscala").innerHTML=FIA.map((f,i)=>`<span><i style="background:${f[2]}"></i></span><span><b style="color:${f[2]}">${f[1]}</b> <small style="color:var(--suave)">${T[i][0]}</small></span><small style="color:var(--suave)">${i<3?"lo consigue ":""}${T[i][1]}</small>`).join("")}
 function pintaApu(d){
   pintaEscala();
   const L=d[apuSub]||[];
