@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T09:52:05+01:00",
+ "actualizado": "2026-11-26T15:43:07+01:00",
  "nota": "",
  "ganar": [
   {
@@ -37,8 +37,8 @@
    "mercado": "Partido con más escaños",
    "fecha": "2026-11-26",
    "tipo": "prob",
-   "pp": 92.2,
-   "psoe": 7.7,
+   "pp": 89.0,
+   "psoe": 10.9,
    "vox": 0.0,
    "url": "https://manifold.markets/AlbertoMC/which-party-will-win-the-most-seats-c09AA2cR00"
   }
@@ -49,9 +49,9 @@
    "mercado": "Próximo presidente del Gobierno",
    "fecha": "2026-11-26",
    "tipo": "prob",
-   "pp": 88.5,
-   "psoe": 11.2,
-   "vox": 0.1,
+   "pp": 87.5,
+   "psoe": 11.8,
+   "vox": 0.2,
    "url": "https://polymarket.com/event/next-prime-minister-of-spain-20260625005215443"
   },
   {
@@ -70,7 +70,7 @@
    "fecha": "2026-11-26",
    "tipo": "prob",
    "pp": 89.5,
-   "psoe": 11.5,
+   "psoe": 11.0,
    "vox": 1.0,
    "url": "https://kalshi.com/markets/kxspanishpm"
   }
@@ -148,9 +148,9 @@
   },
   {
    "fecha": "2026-11-26",
-   "gan_pp": 85.9,
-   "gan_psoe": 16.9,
-   "gob_pp": 89.0,
+   "gan_pp": 84.8,
+   "gan_psoe": 17.7,
+   "gob_pp": 88.7,
    "gob_psoe": 11.1
   }
  ]
