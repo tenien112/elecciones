@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-25T23:36:15+01:00",
+ "actualizado": "2026-11-26T01:15:09+01:00",
  "nota": "Veda de encuestas en España desde el 24/11: se muestran las últimas publicadas.",
  "encuestas": [
   {
@@ -321,6 +321,13 @@
   },
   {
    "fecha": "2026-11-25",
+   "pp": 31.2,
+   "psoe": 28.8,
+   "vox": 17.8,
+   "fa": 6.6
+  },
+  {
+   "fecha": "2026-11-26",
    "pp": 31.2,
    "psoe": 28.8,
    "vox": 17.8,
