@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T01:15:09+01:00",
+ "actualizado": "2026-11-26T09:52:05+01:00",
  "nota": "",
  "ganar": [
   {
@@ -49,8 +49,8 @@
    "mercado": "Próximo presidente del Gobierno",
    "fecha": "2026-11-26",
    "tipo": "prob",
-   "pp": 89.5,
-   "psoe": 10.7,
+   "pp": 88.5,
+   "psoe": 11.2,
    "vox": 0.1,
    "url": "https://polymarket.com/event/next-prime-minister-of-spain-20260625005215443"
   },
@@ -59,8 +59,8 @@
    "mercado": "Próximo presidente del Gobierno",
    "fecha": "2026-11-26",
    "tipo": "prob",
-   "pp": 82.7,
-   "psoe": 15.9,
+   "pp": 89.0,
+   "psoe": 10.6,
    "vox": null,
    "url": "https://manifold.markets/Jack1/prime-minister-of-spain-after-novem"
   },
@@ -71,7 +71,7 @@
    "tipo": "prob",
    "pp": 89.5,
    "psoe": 11.5,
-   "vox": 3.0,
+   "vox": 1.0,
    "url": "https://kalshi.com/markets/kxspanishpm"
   }
  ],
@@ -150,8 +150,8 @@
    "fecha": "2026-11-26",
    "gan_pp": 85.9,
    "gan_psoe": 16.9,
-   "gob_pp": 87.2,
-   "gob_psoe": 12.7
+   "gob_pp": 89.0,
+   "gob_psoe": 11.1
   }
  ]
 }
