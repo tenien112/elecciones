@@ -1,37 +1,37 @@
 {
- "actualizado": "2026-11-28T12:37:59+01:00",
+ "actualizado": "2026-11-28T20:55:59+01:00",
  "nota": "Veda de encuestas en España desde el 24/11: se muestran las últimas publicadas.",
  "encuestas": [
   {
    "instituto": "GESOP",
    "medio": "The Adelaide Review",
-   "fecha": "2026-11-27",
+   "fecha": "2026-11-28",
    "pp": {
-    "pct": 33.0,
-    "esc": "132-138"
+    "pct": 32.1,
+    "esc": "130-136"
    },
    "psoe": {
-    "pct": 28.0,
-    "esc": "108-113"
+    "pct": 27.8,
+    "esc": "107-112"
    },
    "vox": {
-    "pct": 16.4,
-    "esc": "53-57"
+    "pct": 16.6,
+    "esc": "52-57"
    },
    "fa": {
-    "pct": 8.0,
-    "esc": "12-15"
+    "pct": 8.7,
+    "esc": "14-18"
    },
    "fv": {
     "pct": null,
     "esc": "s/d"
    },
    "erc": {
-    "pct": 2.7,
+    "pct": 2.9,
     "esc": "9-12"
    },
    "junts": {
-    "pct": 1.0,
+    "pct": 1.1,
     "esc": "3-4"
    },
    "bildu": {
@@ -59,11 +59,11 @@
     "esc": "0"
    },
    "salf": {
-    "pct": 1.8,
+    "pct": 1.6,
     "esc": "0"
    },
-   "ppvox": "185-195",
-   "url": "https://encuestas.adelaidereview.com.au/cuarto-sondeo-elecciones-generales-espana-2026-29n-przj-Z3c7H2d.html"
+   "ppvox": "182-193",
+   "url": "https://encuestas.adelaidereview.com.au/quinto-sondeo-elecciones-generales-espana-2026-29n-przj-7mQ4d9W.html"
   },
   {
    "instituto": "Data10",
@@ -342,10 +342,10 @@
   },
   {
    "fecha": "2026-11-28",
-   "pp": 31.4,
-   "psoe": 28.7,
+   "pp": 31.2,
+   "psoe": 28.6,
    "vox": 17.6,
-   "fa": 6.8
+   "fa": 7.0
   }
  ],
  "politico": {
