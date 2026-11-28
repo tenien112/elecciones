@@ -1,21 +1,21 @@
 {
- "actualizado": "2026-11-27T21:17:08+01:00",
+ "actualizado": "2026-11-28T03:56:45+01:00",
  "nota": "",
  "ganar": [
   {
    "casa": "Polymarket",
    "mercado": "Partido con más escaños",
-   "fecha": "2026-11-27",
+   "fecha": "2026-11-28",
    "tipo": "prob",
    "pp": 73.5,
-   "psoe": 26.5,
-   "vox": 0.7,
+   "psoe": 27.5,
+   "vox": 0.6,
    "url": "https://polymarket.com/event/spain-general-election-winner"
   },
   {
    "casa": "Manifold (dinero ficticio)",
    "mercado": "Partido ganador",
-   "fecha": "2026-11-27",
+   "fecha": "2026-11-28",
    "tipo": "prob",
    "pp": 91.0,
    "psoe": 8.9,
@@ -25,17 +25,17 @@
   {
    "casa": "Kalshi",
    "mercado": "Partido ganador",
-   "fecha": "2026-11-27",
+   "fecha": "2026-11-28",
    "tipo": "prob",
    "pp": null,
-   "psoe": 25.5,
-   "vox": 3.3,
+   "psoe": 26.5,
+   "vox": 2.3,
    "url": "https://kalshi.com/markets/kxspainparli"
   },
   {
    "casa": "Manifold 2 (dinero ficticio)",
    "mercado": "Partido con más escaños",
-   "fecha": "2026-11-27",
+   "fecha": "2026-11-28",
    "tipo": "prob",
    "pp": 88.0,
    "psoe": 11.9,
@@ -47,31 +47,31 @@
   {
    "casa": "Polymarket",
    "mercado": "Próximo presidente del Gobierno",
-   "fecha": "2026-11-27",
+   "fecha": "2026-11-28",
    "tipo": "prob",
-   "pp": 88.0,
-   "psoe": 12.2,
-   "vox": 0.2,
+   "pp": 88.5,
+   "psoe": 11.8,
+   "vox": 0.1,
    "url": "https://polymarket.com/event/next-prime-minister-of-spain-20260625005215443"
   },
   {
    "casa": "Manifold (dinero ficticio)",
    "mercado": "Próximo presidente del Gobierno",
-   "fecha": "2026-11-27",
+   "fecha": "2026-11-28",
    "tipo": "prob",
-   "pp": 86.6,
-   "psoe": 13.1,
+   "pp": 87.0,
+   "psoe": 12.7,
    "vox": null,
    "url": "https://manifold.markets/Jack1/prime-minister-of-spain-after-novem"
   },
   {
    "casa": "Kalshi",
    "mercado": "Próximo presidente del Gobierno",
-   "fecha": "2026-11-27",
+   "fecha": "2026-11-28",
    "tipo": "prob",
-   "pp": 89.5,
-   "psoe": 11.5,
-   "vox": 1.0,
+   "pp": 86.5,
+   "psoe": 13.5,
+   "vox": 2.0,
    "url": "https://kalshi.com/markets/kxspanishpm"
   }
  ],
@@ -159,6 +159,13 @@
    "gan_psoe": 18.2,
    "gob_pp": 88.0,
    "gob_psoe": 12.3
+  },
+  {
+   "fecha": "2026-11-28",
+   "gan_pp": 84.2,
+   "gan_psoe": 18.7,
+   "gob_pp": 87.3,
+   "gob_psoe": 12.7
   }
  ]
 }

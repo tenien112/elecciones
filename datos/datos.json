@@ -1,70 +1,7 @@
 {
- "actualizado": "2026-11-27T21:17:08+01:00",
+ "actualizado": "2026-11-28T03:56:45+01:00",
  "nota": "Veda de encuestas en España desde el 24/11: se muestran las últimas publicadas.",
  "encuestas": [
-  {
-   "instituto": "PSOE",
-   "medio": "The Objective",
-   "fecha": "2026-11-27",
-   "pp": {
-    "pct": 31.9,
-    "esc": "129"
-   },
-   "psoe": {
-    "pct": 33.2,
-    "esc": "137"
-   },
-   "vox": {
-    "pct": 14.3,
-    "esc": "43"
-   },
-   "fa": {
-    "pct": 6.9,
-    "esc": "9"
-   },
-   "fv": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "erc": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "junts": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "bildu": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "pnv": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "bng": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "cc": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "aa": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "podemos": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "salf": {
-    "pct": null,
-    "esc": "s/d"
-   },
-   "ppvox": "172",
-   "url": "https://theobjective.com/espana/politica/2026-11-27/optimismo-psoe-trackings-escanos-pp/"
-  },
   {
    "instituto": "GESOP",
    "medio": "The Adelaide Review",
@@ -253,6 +190,69 @@
    },
    "ppvox": "185",
    "url": "https://web.archive.org/web/20261123222750/https://pollstergraph.com/uploads/reports/atlas/atlas-pollstergraph-es-20261123-f8115c808c94.pdf"
+  },
+  {
+   "instituto": "Sigma Dos",
+   "medio": "El Mundo",
+   "fecha": "2026-11-23",
+   "pp": {
+    "pct": 31.9,
+    "esc": "124-130"
+   },
+   "psoe": {
+    "pct": 28.6,
+    "esc": "114-120"
+   },
+   "vox": {
+    "pct": 17.8,
+    "esc": "58-63"
+   },
+   "fa": {
+    "pct": 5.5,
+    "esc": "8-10"
+   },
+   "fv": {
+    "pct": 1.6,
+    "esc": "3-4"
+   },
+   "erc": {
+    "pct": 2.7,
+    "esc": "10-12"
+   },
+   "junts": {
+    "pct": 1.4,
+    "esc": "3-4"
+   },
+   "bildu": {
+    "pct": 1.6,
+    "esc": "6-7"
+   },
+   "pnv": {
+    "pct": 0.9,
+    "esc": "3-4"
+   },
+   "bng": {
+    "pct": 1.1,
+    "esc": "2-3"
+   },
+   "cc": {
+    "pct": 0.4,
+    "esc": "0-1"
+   },
+   "aa": {
+    "pct": 1.8,
+    "esc": "4-5"
+   },
+   "podemos": {
+    "pct": 0.6,
+    "esc": "0"
+   },
+   "salf": {
+    "pct": null,
+    "esc": "s/d"
+   },
+   "ppvox": "182-193",
+   "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/23/6b048219e9cf4a411a8b4580.html"
   }
  ],
  "historial": [
@@ -339,6 +339,13 @@
    "psoe": 29.8,
    "vox": 16.7,
    "fa": 7.2
+  },
+  {
+   "fecha": "2026-11-28",
+   "pp": 31.4,
+   "psoe": 28.7,
+   "vox": 17.6,
+   "fa": 6.8
   }
  ],
  "politico": {
